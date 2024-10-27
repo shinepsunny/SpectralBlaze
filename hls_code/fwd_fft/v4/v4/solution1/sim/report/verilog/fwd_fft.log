@@ -1,0 +1,4 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

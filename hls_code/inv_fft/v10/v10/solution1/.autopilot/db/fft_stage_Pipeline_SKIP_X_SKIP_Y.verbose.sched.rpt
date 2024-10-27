@@ -1,0 +1,548 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_stage_Pipeline_SKIP_X_SKIP_Y'
+================================================================
+* Date:           Fri Dec  9 11:04:53 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        v10
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.953 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|      152|  10.000 ns|  0.760 us|    2|  152|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- SKIP_X_SKIP_Y  |        0|      150|        25|          2|          2|  0 ~ 64|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 25
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 25, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.84>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%k2 = alloca i32 1"   --->   Operation 28 'alloca' 'k2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%m2 = alloca i32 1"   --->   Operation 29 'alloca' 'm2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%m1 = alloca i32 1"   --->   Operation 30 'alloca' 'm1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 31 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %I, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 32 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %X, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 33 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln17_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %trunc_ln17"   --->   Operation 34 'read' 'trunc_ln17_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%bound_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %bound"   --->   Operation 35 'read' 'bound_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.48ns)   --->   "%store_ln0 = store i14 0, i14 %indvar_flatten"   --->   Operation 36 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 37 [1/1] (0.48ns)   --->   "%store_ln0 = store i8 0, i8 %m1"   --->   Operation 37 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 38 [1/1] (0.48ns)   --->   "%store_ln0 = store i8 0, i8 %m2"   --->   Operation 38 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 39 [1/1] (0.48ns)   --->   "%store_ln0 = store i7 0, i7 %k2"   --->   Operation 39 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body26"   --->   Operation 40 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i14 %indvar_flatten"   --->   Operation 41 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.86ns)   --->   "%icmp_ln1027 = icmp_eq  i14 %indvar_flatten_load, i14 %bound_read"   --->   Operation 42 'icmp' 'icmp_ln1027' <Predicate = true> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.98ns)   --->   "%add_ln1027 = add i14 %indvar_flatten_load, i14 1"   --->   Operation 43 'add' 'add_ln1027' <Predicate = true> <Delay = 0.98> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln1027 = br i1 %icmp_ln1027, void %if.else136, void %if.end199.loopexit93.exitStub"   --->   Operation 44 'br' 'br_ln1027' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%k2_load = load i7 %k2" [src/fft.cpp:22]   --->   Operation 45 'load' 'k2_load' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%m1_load = load i8 %m1" [src/fft.cpp:57]   --->   Operation 46 'load' 'm1_load' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.90ns)   --->   "%add_ln57 = add i8 %m1_load, i8 2" [src/fft.cpp:57]   --->   Operation 47 'add' 'add_ln57' <Predicate = (!icmp_ln1027)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.86ns)   --->   "%icmp_ln1027_4 = icmp_eq  i7 %k2_load, i7 %trunc_ln17_read"   --->   Operation 48 'icmp' 'icmp_ln1027_4' <Predicate = (!icmp_ln1027)> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.44ns)   --->   "%select_ln1027_2 = select i1 %icmp_ln1027_4, i8 %add_ln57, i8 %m1_load"   --->   Operation 49 'select' 'select_ln1027_2' <Predicate = (!icmp_ln1027)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln388 = trunc i8 %select_ln1027_2"   --->   Operation 50 'trunc' 'trunc_ln388' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.89ns)   --->   "%add_ln22 = add i7 %k2_load, i7 1" [src/fft.cpp:22]   --->   Operation 51 'add' 'add_ln22' <Predicate = (!icmp_ln1027)> <Delay = 0.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.42ns)   --->   "%k2_1 = select i1 %icmp_ln1027_4, i7 1, i7 %add_ln22" [src/fft.cpp:22]   --->   Operation 52 'select' 'k2_1' <Predicate = (!icmp_ln1027)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.48ns)   --->   "%store_ln22 = store i14 %add_ln1027, i14 %indvar_flatten" [src/fft.cpp:22]   --->   Operation 53 'store' 'store_ln22' <Predicate = (!icmp_ln1027)> <Delay = 0.48>
+ST_1 : Operation 54 [1/1] (0.48ns)   --->   "%store_ln22 = store i8 %select_ln1027_2, i8 %m1" [src/fft.cpp:22]   --->   Operation 54 'store' 'store_ln22' <Predicate = (!icmp_ln1027)> <Delay = 0.48>
+ST_1 : Operation 55 [1/1] (0.48ns)   --->   "%store_ln22 = store i7 %k2_1, i7 %k2" [src/fft.cpp:22]   --->   Operation 55 'store' 'store_ln22' <Predicate = (!icmp_ln1027)> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 2.75>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%m2_load = load i8 %m2"   --->   Operation 56 'load' 'm2_load' <Predicate = (!icmp_ln1027 & !icmp_ln1027_4)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.44ns)   --->   "%select_ln1027 = select i1 %icmp_ln1027_4, i8 0, i8 %m2_load"   --->   Operation 57 'select' 'select_ln1027' <Predicate = (!icmp_ln1027)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i6.i6, i6 %trunc_ln388, i6 0"   --->   Operation 58 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%or_ln1027 = or i6 %trunc_ln388, i6 1"   --->   Operation 59 'or' 'or_ln1027' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_6 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i6.i6, i6 %or_ln1027, i6 0"   --->   Operation 60 'bitconcatenate' 'tmp_6' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln388 = zext i8 %select_ln1027"   --->   Operation 61 'zext' 'zext_ln388' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.96ns)   --->   "%add_ln388 = add i12 %tmp_6, i12 %zext_ln388"   --->   Operation 62 'add' 'add_ln388' <Predicate = (!icmp_ln1027)> <Delay = 0.96> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln388_1 = zext i12 %add_ln388"   --->   Operation 63 'zext' 'zext_ln388_1' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%I_addr = getelementptr i32 %I, i64 0, i64 %zext_ln388_1"   --->   Operation 64 'getelementptr' 'I_addr' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.96ns)   --->   "%add_ln328 = add i12 %tmp_s, i12 %zext_ln388"   --->   Operation 65 'add' 'add_ln328' <Predicate = (!icmp_ln1027)> <Delay = 0.96> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [2/2] (1.35ns)   --->   "%I_load = load i12 %I_addr"   --->   Operation 66 'load' 'I_load' <Predicate = (!icmp_ln1027)> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%or_ln30 = or i8 %select_ln1027, i8 1" [src/fft.cpp:30]   --->   Operation 67 'or' 'or_ln30' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln388_2 = zext i8 %or_ln30"   --->   Operation 68 'zext' 'zext_ln388_2' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.96ns)   --->   "%add_ln388_1 = add i12 %tmp_s, i12 %zext_ln388_2"   --->   Operation 69 'add' 'add_ln388_1' <Predicate = (!icmp_ln1027)> <Delay = 0.96> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln388_3 = zext i12 %add_ln388_1"   --->   Operation 70 'zext' 'zext_ln388_3' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%I_addr_5 = getelementptr i32 %I, i64 0, i64 %zext_ln388_3"   --->   Operation 71 'getelementptr' 'I_addr_5' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.96ns)   --->   "%add_ln388_2 = add i12 %tmp_6, i12 %zext_ln388_2"   --->   Operation 72 'add' 'add_ln388_2' <Predicate = (!icmp_ln1027)> <Delay = 0.96> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 73 [2/2] (1.35ns)   --->   "%I_load_4 = load i12 %I_addr_5"   --->   Operation 73 'load' 'I_load_4' <Predicate = (!icmp_ln1027)> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_2 : Operation 74 [1/1] (0.90ns)   --->   "%add_ln47 = add i8 %select_ln1027, i8 2" [src/fft.cpp:47]   --->   Operation 74 'add' 'add_ln47' <Predicate = (!icmp_ln1027)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.48ns)   --->   "%store_ln22 = store i8 %add_ln47, i8 %m2" [src/fft.cpp:22]   --->   Operation 75 'store' 'store_ln22' <Predicate = (!icmp_ln1027)> <Delay = 0.48>
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 76 [1/2] (1.35ns)   --->   "%I_load = load i12 %I_addr"   --->   Operation 76 'load' 'I_load' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%trunc_ln388_1 = trunc i32 %I_load"   --->   Operation 77 'trunc' 'trunc_ln388_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%trunc_ln388_s = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %I_load, i32 16, i32 31"   --->   Operation 78 'partselect' 'trunc_ln388_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln388_4 = zext i12 %add_ln388_2"   --->   Operation 79 'zext' 'zext_ln388_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%I_addr_6 = getelementptr i32 %I, i64 0, i64 %zext_ln388_4"   --->   Operation 80 'getelementptr' 'I_addr_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/2] (1.35ns)   --->   "%I_load_4 = load i12 %I_addr_5"   --->   Operation 81 'load' 'I_load_4' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln388_2 = trunc i32 %I_load_4"   --->   Operation 82 'trunc' 'trunc_ln388_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln388_3 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %I_load_4, i32 16, i32 31"   --->   Operation 83 'partselect' 'trunc_ln388_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [2/2] (1.35ns)   --->   "%I_load_5 = load i12 %I_addr_6"   --->   Operation 84 'load' 'I_load_5' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 4 <SV = 3> <Delay = 2.62>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%p_r_M_real = bitcast i16 %trunc_ln388_1"   --->   Operation 85 'bitcast' 'p_r_M_real' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%p_r_M_imag = bitcast i16 %trunc_ln388_s"   --->   Operation 86 'bitcast' 'p_r_M_imag' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 87 [4/4] (2.62ns)   --->   "%mul3_i_i = hmul i16 %p_r_M_imag, i16 0"   --->   Operation 87 'hmul' 'mul3_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [4/4] (2.62ns)   --->   "%mul6_i_i = hmul i16 %p_r_M_real, i16 0"   --->   Operation 88 'hmul' 'mul6_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%p_r_M_imag_2 = bitcast i16 %trunc_ln388_3"   --->   Operation 89 'bitcast' 'p_r_M_imag_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [4/4] (2.62ns)   --->   "%mul3_i_i2 = hmul i16 %p_r_M_imag_2, i16 0"   --->   Operation 90 'hmul' 'mul3_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/2] (1.35ns)   --->   "%I_load_5 = load i12 %I_addr_6"   --->   Operation 91 'load' 'I_load_5' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%trunc_ln388_4 = trunc i32 %I_load_5"   --->   Operation 92 'trunc' 'trunc_ln388_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%trunc_ln388_5 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %I_load_5, i32 16, i32 31"   --->   Operation 93 'partselect' 'trunc_ln388_5' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.62>
+ST_5 : Operation 94 [3/4] (2.62ns)   --->   "%mul3_i_i = hmul i16 %p_r_M_imag, i16 0"   --->   Operation 94 'hmul' 'mul3_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [3/4] (2.62ns)   --->   "%mul6_i_i = hmul i16 %p_r_M_real, i16 0"   --->   Operation 95 'hmul' 'mul6_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%p_r_M_real_2 = bitcast i16 %trunc_ln388_2"   --->   Operation 96 'bitcast' 'p_r_M_real_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 97 [3/4] (2.62ns)   --->   "%mul3_i_i2 = hmul i16 %p_r_M_imag_2, i16 0"   --->   Operation 97 'hmul' 'mul3_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [4/4] (2.62ns)   --->   "%mul6_i_i2 = hmul i16 %p_r_M_real_2, i16 0"   --->   Operation 98 'hmul' 'mul6_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%p_r_M_real_4 = bitcast i16 %trunc_ln388_4"   --->   Operation 99 'bitcast' 'p_r_M_real_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%p_r_M_imag_4 = bitcast i16 %trunc_ln388_5"   --->   Operation 100 'bitcast' 'p_r_M_imag_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [4/4] (2.62ns)   --->   "%mul3_i_i3 = hmul i16 %p_r_M_imag_4, i16 0"   --->   Operation 101 'hmul' 'mul3_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [4/4] (2.62ns)   --->   "%mul6_i_i3 = hmul i16 %p_r_M_real_4, i16 0"   --->   Operation 102 'hmul' 'mul6_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.62>
+ST_6 : Operation 103 [2/4] (2.62ns)   --->   "%mul3_i_i = hmul i16 %p_r_M_imag, i16 0"   --->   Operation 103 'hmul' 'mul3_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 104 [2/4] (2.62ns)   --->   "%mul6_i_i = hmul i16 %p_r_M_real, i16 0"   --->   Operation 104 'hmul' 'mul6_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 105 [2/4] (2.62ns)   --->   "%mul3_i_i2 = hmul i16 %p_r_M_imag_2, i16 0"   --->   Operation 105 'hmul' 'mul3_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [3/4] (2.62ns)   --->   "%mul6_i_i2 = hmul i16 %p_r_M_real_2, i16 0"   --->   Operation 106 'hmul' 'mul6_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 107 [3/4] (2.62ns)   --->   "%mul3_i_i3 = hmul i16 %p_r_M_imag_4, i16 0"   --->   Operation 107 'hmul' 'mul3_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [3/4] (2.62ns)   --->   "%mul6_i_i3 = hmul i16 %p_r_M_real_4, i16 0"   --->   Operation 108 'hmul' 'mul6_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.62>
+ST_7 : Operation 109 [1/4] (2.62ns)   --->   "%mul3_i_i = hmul i16 %p_r_M_imag, i16 0"   --->   Operation 109 'hmul' 'mul3_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 110 [1/4] (2.62ns)   --->   "%mul6_i_i = hmul i16 %p_r_M_real, i16 0"   --->   Operation 110 'hmul' 'mul6_i_i' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 111 [1/4] (2.62ns)   --->   "%mul3_i_i2 = hmul i16 %p_r_M_imag_2, i16 0"   --->   Operation 111 'hmul' 'mul3_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 112 [2/4] (2.62ns)   --->   "%mul6_i_i2 = hmul i16 %p_r_M_real_2, i16 0"   --->   Operation 112 'hmul' 'mul6_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 113 [2/4] (2.62ns)   --->   "%mul3_i_i3 = hmul i16 %p_r_M_imag_4, i16 0"   --->   Operation 113 'hmul' 'mul3_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 114 [2/4] (2.62ns)   --->   "%mul6_i_i3 = hmul i16 %p_r_M_real_4, i16 0"   --->   Operation 114 'hmul' 'mul6_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.95>
+ST_8 : Operation 115 [5/5] (2.95ns)   --->   "%p_r = hsub i16 %p_r_M_real, i16 %mul3_i_i"   --->   Operation 115 'hsub' 'p_r' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 116 [5/5] (2.95ns)   --->   "%p_r_M_imag_8 = hadd i16 %mul6_i_i, i16 %p_r_M_imag"   --->   Operation 116 'hadd' 'p_r_M_imag_8' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 117 [5/5] (2.95ns)   --->   "%p_r_1 = hsub i16 %p_r_M_real_2, i16 %mul3_i_i2"   --->   Operation 117 'hsub' 'p_r_1' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 118 [1/4] (2.62ns)   --->   "%mul6_i_i2 = hmul i16 %p_r_M_real_2, i16 0"   --->   Operation 118 'hmul' 'mul6_i_i2' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 119 [1/4] (2.62ns)   --->   "%mul3_i_i3 = hmul i16 %p_r_M_imag_4, i16 0"   --->   Operation 119 'hmul' 'mul3_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 120 [1/4] (2.62ns)   --->   "%mul6_i_i3 = hmul i16 %p_r_M_real_4, i16 0"   --->   Operation 120 'hmul' 'mul6_i_i3' <Predicate = true> <Delay = 2.62> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.95>
+ST_9 : Operation 121 [4/5] (2.95ns)   --->   "%p_r = hsub i16 %p_r_M_real, i16 %mul3_i_i"   --->   Operation 121 'hsub' 'p_r' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 122 [4/5] (2.95ns)   --->   "%p_r_M_imag_8 = hadd i16 %mul6_i_i, i16 %p_r_M_imag"   --->   Operation 122 'hadd' 'p_r_M_imag_8' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 123 [4/5] (2.95ns)   --->   "%p_r_1 = hsub i16 %p_r_M_real_2, i16 %mul3_i_i2"   --->   Operation 123 'hsub' 'p_r_1' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 124 [5/5] (2.95ns)   --->   "%p_r_M_imag_18 = hadd i16 %mul6_i_i2, i16 %p_r_M_imag_2"   --->   Operation 124 'hadd' 'p_r_M_imag_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 125 [5/5] (2.95ns)   --->   "%p_r_2 = hsub i16 %p_r_M_real_4, i16 %mul3_i_i3"   --->   Operation 125 'hsub' 'p_r_2' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 126 [5/5] (2.95ns)   --->   "%p_r_M_imag_19 = hadd i16 %mul6_i_i3, i16 %p_r_M_imag_4"   --->   Operation 126 'hadd' 'p_r_M_imag_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.95>
+ST_10 : Operation 127 [3/5] (2.95ns)   --->   "%p_r = hsub i16 %p_r_M_real, i16 %mul3_i_i"   --->   Operation 127 'hsub' 'p_r' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 128 [3/5] (2.95ns)   --->   "%p_r_M_imag_8 = hadd i16 %mul6_i_i, i16 %p_r_M_imag"   --->   Operation 128 'hadd' 'p_r_M_imag_8' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 129 [3/5] (2.95ns)   --->   "%p_r_1 = hsub i16 %p_r_M_real_2, i16 %mul3_i_i2"   --->   Operation 129 'hsub' 'p_r_1' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 130 [4/5] (2.95ns)   --->   "%p_r_M_imag_18 = hadd i16 %mul6_i_i2, i16 %p_r_M_imag_2"   --->   Operation 130 'hadd' 'p_r_M_imag_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 131 [4/5] (2.95ns)   --->   "%p_r_2 = hsub i16 %p_r_M_real_4, i16 %mul3_i_i3"   --->   Operation 131 'hsub' 'p_r_2' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 132 [4/5] (2.95ns)   --->   "%p_r_M_imag_19 = hadd i16 %mul6_i_i3, i16 %p_r_M_imag_4"   --->   Operation 132 'hadd' 'p_r_M_imag_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.95>
+ST_11 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln328 = zext i12 %add_ln328"   --->   Operation 133 'zext' 'zext_ln328' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 134 [1/1] (0.00ns)   --->   "%I_addr_4 = getelementptr i32 %I, i64 0, i64 %zext_ln328"   --->   Operation 134 'getelementptr' 'I_addr_4' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 135 [2/5] (2.95ns)   --->   "%p_r = hsub i16 %p_r_M_real, i16 %mul3_i_i"   --->   Operation 135 'hsub' 'p_r' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [2/5] (2.95ns)   --->   "%p_r_M_imag_8 = hadd i16 %mul6_i_i, i16 %p_r_M_imag"   --->   Operation 136 'hadd' 'p_r_M_imag_8' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 137 [2/5] (2.95ns)   --->   "%p_r_1 = hsub i16 %p_r_M_real_2, i16 %mul3_i_i2"   --->   Operation 137 'hsub' 'p_r_1' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 138 [3/5] (2.95ns)   --->   "%p_r_M_imag_18 = hadd i16 %mul6_i_i2, i16 %p_r_M_imag_2"   --->   Operation 138 'hadd' 'p_r_M_imag_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [3/5] (2.95ns)   --->   "%p_r_2 = hsub i16 %p_r_M_real_4, i16 %mul3_i_i3"   --->   Operation 139 'hsub' 'p_r_2' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [3/5] (2.95ns)   --->   "%p_r_M_imag_19 = hadd i16 %mul6_i_i3, i16 %p_r_M_imag_4"   --->   Operation 140 'hadd' 'p_r_M_imag_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 141 [2/2] (1.35ns)   --->   "%I_load_6 = load i12 %I_addr_4"   --->   Operation 141 'load' 'I_load_6' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 12 <SV = 11> <Delay = 2.95>
+ST_12 : Operation 142 [1/5] (2.95ns)   --->   "%p_r = hsub i16 %p_r_M_real, i16 %mul3_i_i"   --->   Operation 142 'hsub' 'p_r' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 143 [1/5] (2.95ns)   --->   "%p_r_M_imag_8 = hadd i16 %mul6_i_i, i16 %p_r_M_imag"   --->   Operation 143 'hadd' 'p_r_M_imag_8' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 144 [1/5] (2.95ns)   --->   "%p_r_1 = hsub i16 %p_r_M_real_2, i16 %mul3_i_i2"   --->   Operation 144 'hsub' 'p_r_1' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 145 [2/5] (2.95ns)   --->   "%p_r_M_imag_18 = hadd i16 %mul6_i_i2, i16 %p_r_M_imag_2"   --->   Operation 145 'hadd' 'p_r_M_imag_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 146 [2/5] (2.95ns)   --->   "%p_r_2 = hsub i16 %p_r_M_real_4, i16 %mul3_i_i3"   --->   Operation 146 'hsub' 'p_r_2' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 147 [2/5] (2.95ns)   --->   "%p_r_M_imag_19 = hadd i16 %mul6_i_i3, i16 %p_r_M_imag_4"   --->   Operation 147 'hadd' 'p_r_M_imag_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 148 [1/2] (1.35ns)   --->   "%I_load_6 = load i12 %I_addr_4"   --->   Operation 148 'load' 'I_load_6' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_12 : Operation 149 [1/1] (0.00ns)   --->   "%trunc_ln328 = trunc i32 %I_load_6"   --->   Operation 149 'trunc' 'trunc_ln328' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 150 [1/1] (0.00ns)   --->   "%trunc_ln328_6 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %I_load_6, i32 16, i32 31"   --->   Operation 150 'partselect' 'trunc_ln328_6' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 2.95>
+ST_13 : Operation 151 [1/5] (2.95ns)   --->   "%p_r_M_imag_18 = hadd i16 %mul6_i_i2, i16 %p_r_M_imag_2"   --->   Operation 151 'hadd' 'p_r_M_imag_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 152 [1/5] (2.95ns)   --->   "%p_r_2 = hsub i16 %p_r_M_real_4, i16 %mul3_i_i3"   --->   Operation 152 'hsub' 'p_r_2' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 153 [1/5] (2.95ns)   --->   "%p_r_M_imag_19 = hadd i16 %mul6_i_i3, i16 %p_r_M_imag_4"   --->   Operation 153 'hadd' 'p_r_M_imag_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 154 [1/1] (0.00ns)   --->   "%p_r_M_real_6 = bitcast i16 %trunc_ln328"   --->   Operation 154 'bitcast' 'p_r_M_real_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 155 [5/5] (2.95ns)   --->   "%p_r_M_real_15 = hadd i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 155 'hadd' 'p_r_M_real_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 156 [5/5] (2.95ns)   --->   "%p_r_M_real_13 = hsub i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 156 'hsub' 'p_r_M_real_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.95>
+ST_14 : Operation 157 [1/1] (0.00ns)   --->   "%p_r_M_imag_6 = bitcast i16 %trunc_ln328_6"   --->   Operation 157 'bitcast' 'p_r_M_imag_6' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 158 [4/5] (2.95ns)   --->   "%p_r_M_real_15 = hadd i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 158 'hadd' 'p_r_M_real_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 159 [5/5] (2.95ns)   --->   "%p_r_M_imag_15 = hadd i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 159 'hadd' 'p_r_M_imag_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 160 [5/5] (2.95ns)   --->   "%p_r_M_real_18 = hadd i16 %p_r, i16 %p_r_2"   --->   Operation 160 'hadd' 'p_r_M_real_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 161 [5/5] (2.95ns)   --->   "%p_r_M_imag_20 = hadd i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 161 'hadd' 'p_r_M_imag_20' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 162 [4/5] (2.95ns)   --->   "%p_r_M_real_13 = hsub i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 162 'hsub' 'p_r_M_real_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 163 [5/5] (2.95ns)   --->   "%p_r_M_imag_13 = hsub i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 163 'hsub' 'p_r_M_imag_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 164 [5/5] (2.95ns)   --->   "%p_r_M_real_19 = hsub i16 %p_r, i16 %p_r_2"   --->   Operation 164 'hsub' 'p_r_M_real_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 165 [5/5] (2.95ns)   --->   "%p_r_M_imag_21 = hsub i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 165 'hsub' 'p_r_M_imag_21' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.95>
+ST_15 : Operation 166 [3/5] (2.95ns)   --->   "%p_r_M_real_15 = hadd i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 166 'hadd' 'p_r_M_real_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 167 [4/5] (2.95ns)   --->   "%p_r_M_imag_15 = hadd i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 167 'hadd' 'p_r_M_imag_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 168 [4/5] (2.95ns)   --->   "%p_r_M_real_18 = hadd i16 %p_r, i16 %p_r_2"   --->   Operation 168 'hadd' 'p_r_M_real_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 169 [4/5] (2.95ns)   --->   "%p_r_M_imag_20 = hadd i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 169 'hadd' 'p_r_M_imag_20' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 170 [3/5] (2.95ns)   --->   "%p_r_M_real_13 = hsub i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 170 'hsub' 'p_r_M_real_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 171 [4/5] (2.95ns)   --->   "%p_r_M_imag_13 = hsub i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 171 'hsub' 'p_r_M_imag_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 172 [4/5] (2.95ns)   --->   "%p_r_M_real_19 = hsub i16 %p_r, i16 %p_r_2"   --->   Operation 172 'hsub' 'p_r_M_real_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 173 [4/5] (2.95ns)   --->   "%p_r_M_imag_21 = hsub i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 173 'hsub' 'p_r_M_imag_21' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.95>
+ST_16 : Operation 174 [2/5] (2.95ns)   --->   "%p_r_M_real_15 = hadd i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 174 'hadd' 'p_r_M_real_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 175 [3/5] (2.95ns)   --->   "%p_r_M_imag_15 = hadd i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 175 'hadd' 'p_r_M_imag_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 176 [3/5] (2.95ns)   --->   "%p_r_M_real_18 = hadd i16 %p_r, i16 %p_r_2"   --->   Operation 176 'hadd' 'p_r_M_real_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 177 [3/5] (2.95ns)   --->   "%p_r_M_imag_20 = hadd i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 177 'hadd' 'p_r_M_imag_20' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 178 [2/5] (2.95ns)   --->   "%p_r_M_real_13 = hsub i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 178 'hsub' 'p_r_M_real_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 179 [3/5] (2.95ns)   --->   "%p_r_M_imag_13 = hsub i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 179 'hsub' 'p_r_M_imag_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 180 [3/5] (2.95ns)   --->   "%p_r_M_real_19 = hsub i16 %p_r, i16 %p_r_2"   --->   Operation 180 'hsub' 'p_r_M_real_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 181 [3/5] (2.95ns)   --->   "%p_r_M_imag_21 = hsub i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 181 'hsub' 'p_r_M_imag_21' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.95>
+ST_17 : Operation 182 [1/5] (2.95ns)   --->   "%p_r_M_real_15 = hadd i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 182 'hadd' 'p_r_M_real_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 183 [2/5] (2.95ns)   --->   "%p_r_M_imag_15 = hadd i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 183 'hadd' 'p_r_M_imag_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 184 [2/5] (2.95ns)   --->   "%p_r_M_real_18 = hadd i16 %p_r, i16 %p_r_2"   --->   Operation 184 'hadd' 'p_r_M_real_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 185 [2/5] (2.95ns)   --->   "%p_r_M_imag_20 = hadd i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 185 'hadd' 'p_r_M_imag_20' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 186 [1/5] (2.95ns)   --->   "%p_r_M_real_13 = hsub i16 %p_r_M_real_6, i16 %p_r_1"   --->   Operation 186 'hsub' 'p_r_M_real_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 187 [2/5] (2.95ns)   --->   "%p_r_M_imag_13 = hsub i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 187 'hsub' 'p_r_M_imag_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 188 [2/5] (2.95ns)   --->   "%p_r_M_real_19 = hsub i16 %p_r, i16 %p_r_2"   --->   Operation 188 'hsub' 'p_r_M_real_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 189 [2/5] (2.95ns)   --->   "%p_r_M_imag_21 = hsub i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 189 'hsub' 'p_r_M_imag_21' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.95>
+ST_18 : Operation 190 [1/5] (2.95ns)   --->   "%p_r_M_imag_15 = hadd i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 190 'hadd' 'p_r_M_imag_15' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 191 [1/5] (2.95ns)   --->   "%p_r_M_real_18 = hadd i16 %p_r, i16 %p_r_2"   --->   Operation 191 'hadd' 'p_r_M_real_18' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 192 [1/5] (2.95ns)   --->   "%p_r_M_imag_20 = hadd i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 192 'hadd' 'p_r_M_imag_20' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 193 [1/5] (2.95ns)   --->   "%p_r_M_imag_13 = hsub i16 %p_r_M_imag_6, i16 %p_r_M_imag_18"   --->   Operation 193 'hsub' 'p_r_M_imag_13' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 194 [1/5] (2.95ns)   --->   "%p_r_M_real_19 = hsub i16 %p_r, i16 %p_r_2"   --->   Operation 194 'hsub' 'p_r_M_real_19' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 195 [1/5] (2.95ns)   --->   "%p_r_M_imag_21 = hsub i16 %p_r_M_imag_8, i16 %p_r_M_imag_19"   --->   Operation 195 'hsub' 'p_r_M_imag_21' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.95>
+ST_19 : Operation 196 [5/5] (2.95ns)   --->   "%p_r_M_real_12 = hadd i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 196 'hadd' 'p_r_M_real_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 197 [5/5] (2.95ns)   --->   "%p_r_M_imag_12 = hadd i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 197 'hadd' 'p_r_M_imag_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 198 [5/5] (2.95ns)   --->   "%p_r_M_real_14 = hadd i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 198 'hadd' 'p_r_M_real_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 199 [5/5] (2.95ns)   --->   "%p_r_M_imag_14 = hadd i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 199 'hadd' 'p_r_M_imag_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 200 [5/5] (2.95ns)   --->   "%p_r_M_real_16 = hsub i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 200 'hsub' 'p_r_M_real_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 201 [5/5] (2.95ns)   --->   "%p_r_M_imag_16 = hsub i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 201 'hsub' 'p_r_M_imag_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.95>
+ST_20 : Operation 202 [4/5] (2.95ns)   --->   "%p_r_M_real_12 = hadd i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 202 'hadd' 'p_r_M_real_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 203 [4/5] (2.95ns)   --->   "%p_r_M_imag_12 = hadd i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 203 'hadd' 'p_r_M_imag_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 204 [4/5] (2.95ns)   --->   "%p_r_M_real_14 = hadd i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 204 'hadd' 'p_r_M_real_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 205 [4/5] (2.95ns)   --->   "%p_r_M_imag_14 = hadd i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 205 'hadd' 'p_r_M_imag_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 206 [4/5] (2.95ns)   --->   "%p_r_M_real_16 = hsub i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 206 'hsub' 'p_r_M_real_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 207 [4/5] (2.95ns)   --->   "%p_r_M_imag_16 = hsub i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 207 'hsub' 'p_r_M_imag_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 208 [5/5] (2.95ns)   --->   "%p_r_M_real_17 = hsub i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 208 'hsub' 'p_r_M_real_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 209 [5/5] (2.95ns)   --->   "%p_r_M_imag_17 = hsub i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 209 'hsub' 'p_r_M_imag_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.95>
+ST_21 : Operation 210 [3/5] (2.95ns)   --->   "%p_r_M_real_12 = hadd i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 210 'hadd' 'p_r_M_real_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 211 [3/5] (2.95ns)   --->   "%p_r_M_imag_12 = hadd i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 211 'hadd' 'p_r_M_imag_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 212 [3/5] (2.95ns)   --->   "%p_r_M_real_14 = hadd i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 212 'hadd' 'p_r_M_real_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 213 [3/5] (2.95ns)   --->   "%p_r_M_imag_14 = hadd i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 213 'hadd' 'p_r_M_imag_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 214 [3/5] (2.95ns)   --->   "%p_r_M_real_16 = hsub i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 214 'hsub' 'p_r_M_real_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 215 [3/5] (2.95ns)   --->   "%p_r_M_imag_16 = hsub i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 215 'hsub' 'p_r_M_imag_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 216 [4/5] (2.95ns)   --->   "%p_r_M_real_17 = hsub i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 216 'hsub' 'p_r_M_real_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 217 [4/5] (2.95ns)   --->   "%p_r_M_imag_17 = hsub i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 217 'hsub' 'p_r_M_imag_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.95>
+ST_22 : Operation 218 [2/5] (2.95ns)   --->   "%p_r_M_real_12 = hadd i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 218 'hadd' 'p_r_M_real_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 219 [2/5] (2.95ns)   --->   "%p_r_M_imag_12 = hadd i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 219 'hadd' 'p_r_M_imag_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 220 [2/5] (2.95ns)   --->   "%p_r_M_real_14 = hadd i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 220 'hadd' 'p_r_M_real_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 221 [2/5] (2.95ns)   --->   "%p_r_M_imag_14 = hadd i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 221 'hadd' 'p_r_M_imag_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 222 [2/5] (2.95ns)   --->   "%p_r_M_real_16 = hsub i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 222 'hsub' 'p_r_M_real_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 223 [2/5] (2.95ns)   --->   "%p_r_M_imag_16 = hsub i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 223 'hsub' 'p_r_M_imag_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 224 [3/5] (2.95ns)   --->   "%p_r_M_real_17 = hsub i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 224 'hsub' 'p_r_M_real_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 225 [3/5] (2.95ns)   --->   "%p_r_M_imag_17 = hsub i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 225 'hsub' 'p_r_M_imag_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.95>
+ST_23 : Operation 226 [1/5] (2.95ns)   --->   "%p_r_M_real_12 = hadd i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 226 'hadd' 'p_r_M_real_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 227 [1/5] (2.95ns)   --->   "%p_r_M_imag_12 = hadd i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 227 'hadd' 'p_r_M_imag_12' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 228 [1/5] (2.95ns)   --->   "%p_r_M_real_14 = hadd i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 228 'hadd' 'p_r_M_real_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 229 [1/5] (2.95ns)   --->   "%p_r_M_imag_14 = hadd i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 229 'hadd' 'p_r_M_imag_14' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 230 [1/5] (2.95ns)   --->   "%p_r_M_real_16 = hsub i16 %p_r_M_real_15, i16 %p_r_M_real_18"   --->   Operation 230 'hsub' 'p_r_M_real_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 231 [1/5] (2.95ns)   --->   "%p_r_M_imag_16 = hsub i16 %p_r_M_imag_15, i16 %p_r_M_imag_20"   --->   Operation 231 'hsub' 'p_r_M_imag_16' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 232 [2/5] (2.95ns)   --->   "%p_r_M_real_17 = hsub i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 232 'hsub' 'p_r_M_real_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 233 [2/5] (2.95ns)   --->   "%p_r_M_imag_17 = hsub i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 233 'hsub' 'p_r_M_imag_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 261 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 261 'ret' 'ret_ln0' <Predicate = (icmp_ln1027)> <Delay = 0.00>
+
+State 24 <SV = 23> <Delay = 2.95>
+ST_24 : Operation 234 [1/1] (0.00ns)   --->   "%X_addr = getelementptr i32 %X, i64 0, i64 %zext_ln328" [src/fft.cpp:36]   --->   Operation 234 'getelementptr' 'X_addr' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 235 [1/1] (0.00ns)   --->   "%X_addr_5 = getelementptr i32 %X, i64 0, i64 %zext_ln388_3" [src/fft.cpp:37]   --->   Operation 235 'getelementptr' 'X_addr_5' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 236 [1/1] (0.00ns)   --->   "%bitcast_ln36 = bitcast i16 %p_r_M_real_12" [src/fft.cpp:36]   --->   Operation 236 'bitcast' 'bitcast_ln36' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 237 [1/1] (0.00ns)   --->   "%bitcast_ln36_1 = bitcast i16 %p_r_M_imag_12" [src/fft.cpp:36]   --->   Operation 237 'bitcast' 'bitcast_ln36_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 238 [1/1] (0.00ns)   --->   "%add3_i_i290_partset = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %bitcast_ln36_1, i16 %bitcast_ln36" [src/fft.cpp:36]   --->   Operation 238 'bitconcatenate' 'add3_i_i290_partset' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 239 [1/1] (1.35ns)   --->   "%store_ln36 = store i32 %add3_i_i290_partset, i12 %X_addr" [src/fft.cpp:36]   --->   Operation 239 'store' 'store_ln36' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_24 : Operation 240 [1/1] (0.00ns)   --->   "%bitcast_ln37 = bitcast i16 %p_r_M_real_14" [src/fft.cpp:37]   --->   Operation 240 'bitcast' 'bitcast_ln37' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 241 [1/1] (0.00ns)   --->   "%bitcast_ln37_1 = bitcast i16 %p_r_M_imag_14" [src/fft.cpp:37]   --->   Operation 241 'bitcast' 'bitcast_ln37_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 242 [1/1] (0.00ns)   --->   "%add3_i_i294_partset = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %bitcast_ln37_1, i16 %bitcast_ln37" [src/fft.cpp:37]   --->   Operation 242 'bitconcatenate' 'add3_i_i294_partset' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 243 [1/1] (1.35ns)   --->   "%store_ln37 = store i32 %add3_i_i294_partset, i12 %X_addr_5" [src/fft.cpp:37]   --->   Operation 243 'store' 'store_ln37' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_24 : Operation 244 [1/5] (2.95ns)   --->   "%p_r_M_real_17 = hsub i16 %p_r_M_real_13, i16 %p_r_M_real_19"   --->   Operation 244 'hsub' 'p_r_M_real_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 245 [1/5] (2.95ns)   --->   "%p_r_M_imag_17 = hsub i16 %p_r_M_imag_13, i16 %p_r_M_imag_21"   --->   Operation 245 'hsub' 'p_r_M_imag_17' <Predicate = true> <Delay = 2.95> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 2.95> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 1.35>
+ST_25 : Operation 246 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @SKIP_X_SKIP_Y_str"   --->   Operation 246 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 247 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 64, i64 16"   --->   Operation 247 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 248 [1/1] (0.00ns)   --->   "%X_addr_4 = getelementptr i32 %X, i64 0, i64 %zext_ln388_1" [src/fft.cpp:38]   --->   Operation 248 'getelementptr' 'X_addr_4' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 249 [1/1] (0.00ns)   --->   "%specpipeline_ln25 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_18" [src/fft.cpp:25]   --->   Operation 249 'specpipeline' 'specpipeline_ln25' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 250 [1/1] (0.00ns)   --->   "%specloopname_ln10 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [src/fft.cpp:10]   --->   Operation 250 'specloopname' 'specloopname_ln10' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 251 [1/1] (0.00ns)   --->   "%X_addr_6 = getelementptr i32 %X, i64 0, i64 %zext_ln388_4" [src/fft.cpp:39]   --->   Operation 251 'getelementptr' 'X_addr_6' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 252 [1/1] (0.00ns)   --->   "%bitcast_ln38 = bitcast i16 %p_r_M_real_16" [src/fft.cpp:38]   --->   Operation 252 'bitcast' 'bitcast_ln38' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 253 [1/1] (0.00ns)   --->   "%bitcast_ln38_1 = bitcast i16 %p_r_M_imag_16" [src/fft.cpp:38]   --->   Operation 253 'bitcast' 'bitcast_ln38_1' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 254 [1/1] (0.00ns)   --->   "%sub3_i_i298_partset = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %bitcast_ln38_1, i16 %bitcast_ln38" [src/fft.cpp:38]   --->   Operation 254 'bitconcatenate' 'sub3_i_i298_partset' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 255 [1/1] (1.35ns)   --->   "%store_ln38 = store i32 %sub3_i_i298_partset, i12 %X_addr_4" [src/fft.cpp:38]   --->   Operation 255 'store' 'store_ln38' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_25 : Operation 256 [1/1] (0.00ns)   --->   "%bitcast_ln39 = bitcast i16 %p_r_M_real_17" [src/fft.cpp:39]   --->   Operation 256 'bitcast' 'bitcast_ln39' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 257 [1/1] (0.00ns)   --->   "%bitcast_ln39_1 = bitcast i16 %p_r_M_imag_17" [src/fft.cpp:39]   --->   Operation 257 'bitcast' 'bitcast_ln39_1' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 258 [1/1] (0.00ns)   --->   "%sub3_i_i302_partset = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %bitcast_ln39_1, i16 %bitcast_ln39" [src/fft.cpp:39]   --->   Operation 258 'bitconcatenate' 'sub3_i_i302_partset' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 259 [1/1] (1.35ns)   --->   "%store_ln39 = store i32 %sub3_i_i302_partset, i12 %X_addr_6" [src/fft.cpp:39]   --->   Operation 259 'store' 'store_ln39' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_25 : Operation 260 [1/1] (0.00ns)   --->   "%br_ln22 = br void %for.body26" [src/fft.cpp:22]   --->   Operation 260 'br' 'br_ln22' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 1.84ns
+The critical path consists of the following:
+	'alloca' operation ('m1') [7]  (0 ns)
+	'load' operation ('m1_load', src/fft.cpp:57) on local variable 'm1' [26]  (0 ns)
+	'add' operation ('add_ln57', src/fft.cpp:57) [27]  (0.907 ns)
+	'select' operation ('select_ln1027_2') [32]  (0.445 ns)
+	'store' operation ('store_ln22', src/fft.cpp:22) of variable 'select_ln1027_2' on local variable 'm1' [126]  (0.489 ns)
+
+ <State 2>: 2.76ns
+The critical path consists of the following:
+	'load' operation ('m2_load') on local variable 'm2' [25]  (0 ns)
+	'select' operation ('select_ln1027') [31]  (0.445 ns)
+	'add' operation ('add_ln388') [38]  (0.962 ns)
+	'getelementptr' operation ('I_addr') [40]  (0 ns)
+	'load' operation ('I_load') on array 'I' [48]  (1.35 ns)
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('I_load') on array 'I' [48]  (1.35 ns)
+
+ <State 4>: 2.63ns
+The critical path consists of the following:
+	'hmul' operation ('mul3_i_i') [53]  (2.63 ns)
+
+ <State 5>: 2.63ns
+The critical path consists of the following:
+	'hmul' operation ('mul3_i_i') [53]  (2.63 ns)
+
+ <State 6>: 2.63ns
+The critical path consists of the following:
+	'hmul' operation ('mul3_i_i') [53]  (2.63 ns)
+
+ <State 7>: 2.63ns
+The critical path consists of the following:
+	'hmul' operation ('mul3_i_i') [53]  (2.63 ns)
+
+ <State 8>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r') [54]  (2.95 ns)
+
+ <State 9>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r') [54]  (2.95 ns)
+
+ <State 10>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r') [54]  (2.95 ns)
+
+ <State 11>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r') [54]  (2.95 ns)
+
+ <State 12>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r') [54]  (2.95 ns)
+
+ <State 13>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_imag') [75]  (2.95 ns)
+
+ <State 14>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [90]  (2.95 ns)
+
+ <State 15>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [90]  (2.95 ns)
+
+ <State 16>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [90]  (2.95 ns)
+
+ <State 17>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [90]  (2.95 ns)
+
+ <State 18>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_imag') [91]  (2.95 ns)
+
+ <State 19>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [98]  (2.95 ns)
+
+ <State 20>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [98]  (2.95 ns)
+
+ <State 21>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [98]  (2.95 ns)
+
+ <State 22>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [98]  (2.95 ns)
+
+ <State 23>: 2.95ns
+The critical path consists of the following:
+	'hadd' operation ('__r._M_real') [98]  (2.95 ns)
+
+ <State 24>: 2.95ns
+The critical path consists of the following:
+	'hsub' operation ('__r._M_real') [116]  (2.95 ns)
+
+ <State 25>: 1.35ns
+The critical path consists of the following:
+	'getelementptr' operation ('X_addr_4', src/fft.cpp:38) [45]  (0 ns)
+	'store' operation ('store_ln38', src/fft.cpp:38) of variable 'sub3_i_i298_partset', src/fft.cpp:38 on array 'X' [115]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

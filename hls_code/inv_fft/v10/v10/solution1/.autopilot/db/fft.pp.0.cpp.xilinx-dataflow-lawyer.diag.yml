@@ -1,0 +1,28 @@
+---
+MainSourceFile:  /home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1/.autopilot/db/fft.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-7] As the loop bound is not a constant or function argument, the compiler may not successfully process the dataflow loop'
+    FileOffset:      '208:36'
+    FilePath:        src/fft.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-4] Since the loop counter is not declared in loop header and/or initialized to ''0'', the compiler may not successfully process the dataflow loop'
+    FileOffset:      '332:24'
+    FilePath:        src/fft.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '336:16'
+    FilePath:        src/fft.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '336:25'
+    FilePath:        src/fft.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '337:9'
+    FilePath:        src/fft.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '337:18'
+    FilePath:        src/fft.cpp
+...

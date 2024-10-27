@@ -1,0 +1,1488 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 142, Column: 5 }
+Function:        _ZN3hls6vectorISt7complexIDhELm4EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::pragma() const'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 96, Column: 17 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 97, Column: 17 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 98, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 99, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 100, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 101, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 102, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 103, Column: 19 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 142, Column: 5 }
+Function:        _ZN3hls6vectorISt7complexIDhELm2EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::pragma() const'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 144, Column: 4 }
+Function:        _Z8push_outPA64_St7complexIDhERN3hls6streamINS3_6vectorIS0_Lm2EEELi0EEEP7ctrl1_tP6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'push_out(std::complex<half> (*) [64], hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, ctrl1_t*, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 143, Column: 2 }
+Function:        _Z8push_outPA64_St7complexIDhERN3hls6streamINS3_6vectorIS0_Lm2EEELi0EEEP7ctrl1_tP6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'push_out(std::complex<half> (*) [64], hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, ctrl1_t*, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 317, Column: 62 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 316, Column: 62 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 314, Column: 60 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 315, Column: 60 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 142, Column: 5 }
+Function:        _ZN3hls6vectorIDhLm8EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<half, 8ul>::pragma() const'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<half, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 291, Column: 5 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<half, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/fft.cpp, Line: 278, Column: 5 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<half, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 94, Column: 12 }
+Function:        _ZNSt5arrayISt7complexIDhELm4EEC2Ev.9.15
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 94, Column: 0 }
+Function:        _ZNSt5arrayISt7complexIDhELm4EEC2Ev.9.15
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:94:12'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'std::array<std::complex<half>, 4ul>::array'
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 188, Column: 69 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::real[abi:cxx11]() const'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 188, Column: 36 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::imag[abi:cxx11]() const'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 174, Column: 13 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 188, Column: 9 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 196, Column: 20 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 14 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 17 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 20 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 23 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 26 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 29 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 32 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 36 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 40 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/fft.cpp, Line: 14, Column: 44 }
+Function:        _Z9fft_stagePA64_St7complexIDhES2_iiP7ctrl1_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::complex<half>::complex(half const&, half const&) (.18)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 100, Column: 0 }
+Function:        _ZN3hls6vectorISt7complexIDhELm4EEC2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 4ul>::array()'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 4ul>::vector()'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayISt7complexIDhELm4EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<std::complex<half>, 4ul>::_S_ref(std::complex<half> const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 100, Column: 0 }
+Function:        _ZN3hls6vectorISt7complexIDhELm4EEC2Ev.3
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 4ul>::array() (.9.15)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 4ul>::vector() (.3)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::vector()'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+Function:        _Z13collect_inputRN3hls6streamINS_6vectorISt7complexIDhELm4EEELi2EEEPA64_S3_P7ctrl1_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 4ul>::vector() (.3)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'collect_input(hls::stream<hls::vector<std::complex<half>, 4ul>, 2>&, std::complex<half> (*) [64], ctrl1_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 170, Column: 0 }
+Function:        _Z4poolPA64_St7complexIDhES2_P7ctrl1_tP6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'act(half, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pool(std::complex<half> (*) [64], std::complex<half> (*) [64], ctrl1_t*, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 170, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 100, Column: 0 }
+Function:        _ZN3hls6vectorISt7complexIDhELm2EEC2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 2ul>::array()'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 2ul>::vector()'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayISt7complexIDhELm2EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<std::complex<half>, 2ul>::_S_ref(std::complex<half> const (&) [2], unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+Function:        _Z8push_outPA64_St7complexIDhERN3hls6streamINS3_6vectorIS0_Lm2EEELi0EEEP7ctrl1_tP6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::vector()'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'push_out(std::complex<half> (*) [64], hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, ctrl1_t*, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+Function:        _Z8push_outPA64_St7complexIDhERN3hls6streamINS3_6vectorIS0_Lm2EEELi0EEEP7ctrl1_tP6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'push_out(std::complex<half> (*) [64], hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, ctrl1_t*, actp_t*)'
+    DebugLoc:        { File: src/fft.cpp, Line: 131, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 100, Column: 0 }
+Function:        _ZN3hls6vectorISt7complexIDhELm2EEC2Ev.76.81
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 2ul>::array() (.84.90)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::vector<std::complex<half>, 2ul>::vector() (.76.81)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::vector()'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<std::complex<half>, 2ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<std::complex<half>, 2ul>::vector() (.76.81)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'buffer(hls::stream<hls::vector<std::complex<half>, 2ul>, 0>&, half (*) [256], half (*) [256], ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 301, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIDhLm8EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<half, 8ul>::_S_ref(half const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<half, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<half, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/globals.hpp, Line: 29, Column: 0 }
+Function:        _Z7IFFT_APPN3hls6vectorISt7complexIDhELm4EEEPNS0_IDhLm8EEES6_P7ctrl1_tP7ctrl2_tP8layer1_tP8layer2_tP6actp_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL1w._M_imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/globals.hpp, Line: 29, Column: 0 }
+Function:        _Z7IFFT_APPN3hls6vectorISt7complexIDhELm4EEEPNS0_IDhLm8EEES6_P7ctrl1_tP7ctrl2_tP8layer1_tP8layer2_tP6actp_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL1w._M_real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/fft.cpp, Line: 218, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          out_data_6
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/fft.cpp, Line: 328, Column: 11 }
+Function:        _Z12buffer_writeRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPNS1_IDhLm8EEES8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buffer1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/fft.cpp, Line: 329, Column: 11 }
+Function:        _Z12buffer_writeRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPNS1_IDhLm8EEES8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buffer2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 245, Column: 32 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            in_st
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 369, Column: 23 }
+Function:        _Z7IFFT_APPN3hls6vectorISt7complexIDhELm4EEEPNS0_IDhLm8EEES6_P7ctrl1_tP7ctrl2_tP8layer1_tP8layer2_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            out_st
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 212, Column: 13 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            input_data
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 213, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 214, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 215, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_3
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 216, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_4
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 217, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_5
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 219, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_7
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_IFFT_AP_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_IFFT_AP_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            out1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_IFFT_AP_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            out2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 218, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_6_0_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 218, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_6_0_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 218, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_6_1_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 218, Column: 14 }
+Function:        _Z7vr_ifftPN3hls6vectorISt7complexIDhELm4EEERNS_6streamINS0_IS2_Lm2EEELi0EEEP7ctrl1_tP7ctrl2_tP8layer1_tP6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            out_data_6_1_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 267, Column: 16 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            out_data
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/fft.cpp, Line: 303, Column: 18 }
+Function:        _Z6bufferRN3hls6streamINS_6vectorISt7complexIDhELm2EEELi0EEEPA256_DhS8_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            in_data
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/fft.cpp, Line: 157, Column: 20 }
+Function:        _Z7rd_dataPN3hls6vectorISt7complexIDhELm4EEEPNS_6streamIS3_Li2EEEP7ctrl1_ti
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_157_1
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:157:20'
+  - String:          ' '
+  - Function:        'rd_data(hls::vector<std::complex<half>, 4ul>*, hls::stream<hls::vector<std::complex<half>, 4ul>, 2>*, ctrl1_t*, int)'
+    DebugLoc:        { File: src/fft.cpp, Line: 153, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/fft.cpp, Line: 273, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc14.store.36
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       out1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_273_2
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:273:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/fft.cpp, Line: 286, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc50.store.36
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep3seq
+  - String:          ' '
+  - ArrayName:       out2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_286_5
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:286:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/fft.cpp, Line: 273, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       out1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_270_1
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:270:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/fft.cpp, Line: 286, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep3seq
+  - String:          ' '
+  - ArrayName:       out2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_283_4
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:283:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/fft.cpp, Line: 157, Column: 20 }
+Function:        _Z7rd_dataPN3hls6vectorISt7complexIDhELm4EEEPNS_6streamIS3_Li2EEEP7ctrl1_ti
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_160_2
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:160:20'
+  - String:          ' '
+  - Function:        'rd_data(hls::vector<std::complex<half>, 4ul>*, hls::stream<hls::vector<std::complex<half>, 4ul>, 2>*, ctrl1_t*, int)'
+    DebugLoc:        { File: src/fft.cpp, Line: 153, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/fft.cpp, Line: 286, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep3seq
+  - String:          ' '
+  - ArrayName:       out2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_286_5
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:286:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/fft.cpp, Line: 273, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       out1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_273_2
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:273:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/fft.cpp, Line: 157, Column: 20 }
+Function:        _Z7rd_dataPN3hls6vectorISt7complexIDhELm4EEEPNS_6streamIS3_Li2EEEP7ctrl1_ti.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_160_2
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:160:20'
+  - String:          ' '
+  - Function:        'rd_data(hls::vector<std::complex<half>, 4ul>*, hls::stream<hls::vector<std::complex<half>, 4ul>, 2>*, ctrl1_t*, int) (.1)'
+    DebugLoc:        { File: src/fft.cpp, Line: 153, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/fft.cpp, Line: 157, Column: 20 }
+Function:        _Z7rd_dataPN3hls6vectorISt7complexIDhELm4EEEPNS_6streamIS3_Li2EEEP7ctrl1_ti.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_160_2
+  - String:          '''('
+  - LoopLoc:         'src/fft.cpp:160:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/fft.cpp, Line: 273, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_273_2
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:273:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t) (.1)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/fft.cpp, Line: 273, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_273_2
+  - String:          '''('
+  - LoopLoc:         'src/fft.cpp:273:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/fft.cpp, Line: 286, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_286_5
+  - String:          ' '
+  - LoopLoc:         'src/fft.cpp:286:20'
+  - String:          ' '
+  - Function:        'write(half (*) [256], half (*) [256], hls::vector<half, 8ul>*, hls::vector<half, 8ul>*, ctrl1_t, ctrl2_t, layer1_t, layer2_t, actp_t) (.1)'
+    DebugLoc:        { File: src/fft.cpp, Line: 265, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/fft.cpp, Line: 286, Column: 20 }
+Function:        _Z5writePA256_DhS0_PN3hls6vectorIDhLm8EEES4_7ctrl1_t7ctrl2_t8layer1_t8layer2_t6actp_t.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_286_5
+  - String:          '''('
+  - LoopLoc:         'src/fft.cpp:286:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

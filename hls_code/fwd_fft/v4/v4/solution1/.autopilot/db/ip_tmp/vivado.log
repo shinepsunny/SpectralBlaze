@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Oct 13 08:05:18 2022
+# Process ID: 80053
+# Current directory: /home/shine/Desktop/fft_story/hls/fwd_fft/v4/v4/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /home/shine/Desktop/fft_story/hls/fwd_fft/v4/v4/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/shine/Desktop/fft_story/hls/fwd_fft/v4/v4/solution1/.autopilot/db/ip_tmp/vivado.jou
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'fwd_fft_hmul_16ns_16ns_16_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fwd_fft_hmul_16ns_16ns_16_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fwd_fft_hmul_16ns_16ns_16_4_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'fwd_fft_hadd_16ns_16ns_16_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fwd_fft_hadd_16ns_16ns_16_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fwd_fft_hadd_16ns_16ns_16_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'fwd_fft_hsub_16ns_16ns_16_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fwd_fft_hsub_16ns_16ns_16_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fwd_fft_hsub_16ns_16ns_16_5_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 13 08:05:37 2022...

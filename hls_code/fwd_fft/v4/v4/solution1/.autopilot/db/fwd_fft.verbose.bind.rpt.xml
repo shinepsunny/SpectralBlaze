@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fwd_fft'" level="0">
+<item name = "Date">Thu Oct 13 07:49:15 2022
+</item>
+<item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)</item>
+<item name = "Project">v4</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7cg-fbvb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.536 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">64, 301271, 0.320 us, 1.506 ms, 37, 301244, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Mem_Patch_Gen_fu_312">Mem_Patch_Gen, 4, 206212, 20.000 ns, 1.031 ms, 4, 206212, no</column>
+<column name="grp_Col_Wise_Overlap_Gen_fu_332">Col_Wise_Overlap_Gen, 13, 172045, 65.000 ns, 0.860 ms, 13, 172045, no</column>
+<column name="grp_FFT_R_fu_344">FFT_R, 36, 301243, 0.180 us, 1.506 ms, 36, 301243, no</column>
+<column name="grp_Row_Wise_Synch_fu_380">Row_Wise_Synch, 5, 204293, 25.000 ns, 1.021 ms, 5, 204293, no</column>
+<column name="grp_Transpose_fu_392">Transpose, 2, 212264, 10.000 ns, 1.061 ms, 2, 212264, no</column>
+<column name="grp_FFT_C_fu_404">FFT_C, 36, 301243, 0.180 us, 1.506 ms, 36, 301243, no</column>
+<column name="out_c_channel_entry_proc47_fu_440">entry_proc47, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_Mem_patch_Wr_fu_445">Mem_patch_Wr, 2, 236840, 10.000 ns, 1.184 ms, 2, 236840, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

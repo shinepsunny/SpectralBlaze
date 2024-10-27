@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670564104757">
+  <ports id="1" name="ctrl1_regp" type="PortType" coreId="242266928" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="ctrl2_regp" type="PortType" coreId="241868128" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="layer1_regp" type="PortType" coreId="241777728" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="layer2_regp" type="PortType" coreId="241777728" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="actp_regp" type="PortType" coreId="241777728" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="16" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="17" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="18" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="19" name="ap_return_4" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="25" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="34" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="37" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="45" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="51" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="60" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="61" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="63" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="67" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.5"/>
+  <edges source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.6"/>
+  <edges source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.7"/>
+  <edges source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.8"/>
+  <edges source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.9"/>
+  <blocks id="22" name="Block_entry6_proc" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="ctrl1_regp_read" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="3" contextFuncName="IFFT_AP" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>ctrl1_regp</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="trunc_ln" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." rtlName="ap_return_0_preg" coreId="901229584" contextFuncName="IFFT_AP" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="ctrl2_regp_read" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="242413120" contextFuncName="IFFT_AP" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>ctrl2_regp</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="trunc_ln372" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." rtlName="trunc_ln372_fu_64_p1" coreId="242392080" contextFuncName="IFFT_AP" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="layer1_regp_read" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="4242651765" contextFuncName="IFFT_AP" bitwidth="32" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>layer1_regp</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="trunc_ln372_2" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." rtlName="ap_return_2_preg" coreId="241777728" contextFuncName="IFFT_AP" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="layer2_regp_read" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="242393120" contextFuncName="IFFT_AP" bitwidth="32" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>layer2_regp</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="trunc_ln372_3" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." rtlName="ap_return_3_preg" coreId="241777728" contextFuncName="IFFT_AP" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="actp_regp_read" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="242513728" contextFuncName="IFFT_AP" bitwidth="32" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>actp_regp</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="trunc_ln372_4" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." rtlName="ap_return_4_preg" coreId="242294224" contextFuncName="IFFT_AP" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="mrv" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="241650320" contextFuncName="IFFT_AP" bitwidth="56" opcode="insertvalue" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="mrv_1" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="25" contextFuncName="IFFT_AP" bitwidth="56" opcode="insertvalue" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="mrv_2" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="1881171302" contextFuncName="IFFT_AP" bitwidth="56" opcode="insertvalue" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="mrv_3" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="1314476891" contextFuncName="IFFT_AP" bitwidth="56" opcode="insertvalue" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="mrv_4" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="4244264859" contextFuncName="IFFT_AP" bitwidth="56" opcode="insertvalue" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln372" lineNumber="372" fileName="src/fft.cpp" fileDirectory=".." coreId="241874176" contextFuncName="IFFT_AP" opcode="ret" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/fft.cpp" linenumber="372" fileDirectory="/home/shine/Documents/research/fft_story/hls/inv_fft/v10" functionName="IFFT_AP"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+      <dataOutputObjs>ap_return_2</dataOutputObjs>
+      <dataOutputObjs>ap_return_3</dataOutputObjs>
+      <dataOutputObjs>ap_return_4</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/fft.cpp">
+      <validLinenumbers>372</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="mrv_3_fu_116">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_54">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln372_2_fu_68">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln372_fu_64">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_4_fu_122">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln372_4_fu_88">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_98">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_2_fu_110">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_104">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln372_3_fu_78">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="ctrl1_regp_read_read_fu_24">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ctrl2_regp_read_read_fu_30">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="actp_regp_read_read_fu_48">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer1_regp_read_read_fu_36">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer2_regp_read_read_fu_42">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioPorts name="actp_regp">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_regp">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_regp">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_regp">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer2_regp">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_4">
+    <contents name="ret">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Block_entry6_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

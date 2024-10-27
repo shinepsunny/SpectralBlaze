@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627570611">
+  <ports id="1" name="c_fft_col_op_st" type="PortType" coreName="FIFO_SRL" coreId="1869635878" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="ifmap_CF_M_real" type="PortType" coreName="RAM" coreId="628218096" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="ifmap_CF_M_imag" type="PortType" coreName="RAM" coreId="620235456" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="4" name="p_read" type="PortType" coreId="1795156656" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="14" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="106" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="112" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="119" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="126" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="128" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="157" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@ports.1"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@ports.2"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="175" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="188" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="193" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="215" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="218" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.1/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="231" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="232" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.42"/>
+  <edges id="240" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="242" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.1/@node_objs.42" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="245" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="248" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.1/@node_objs.45" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.49"/>
+  <edges id="251" source_obj="//@regions.0/@basic_blocks.1/@node_objs.45" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.49"/>
+  <edges id="252" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.49"/>
+  <edges id="253" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="254" source_obj="//@regions.0/@basic_blocks.1/@node_objs.47" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="255" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="256" source_obj="//@regions.0/@basic_blocks.1/@node_objs.48" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.51"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.1/@node_objs.50" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.52"/>
+  <edges id="259" source_obj="//@regions.0/@basic_blocks.1/@node_objs.49" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.53"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.1/@node_objs.51" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="261" source_obj="//@regions.0/@basic_blocks.1/@node_objs.46" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.55"/>
+  <edges id="262" source_obj="//@regions.0/@basic_blocks.1/@node_objs.52" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.55"/>
+  <edges id="264" source_obj="//@regions.0/@basic_blocks.1/@node_objs.55" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.56"/>
+  <edges id="267" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.57"/>
+  <edges id="268" source_obj="//@regions.0/@basic_blocks.1/@node_objs.56" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.57"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.1/@node_objs.55" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.57"/>
+  <edges id="271" source_obj="//@regions.0/@basic_blocks.1/@node_objs.53" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <edges id="273" source_obj="//@regions.0/@basic_blocks.1/@node_objs.54" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.59"/>
+  <edges id="274" source_obj="//@regions.0/@basic_blocks.1/@node_objs.58" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.60"/>
+  <edges id="275" source_obj="//@regions.0/@basic_blocks.1/@node_objs.59" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.60"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.61"/>
+  <edges id="277" source_obj="//@regions.0/@basic_blocks.1/@node_objs.60" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.61"/>
+  <edges id="279" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.62"/>
+  <edges id="280" source_obj="//@regions.0/@basic_blocks.1/@node_objs.61" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.62"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.62"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.63"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.64"/>
+  <edges id="285" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.64"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="287" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.1/@node_objs.63" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="289" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="290" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.67"/>
+  <edges id="291" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="345" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="346" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="347" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="348" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="349" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="350" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="351" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="352" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.64"/>
+  <edges id="353" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="354" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="355" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="356" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="357" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.64"/>
+  <edges source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.4"/>
+  <blocks id="16" name=".lr.ph6" type="BlockType">
+    <controlOutputObjs>block_22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="y" originalName="y" coreId="628345760" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="x" originalName="x" coreId="618756480" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="indvar_flatten" coreId="30" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="p_read14" lineNumber="396" fileName="src/main.cpp" fileDirectory=".." coreId="50" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="396" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>p_read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="cast" lineNumber="396" fileName="src/main.cpp" fileDirectory=".." rtlName="cast_fu_132_p1" coreId="624456928" contextFuncName="ifmap_gen_y" bitwidth="16" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="396" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="bound" lineNumber="396" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_8ns_8ns_16_1_1_U441" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="ifmap_gen_y" bitwidth="16" opcode="mul" m_display="0" m_delay="2.17" m_isOnCriticalPath="true" m_isStartOfPath="true" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="396" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="indvar_flatten_write_ln400" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." coreId="617892928" contextFuncName="ifmap_gen_y" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="x_write_ln400" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." coreId="624718992" contextFuncName="ifmap_gen_y" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="y_write_ln400" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." coreId="542329928" contextFuncName="ifmap_gen_y" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln400" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." coreId="623181872" contextFuncName="ifmap_gen_y" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <controlInputObjs>block_22</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/main.cpp">
+      <validLinenumbers>396</validLinenumbers>
+      <validLinenumbers>400</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="99" name="._crit_edge7.loopexit" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="_ln409" lineNumber="409" fileName="src/main.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="ifmap_gen_y" opcode="ret" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="409" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/main.cpp">
+      <validLinenumbers>409</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="377" pipe_depth="2" RegionName="VITIS_LOOP_400_1_VITIS_LOOP_403_2">
+    <basic_blocks id="22" name="block_22" type="BlockType">
+      <controlInputObjs>.lr.ph6</controlInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge7.loopexit</controlOutputObjs>
+      <controlOutputObjs>._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="indvar_flatten_load" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="628090112" contextFuncName="operator_lt_8_false" bitwidth="16" opcode="load" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="icmp_ln1057" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1057_fu_160_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_8_false" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.86" m_isOnCriticalPath="true" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="add_ln1057" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln1057_fu_166_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_lt_8_false" bitwidth="16" opcode="add" m_display="0" m_delay="1.01" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln1057" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="628090112" contextFuncName="operator_lt_8_false" opcode="br" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>._crit_edge</controlInputObjs>
+        <controlInputObjs>._crit_edge7.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>1057</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="97" name="._crit_edge" type="BlockType">
+      <controlInputObjs>block_22</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_22</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="y_load" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1397508187" contextFuncName="operator_lt_8_false" bitwidth="8" opcode="load" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="x_load" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." coreId="1810455536" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="load" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="add_ln400" lineNumber="400" fileName="src/main.cpp" fileDirectory=".." rtlName="add_ln400_fu_178_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="add" m_display="0" m_delay="0.9" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="400" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="icmp_ln1057_2" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1057_2_fu_184_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_8_false" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="select_ln399" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="select_ln399_fu_190_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="select_ln399_1" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="select_ln399_1_fu_198_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln406_mid2_v" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="zext_ln406_mid2_v_fu_206_p4" coreId="1314013527" contextFuncName="ifmap_gen_y" bitwidth="7" opcode="partselect" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln399" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="zext_ln399_fu_216_p1" coreId="618255104" contextFuncName="ifmap_gen_y" bitwidth="11" opcode="zext" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="trunc_ln399" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="trunc_ln399_fu_220_p1" coreId="628410208" contextFuncName="ifmap_gen_y" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="and_ln145_cast_mid2_v" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="and_ln145_cast_mid2_v_fu_224_p3" coreId="1397508187" contextFuncName="ifmap_gen_y" bitwidth="5" opcode="bitconcatenate" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="or_ln399" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." rtlName="or_ln399_fu_232_p2" coreId="621683152" contextFuncName="ifmap_gen_y" bitwidth="5" opcode="or" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="trunc_ln406" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." rtlName="trunc_ln406_fu_238_p1" coreId="622132704" contextFuncName="ifmap_gen_y" bitwidth="6" opcode="trunc" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp_10_cast" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." rtlName="tmp_10_cast_fu_242_p3" coreId="621530672" contextFuncName="ifmap_gen_y" bitwidth="11" opcode="bitconcatenate" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="add_ln406" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." rtlName="add_ln406_fu_250_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ifmap_gen_y" bitwidth="11" opcode="add" m_display="0" m_delay="0.94" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="zext_ln406" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." rtlName="zext_ln406_fu_289_p1" coreId="628410208" contextFuncName="ifmap_gen_y" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="ifmap_CF_M_real_addr" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." coreId="611956672" contextFuncName="ifmap_gen_y" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>ifmap_CF_M_real</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="ifmap_CF_M_imag_addr" lineNumber="406" fileName="src/main.cpp" fileDirectory=".." coreId="626425760" contextFuncName="ifmap_gen_y" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="406" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>ifmap_CF_M_imag</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="c_fft_col_op_st_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>c_fft_col_op_st</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="trunc_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="trunc_ln145_fu_294_p1" coreId="628030832" contextFuncName="read" bitwidth="16" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="icmp_ln145_fu_256_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="read" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.87" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="zext_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_fu_297_p1" coreId="623286992" contextFuncName="read" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="zext_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_1_fu_300_p1" coreId="628090112" contextFuncName="read" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_2_fu_303_p1" coreId="626402832" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="xor_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="xor_ln145_fu_307_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="read" bitwidth="6" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="select_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_fu_313_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_1_fu_320_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="select_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_2_fu_327_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="xor_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="xor_ln145_1_fu_334_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="read" bitwidth="6" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln145_3" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_3_fu_340_p1" coreId="628090112" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="zext_ln145_4" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_4_fu_344_p1" coreId="624509760" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="zext_ln145_5" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_5_fu_348_p1" coreId="542329856" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>lshr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="shl_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="shl_ln145_fu_352_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="read" bitwidth="32" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="1.01" m_topoIndex="52" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="tmp_fu_358_p4" coreId="623979392" contextFuncName="read" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="select_ln145_3" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_3_fu_368_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="32" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="shl_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="shl_ln145_1_fu_375_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="read" bitwidth="32" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="lshr_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="lshr_ln145_fu_381_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="read" bitwidth="32" opcode="lshr" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="and_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="and_ln145_fu_387_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="read" bitwidth="32" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.84" m_topoIndex="57" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataInputObjs>lshr</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="and_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="ifmap_CF_M_real_d0" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="read" bitwidth="32" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.52" m_topoIndex="58" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="tmp_1_fu_400_p3" coreId="621831968" contextFuncName="read" bitwidth="2" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="zext_ln145_6" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_6_fu_407_p1" coreId="625081392" contextFuncName="read" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="shl_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="shl_ln145_2_fu_411_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="read" bitwidth="4" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="0.64" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="ifmap_CF_M_real_addr_write_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="read" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.35" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="trunc_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="trunc_ln145_2_fu_419_p4" coreId="622784368" contextFuncName="read" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="icmp_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="icmp_ln145_1_fu_262_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="read" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.87" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="zext_ln145_7" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_7_fu_428_p1" coreId="176" contextFuncName="read" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln145_8" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_8_fu_431_p1" coreId="625506304" contextFuncName="read" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="zext_ln145_9" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_9_fu_434_p1" coreId="625227680" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="xor_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="xor_ln145_2_fu_438_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="read" bitwidth="6" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="select_ln145_4" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_4_fu_444_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="select_ln145_5" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_5_fu_451_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="select_ln145_6" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_6_fu_458_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="xor_ln145_3" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="xor_ln145_3_fu_465_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="read" bitwidth="6" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="zext_ln145_10" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_10_fu_471_p1" coreId="625888400" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="zext_ln145_11" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_11_fu_475_p1" coreId="625944016" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="zext_ln145_12" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="zext_ln145_12_fu_479_p1" coreId="626663312" contextFuncName="read" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>lshr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="shl_ln145_3" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="shl_ln145_3_fu_483_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="read" bitwidth="32" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="1.01" m_topoIndex="75" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="tmp_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="tmp_2_fu_489_p4" coreId="176" contextFuncName="read" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="6">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="select_ln145_7" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="select_ln145_7_fu_499_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="read" bitwidth="32" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="6">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="shl_ln145_4" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="shl_ln145_4_fu_506_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="read" bitwidth="32" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="lshr_ln145_1" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="lshr_ln145_1_fu_512_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="read" bitwidth="32" opcode="lshr" nodeLabel="1.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="and_ln145_2" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="and_ln145_2_fu_518_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="read" bitwidth="32" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.84" m_topoIndex="80" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataInputObjs>lshr</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="and_ln145_3" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="ifmap_CF_M_imag_d0" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="read" bitwidth="32" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.52" m_topoIndex="81" m_clusterGroupNumber="6">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="ifmap_CF_M_imag_addr_write_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="read" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.35" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="read"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="add_ln403" lineNumber="403" fileName="src/main.cpp" fileDirectory=".." rtlName="add_ln403_fu_268_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ifmap_gen_y" bitwidth="8" opcode="add" m_display="0" m_delay="0.9" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="403" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="indvar_flatten_write_ln1057" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1397508187" contextFuncName="operator_lt_8_false" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="x_write_ln399" lineNumber="399" fileName="src/main.cpp" fileDirectory=".." coreId="624951744" contextFuncName="ifmap_gen_y" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="399" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="y_write_ln403" lineNumber="403" fileName="src/main.cpp" fileDirectory=".." coreId="618311168" contextFuncName="ifmap_gen_y" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="403" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ifmap_gen_y"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln0" coreId="220" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_22</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="src/main.cpp">
+        <validLinenumbers>400</validLinenumbers>
+        <validLinenumbers>399</validLinenumbers>
+        <validLinenumbers>406</validLinenumbers>
+        <validLinenumbers>403</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>1057</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="c_fft_col_op_st_read_reg_577">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten_reg_545">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln399_reg_555">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="x_reg_538">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln406_reg_572">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln145_1_reg_591">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln145_reg_583">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln399_reg_566">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="y_reg_531">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln145_cast_mid2_v_reg_560">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <expressionNodes realName="lshr_ln145_fu_381">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten_fu_92">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln145_fu_294">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln145_2_fu_438">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln399_fu_220">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_cast_fu_242">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln145_2_fu_419">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln145_fu_307">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_6_fu_407">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln145_fu_256">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_400">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_7_fu_499">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln145_cast_mid2_v_fu_224">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_5_fu_451">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln399_fu_216">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln406_fu_238">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln145_fu_352">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln400_fu_178">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln406_fu_250">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln399_fu_190">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_fu_88">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_1_fu_320">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_11_fu_475">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_3_fu_368">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln145_1_fu_512">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_8_fu_431">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln145_1_fu_262">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln403_fu_268">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast_fu_132">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln145_1_fu_375">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_358">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1057_fu_160">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln145_2_fu_411">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln406_fu_289">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln145_1_fu_393">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln145_1_fu_334">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_2_fu_303">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_5_fu_348">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1057_2_fu_184">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_7_fu_428">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_fu_313">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_3_fu_340">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln145_2_fu_518">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_6_fu_458">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_1_fu_300">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_4_fu_344">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_489">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_9_fu_434">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln145_3_fu_524">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_fu_84">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln145_3_fu_483">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln145_4_fu_506">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln399_1_fu_198">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln145_fu_387">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ifmap_CF_M_imag_addr_gep_fu_115">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln145_3_fu_465">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_2_fu_327">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln399_fu_232">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_10_fu_471">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bound_fu_136">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln1057_fu_166">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ifmap_CF_M_real_addr_gep_fu_108">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln145_4_fu_444">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_12_fu_479">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln145_fu_297">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln406_mid2_v_fu_206">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="indvar_flatten_load_load_fu_157">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln399_store_fu_279">
+    <nodeIds>94</nodeIds>
+  </ioNodes>
+  <ioNodes realName="y_load_load_fu_172">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln400_store_fu_147">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln403_store_fu_284">
+    <nodeIds>95</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln1057_store_fu_274">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln400_store_fu_142">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="x_load_load_fu_175">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read14_read_fu_96">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln400_store_fu_152">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_fft_col_op_st_read_read_fu_102">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="ifmap_CF_M_imag">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="ifmap_CF_M_real">
+    <nodeIds>69</nodeIds>
+  </memoryPorts>
+  <ioPorts name="c_fft_col_op_st">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ifmap_CF_M_imag(p0)">
+    <contents name="store">
+      <nodeIds>91</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ifmap_CF_M_real(p0)">
+    <contents name="store">
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>98</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ifmap_gen_y" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2" mMaxLatency="258">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_400_1_VITIS_LOOP_403_2" mII="1" mDepth="2" mMaxTripCount="256" mMaxLatency="256" mType="1">
+      <basicBlocks>22</basicBlocks>
+      <basicBlocks>97</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>99</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

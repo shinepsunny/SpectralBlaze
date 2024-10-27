@@ -1,0 +1,91 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'shine' on host 'shine-VivoBook-ASUSLaptop-K3502ZA-S3502ZA' (Linux_x86_64 version 5.19.5) on Fri Dec 09 11:06:25 IST 2022
+INFO: [HLS 200-10] On os Ubuntu Lunar Lobster (development branch)
+INFO: [HLS 200-10] In directory '/home/shine/Documents/research/fft_story/hls/inv_fft/v10'
+Sourcing Tcl script '/home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project v10 
+INFO: [HLS 200-10] Opening project '/home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10'.
+INFO: [HLS 200-1510] Running: set_top IFFT_AP 
+INFO: [HLS 200-1510] Running: add_files src/fft.cpp 
+INFO: [HLS 200-10] Adding design file 'src/fft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/globals.hpp 
+INFO: [HLS 200-10] Adding design file 'src/globals.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/types.hpp 
+INFO: [HLS 200-10] Adding design file 'src/types.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/main.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7cg-fbvb900-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=VR_IFFT
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/shine/Desktop/fft_story/vivado/ip_repo
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1510] Running: set_part xczu7cg-fbvb900-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [HLS 200-1510] Running: config_export -display_name VR_IFFT -format ip_catalog -output /home/shine/Desktop/fft_story/vivado/ip_repo -rtl verilog -version 1.0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+Running Dispatch Server on port: 38927
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../src/fft.cpp in debug mode
+   Generating csim.exe
+../../../../src/fft.cpp: In function ‘void vr_ifft(c_fft_op_vec_t*, c_fft_op_vec2_stream&, ctrl1_t*, ctrl2_t*, layer1_t*, actp_t*)’:
+../../../../src/fft.cpp:212:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t input_data[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:213:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_1[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:214:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_2[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:215:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_3[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:216:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_4[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:217:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_5[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:218:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_6[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+../../../../src/fft.cpp:219:64: warning: ‘no_ctor’ attribute directive ignored [-Wattributes]
+   c_fft_op_t out_data_7[MAX_PS][MAX_PS] __attribute__((no_ctor));
+                                                                ^
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: /lib/x86_64-linux-gnu/libm.so.6: unknown type [0x13] section `.relr.dyn'
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: skipping incompatible /lib/x86_64-linux-gnu/libm.so.6 when searching for /lib/x86_64-linux-gnu/libm.so.6
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: cannot find /lib/x86_64-linux-gnu/libm.so.6
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: /lib/x86_64-linux-gnu/libm.so.6: unknown type [0x13] section `.relr.dyn'
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: skipping incompatible /lib/x86_64-linux-gnu/libm.so.6 when searching for /lib/x86_64-linux-gnu/libm.so.6
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: /lib/x86_64-linux-gnu/libmvec.so.1: unknown type [0x13] section `.relr.dyn'
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: skipping incompatible /lib/x86_64-linux-gnu/libmvec.so.1 when searching for /lib/x86_64-linux-gnu/libmvec.so.1
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: cannot find /lib/x86_64-linux-gnu/libmvec.so.1
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: /lib/x86_64-linux-gnu/libmvec.so.1: unknown type [0x13] section `.relr.dyn'
+/tools/Xilinx/Vivado/2022.2/tps/lnx64/binutils-2.37/bin/ld: skipping incompatible /lib/x86_64-linux-gnu/libmvec.so.1 when searching for /lib/x86_64-linux-gnu/libmvec.so.1
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:323: csim.exe] Error 1
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.51 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.78 seconds; current allocated memory: 0.000 MB.
+5
+    while executing
+"source /home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1/csim.tcl"
+    invoked from within
+"hls::main /home/shine/Documents/research/fft_story/hls/inv_fft/v10/v10/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 4.27 seconds. Total CPU system time: 0.34 seconds. Total elapsed time: 14.54 seconds; peak allocated memory: 206.270 MB.

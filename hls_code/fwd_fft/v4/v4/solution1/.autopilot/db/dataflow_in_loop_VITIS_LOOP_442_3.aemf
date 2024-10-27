@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627564283">
+  <ports id="1" name="c_row_op_st" type="PortType" coreName="FIFO_SRL" coreId="1330007625" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_read" type="PortType" coreId="612223584" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="c_row_op_trans_st" type="PortType" coreName="FIFO_SRL" coreId="613263936" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="16" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="22" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="23" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="24" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="25" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="28" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="29" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="30" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@ports.2"/>
+  <edges id="31" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="76" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="77" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="79" RegionName="dataflow_in_loop_VITIS_LOOP_442_3">
+    <basic_blocks id="13" name="dataflow_in_loop_VITIS_LOOP_442_3" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="p_read_25" coreId="613584816" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>p_read</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="ifmap_RF_M_real" lineNumber="446" originalName="ifmap_RF._M_real" fileName="src/main.cpp" fileDirectory=".." rtlName="ifmap_RF_M_real_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="Transpose" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="446" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Transpose"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="ifmap_RF_M_imag" lineNumber="446" originalName="ifmap_RF._M_imag" fileName="src/main.cpp" fileDirectory=".." rtlName="ifmap_RF_M_imag_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="Transpose" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="446" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Transpose"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="ctrl1_reg_c_channel1" lineNumber="447" fileName="src/main.cpp" fileDirectory=".." rtlName="ctrl1_reg_c_channel1_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="Transpose" bitwidth="8" opcode="call" nodeLatency="1" m_display="0" m_delay="3.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="447" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Transpose"/>
+        <dataInputObjs>c_row_op_st</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>ifmap_gen_x</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln448" lineNumber="448" fileName="src/main.cpp" fileDirectory=".." rtlName="ifmap_cons_y_U0" coreId="616206736" contextFuncName="Transpose" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="448" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Transpose"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>c_row_op_trans_st</dataOutputObjs>
+        <constName>ifmap_cons_y</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln448" lineNumber="448" fileName="src/main.cpp" fileDirectory=".." coreId="613584816" contextFuncName="Transpose" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="448" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Transpose"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="src/main.cpp">
+        <validLinenumbers>446</validLinenumbers>
+        <validLinenumbers>447</validLinenumbers>
+        <validLinenumbers>448</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="p_read_25_reg_61">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c_channel1_reg_66">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <expressionNodes realName="ifmap_RF_M_real_alloca_fu_26">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ifmap_RF_M_imag_alloca_fu_30">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_ifmap_gen_x_fu_40">
+    <nodeIds>10</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ifmap_cons_y_fu_52">
+    <nodeIds>11</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="p_read_25_read_fu_34">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="c_row_op_st">
+    <contents name="call">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_row_op_trans_st">
+    <contents name="call">
+      <nodeIds>11</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="10" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="11" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="2"/>
+      <operations id="12" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dataflow_in_loop_VITIS_LOOP_442_3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="5" mMaxLatency="518" mIsDfPipe="true">
+      <basicBlocks>13</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst">
+        <processe_list name="ifmap_gen_x_U0" ssdmobj_id="10">
+          <pins>
+            <port name="c_row_op_st" top_port_object_id="" top_port_object_id_reference="_31" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_gen_x_U0" ssdmobj_id="10" object_id="_37"/>
+          </pins>
+          <pins>
+            <port name="p_read" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_32" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_gen_x_U0" ssdmobj_id="10" object_id="_37"/>
+          </pins>
+        </processe_list>
+        <processe_list name="ifmap_cons_y_U0" ssdmobj_id="11">
+          <pins>
+            <port name="c_row_op_trans_st" dir="DirOut" top_port_object_id="" top_port_object_id_reference="_33" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_cons_y_U0" ssdmobj_id="11" object_id="_43"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="ifmap_RF_M_real" ssdmobj_id="8">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_gen_x_U0" ssdmobj_id="10" object_id="_37"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_cons_y_U0" ssdmobj_id="11" object_id="_43"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="ifmap_RF_M_imag" ssdmobj_id="9">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_gen_x_U0" ssdmobj_id="10" object_id="_37"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_cons_y_U0" ssdmobj_id="11" object_id="_43"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="8" suggested_type="1" suggested_depth="2" name="ctrl1_reg_c_channel1" ssdmobj_id="10">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_gen_x_U0" ssdmobj_id="10" object_id="_37"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ifmap_cons_y_U0" ssdmobj_id="11" object_id="_43"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,164 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FFT_R'" level="0">
+<item name = "Date">Thu Oct 13 07:49:22 2022
+</item>
+<item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)</item>
+<item name = "Project">v4</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7cg-fbvb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.708 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">36, 301243, 0.180 us, 1.506 ms, 36, 301243, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dataflow_parent_loop_proc11_fu_112">dataflow_parent_loop_proc11, 28, 301235, 0.140 us, 1.506 ms, 28, 301235, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 2, -, -, -</column>
+<column name="Expression">-, -, 0, 6, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">28, 120, 11387, 10669, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 144, -</column>
+<column name="Register">-, -, 110, -, -</column>
+<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Utilization (%)">4, 7, 2, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_dataflow_parent_loop_proc11_fu_112">dataflow_parent_loop_proc11, 28, 120, 11387, 10629, 0</column>
+<column name="mul_8ns_8ns_16_1_1_U218">mul_8ns_8ns_16_1_1, 0, 0, 0, 40, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mul_mul_16ns_8ns_24_4_1_U219">mul_mul_16ns_8ns_24_4_1, i0 * i1</column>
+<column name="mul_mul_24ns_16ns_32_4_1_U220">mul_mul_24ns_16ns_32_4_1, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_grp_dataflow_parent_loop_proc11_fu_112_ap_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_grp_dataflow_parent_loop_proc11_fu_112_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">54, 10, 1, 10</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="c_fft_row_op_st_write">9, 2, 1, 2</column>
+<column name="c_ifmap_col_op_st_read">9, 2, 1, 2</column>
+<column name="ctrl1_reg_blk_n">9, 2, 1, 2</column>
+<column name="ctrl1_reg_c19_blk_n">9, 2, 1, 2</column>
+<column name="ctrl2_reg_blk_n">9, 2, 1, 2</column>
+<column name="ctrl2_reg_c24_blk_n">9, 2, 1, 2</column>
+<column name="layer1_reg_blk_n">9, 2, 1, 2</column>
+<column name="layer1_reg_c29_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">9, 0, 9, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_sync_reg_grp_dataflow_parent_loop_proc11_fu_112_ap_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_grp_dataflow_parent_loop_proc11_fu_112_ap_ready">1, 0, 1, 0</column>
+<column name="ctrl1_reg_read_reg_203">32, 0, 32, 0</column>
+<column name="grp_dataflow_parent_loop_proc11_fu_112_ap_start_reg">1, 0, 1, 0</column>
+<column name="n_reg_244">32, 0, 32, 0</column>
+<column name="rhs_reg_213">8, 0, 8, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="trunc_ln225_reg_219">16, 0, 16, 0</column>
+<column name="trunc_ln_reg_208">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, FFT_R, return value</column>
+<column name="c_ifmap_col_op_st_dout">in, 32, ap_fifo, c_ifmap_col_op_st, pointer</column>
+<column name="c_ifmap_col_op_st_empty_n">in, 1, ap_fifo, c_ifmap_col_op_st, pointer</column>
+<column name="c_ifmap_col_op_st_read">out, 1, ap_fifo, c_ifmap_col_op_st, pointer</column>
+<column name="c_fft_row_op_st_din">out, 32, ap_fifo, c_fft_row_op_st, pointer</column>
+<column name="c_fft_row_op_st_full_n">in, 1, ap_fifo, c_fft_row_op_st, pointer</column>
+<column name="c_fft_row_op_st_write">out, 1, ap_fifo, c_fft_row_op_st, pointer</column>
+<column name="ctrl1_reg_dout">in, 32, ap_fifo, ctrl1_reg, pointer</column>
+<column name="ctrl1_reg_empty_n">in, 1, ap_fifo, ctrl1_reg, pointer</column>
+<column name="ctrl1_reg_read">out, 1, ap_fifo, ctrl1_reg, pointer</column>
+<column name="ctrl2_reg_dout">in, 32, ap_fifo, ctrl2_reg, pointer</column>
+<column name="ctrl2_reg_empty_n">in, 1, ap_fifo, ctrl2_reg, pointer</column>
+<column name="ctrl2_reg_read">out, 1, ap_fifo, ctrl2_reg, pointer</column>
+<column name="layer1_reg_dout">in, 32, ap_fifo, layer1_reg, pointer</column>
+<column name="layer1_reg_empty_n">in, 1, ap_fifo, layer1_reg, pointer</column>
+<column name="layer1_reg_read">out, 1, ap_fifo, layer1_reg, pointer</column>
+<column name="ctrl1_reg_c19_din">out, 32, ap_fifo, ctrl1_reg_c19, pointer</column>
+<column name="ctrl1_reg_c19_full_n">in, 1, ap_fifo, ctrl1_reg_c19, pointer</column>
+<column name="ctrl1_reg_c19_write">out, 1, ap_fifo, ctrl1_reg_c19, pointer</column>
+<column name="ctrl2_reg_c24_din">out, 32, ap_fifo, ctrl2_reg_c24, pointer</column>
+<column name="ctrl2_reg_c24_full_n">in, 1, ap_fifo, ctrl2_reg_c24, pointer</column>
+<column name="ctrl2_reg_c24_write">out, 1, ap_fifo, ctrl2_reg_c24, pointer</column>
+<column name="layer1_reg_c29_din">out, 32, ap_fifo, layer1_reg_c29, pointer</column>
+<column name="layer1_reg_c29_full_n">in, 1, ap_fifo, layer1_reg_c29, pointer</column>
+<column name="layer1_reg_c29_write">out, 1, ap_fifo, layer1_reg_c29, pointer</column>
+</table>
+</item>
+</section>
+</profile>

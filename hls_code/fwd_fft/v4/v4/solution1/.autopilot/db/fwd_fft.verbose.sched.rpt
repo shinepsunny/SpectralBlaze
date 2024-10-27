@@ -1,0 +1,315 @@
+
+
+================================================================
+== Vitis HLS Report for 'fwd_fft'
+================================================================
+* Date:           Thu Oct 13 07:49:14 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.536 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   | min |   max  |   Type   |
+    +---------+---------+----------+----------+-----+--------+----------+
+    |       64|   301271|  0.320 us|  1.506 ms|   37|  301244|  dataflow|
+    +---------+---------+----------+----------+-----+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 15, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 16 [1/1] (1.00ns)   --->   "%out_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %out_r"   --->   Operation 16 'read' 'out_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 17 [1/1] (1.00ns)   --->   "%in2_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %in2"   --->   Operation 17 'read' 'in2_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 18 [1/1] (1.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %in1"   --->   Operation 18 'read' 'in1_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%layer1_reg_c31 = alloca i64 1"   --->   Operation 19 'alloca' 'layer1_reg_c31' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%layer1_reg_c30 = alloca i64 1"   --->   Operation 20 'alloca' 'layer1_reg_c30' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%layer1_reg_c29 = alloca i64 1"   --->   Operation 21 'alloca' 'layer1_reg_c29' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%layer1_reg_c28 = alloca i64 1"   --->   Operation 22 'alloca' 'layer1_reg_c28' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%layer1_reg_c27 = alloca i64 1"   --->   Operation 23 'alloca' 'layer1_reg_c27' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%layer1_reg_c = alloca i64 1"   --->   Operation 24 'alloca' 'layer1_reg_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%ctrl2_reg_c26 = alloca i64 1"   --->   Operation 25 'alloca' 'ctrl2_reg_c26' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%ctrl2_reg_c25 = alloca i64 1"   --->   Operation 26 'alloca' 'ctrl2_reg_c25' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%ctrl2_reg_c24 = alloca i64 1"   --->   Operation 27 'alloca' 'ctrl2_reg_c24' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ctrl2_reg_c23 = alloca i64 1"   --->   Operation 28 'alloca' 'ctrl2_reg_c23' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%ctrl2_reg_c22 = alloca i64 1"   --->   Operation 29 'alloca' 'ctrl2_reg_c22' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%ctrl2_reg_c = alloca i64 1"   --->   Operation 30 'alloca' 'ctrl2_reg_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%ctrl1_reg_c21 = alloca i64 1"   --->   Operation 31 'alloca' 'ctrl1_reg_c21' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%ctrl1_reg_c20 = alloca i64 1"   --->   Operation 32 'alloca' 'ctrl1_reg_c20' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%ctrl1_reg_c19 = alloca i64 1"   --->   Operation 33 'alloca' 'ctrl1_reg_c19' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%ctrl1_reg_c18 = alloca i64 1"   --->   Operation 34 'alloca' 'ctrl1_reg_c18' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%ctrl1_reg_c17 = alloca i64 1"   --->   Operation 35 'alloca' 'ctrl1_reg_c17' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%ctrl1_reg_c = alloca i64 1"   --->   Operation 36 'alloca' 'ctrl1_reg_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%c_ifmap_patch_st = alloca i64 1" [src/main.cpp:509]   --->   Operation 37 'alloca' 'c_ifmap_patch_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.97> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1001> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%c_ifmap_col_op_st = alloca i64 1" [src/main.cpp:510]   --->   Operation 38 'alloca' 'c_ifmap_col_op_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.97> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1001> <FIFO>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%c_fft_row_op_st = alloca i64 1" [src/main.cpp:511]   --->   Operation 39 'alloca' 'c_fft_row_op_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%c_fft_col_op_st = alloca i64 1" [src/main.cpp:512]   --->   Operation 40 'alloca' 'c_fft_col_op_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%c_row_op_st = alloca i64 1" [src/main.cpp:513]   --->   Operation 41 'alloca' 'c_row_op_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%c_row_op_trans_st = alloca i64 1" [src/main.cpp:514]   --->   Operation 42 'alloca' 'c_row_op_trans_st' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.86>
+ST_2 : Operation 43 [2/2] (2.86ns)   --->   "%call_ln518 = call void @Mem_Patch_Gen, i128 %gmem, i64 %in1_read, i64 %in2_read, i32 %c_ifmap_patch_st, i32 %ctrl1_reg, i32 %ctrl2_reg, i32 %layer1_reg, i32 %layer2_reg, i32 %ctrl1_reg_c21, i32 %ctrl2_reg_c26, i32 %layer1_reg_c31" [src/main.cpp:518]   --->   Operation 43 'call' 'call_ln518' <Predicate = true> <Delay = 2.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln518 = call void @Mem_Patch_Gen, i128 %gmem, i64 %in1_read, i64 %in2_read, i32 %c_ifmap_patch_st, i32 %ctrl1_reg, i32 %ctrl2_reg, i32 %layer1_reg, i32 %layer2_reg, i32 %ctrl1_reg_c21, i32 %ctrl2_reg_c26, i32 %layer1_reg_c31" [src/main.cpp:518]   --->   Operation 44 'call' 'call_ln518' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln519 = call void @Col_Wise_Overlap_Gen, i32 %c_ifmap_patch_st, i32 %c_ifmap_col_op_st, i32 %ctrl1_reg_c21, i32 %ctrl2_reg_c26, i32 %layer1_reg_c31, i32 %ctrl1_reg_c20, i32 %ctrl2_reg_c25, i32 %layer1_reg_c30" [src/main.cpp:519]   --->   Operation 45 'call' 'call_ln519' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln519 = call void @Col_Wise_Overlap_Gen, i32 %c_ifmap_patch_st, i32 %c_ifmap_col_op_st, i32 %ctrl1_reg_c21, i32 %ctrl2_reg_c26, i32 %layer1_reg_c31, i32 %ctrl1_reg_c20, i32 %ctrl2_reg_c25, i32 %layer1_reg_c30" [src/main.cpp:519]   --->   Operation 46 'call' 'call_ln519' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 47 [2/2] (0.00ns)   --->   "%call_ln520 = call void @FFT_R, i32 %c_ifmap_col_op_st, i32 %c_fft_row_op_st, i32 %ctrl1_reg_c20, i32 %ctrl2_reg_c25, i32 %layer1_reg_c30, i32 %ctrl1_reg_c19, i32 %ctrl2_reg_c24, i32 %layer1_reg_c29, i16 %w_M_real40, i16 %w_M_imag29, i16 %w_M_real39, i16 %w_M_imag28, i16 %w_M_real38, i16 %w_M_imag27, i16 %w_M_real37, i16 %w_M_imag26, i16 %w_M_real36, i16 %w_M_imag25, i16 %w_M_real, i16 %w_M_imag" [src/main.cpp:520]   --->   Operation 47 'call' 'call_ln520' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln520 = call void @FFT_R, i32 %c_ifmap_col_op_st, i32 %c_fft_row_op_st, i32 %ctrl1_reg_c20, i32 %ctrl2_reg_c25, i32 %layer1_reg_c30, i32 %ctrl1_reg_c19, i32 %ctrl2_reg_c24, i32 %layer1_reg_c29, i16 %w_M_real40, i16 %w_M_imag29, i16 %w_M_real39, i16 %w_M_imag28, i16 %w_M_real38, i16 %w_M_imag27, i16 %w_M_real37, i16 %w_M_imag26, i16 %w_M_real36, i16 %w_M_imag25, i16 %w_M_real, i16 %w_M_imag" [src/main.cpp:520]   --->   Operation 48 'call' 'call_ln520' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln521 = call void @Row_Wise_Synch, i32 %c_fft_row_op_st, i32 %c_row_op_st, i32 %ctrl1_reg_c19, i32 %ctrl2_reg_c24, i32 %layer1_reg_c29, i32 %ctrl1_reg_c18, i32 %ctrl2_reg_c23, i32 %layer1_reg_c28" [src/main.cpp:521]   --->   Operation 49 'call' 'call_ln521' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln521 = call void @Row_Wise_Synch, i32 %c_fft_row_op_st, i32 %c_row_op_st, i32 %ctrl1_reg_c19, i32 %ctrl2_reg_c24, i32 %layer1_reg_c29, i32 %ctrl1_reg_c18, i32 %ctrl2_reg_c23, i32 %layer1_reg_c28" [src/main.cpp:521]   --->   Operation 50 'call' 'call_ln521' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 51 [2/2] (0.00ns)   --->   "%call_ln522 = call void @Transpose, i32 %c_row_op_st, i32 %c_row_op_trans_st, i32 %ctrl1_reg_c18, i32 %ctrl2_reg_c23, i32 %layer1_reg_c28, i32 %ctrl1_reg_c17, i32 %ctrl2_reg_c22, i32 %layer1_reg_c27" [src/main.cpp:522]   --->   Operation 51 'call' 'call_ln522' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 52 [1/2] (0.00ns)   --->   "%call_ln522 = call void @Transpose, i32 %c_row_op_st, i32 %c_row_op_trans_st, i32 %ctrl1_reg_c18, i32 %ctrl2_reg_c23, i32 %layer1_reg_c28, i32 %ctrl1_reg_c17, i32 %ctrl2_reg_c22, i32 %layer1_reg_c27" [src/main.cpp:522]   --->   Operation 52 'call' 'call_ln522' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 53 [2/2] (0.00ns)   --->   "%call_ln523 = call void @FFT_C, i32 %c_row_op_trans_st, i32 %c_fft_col_op_st, i32 %ctrl1_reg_c17, i32 %ctrl2_reg_c22, i32 %layer1_reg_c27, i32 %ctrl1_reg_c, i32 %ctrl2_reg_c, i32 %layer1_reg_c, i16 %w_M_real41, i16 %w_M_imag30, i16 %w_M_real42, i16 %w_M_imag31, i16 %w_M_real43, i16 %w_M_imag32, i16 %w_M_real44, i16 %w_M_imag33, i16 %w_M_real45, i16 %w_M_imag34, i16 %w_M_real46, i16 %w_M_imag35" [src/main.cpp:523]   --->   Operation 53 'call' 'call_ln523' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 54 [1/2] (0.00ns)   --->   "%call_ln523 = call void @FFT_C, i32 %c_row_op_trans_st, i32 %c_fft_col_op_st, i32 %ctrl1_reg_c17, i32 %ctrl2_reg_c22, i32 %layer1_reg_c27, i32 %ctrl1_reg_c, i32 %ctrl2_reg_c, i32 %layer1_reg_c, i16 %w_M_real41, i16 %w_M_imag30, i16 %w_M_real42, i16 %w_M_imag31, i16 %w_M_real43, i16 %w_M_imag32, i16 %w_M_real44, i16 %w_M_imag33, i16 %w_M_real45, i16 %w_M_imag34, i16 %w_M_real46, i16 %w_M_imag35" [src/main.cpp:523]   --->   Operation 54 'call' 'call_ln523' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 55 [1/1] (0.00ns)   --->   "%out_c_channel = call i64 @entry_proc47, i64 %out_read"   --->   Operation 55 'call' 'out_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_14 : Operation 56 [2/2] (0.00ns)   --->   "%call_ln524 = call void @Mem_patch_Wr, i32 %c_fft_col_op_st, i128 %gmem, i64 %out_c_channel, i32 %ctrl1_reg_c, i32 %ctrl2_reg_c, i32 %layer1_reg_c, i32 %wr_ptr" [src/main.cpp:524]   --->   Operation 56 'call' 'call_ln524' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 57 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c31_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c31, i32 %layer1_reg_c31"   --->   Operation 57 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c31, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 59 [1/1] (0.00ns)   --->   "%empty_66 = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c30_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c30, i32 %layer1_reg_c30"   --->   Operation 59 'specchannel' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c30, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 61 [1/1] (0.00ns)   --->   "%empty_67 = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c29_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c29, i32 %layer1_reg_c29"   --->   Operation 61 'specchannel' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c29, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 63 [1/1] (0.00ns)   --->   "%empty_68 = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c28_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c28, i32 %layer1_reg_c28"   --->   Operation 63 'specchannel' 'empty_68' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c28, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 65 [1/1] (0.00ns)   --->   "%empty_69 = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c27_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c27, i32 %layer1_reg_c27"   --->   Operation 65 'specchannel' 'empty_69' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c27, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 67 [1/1] (0.00ns)   --->   "%empty_70 = specchannel i32 @_ssdm_op_SpecChannel, void @layer1_reg_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %layer1_reg_c, i32 %layer1_reg_c"   --->   Operation 67 'specchannel' 'empty_70' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 69 [1/1] (0.00ns)   --->   "%empty_71 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c26_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c26, i32 %ctrl2_reg_c26"   --->   Operation 69 'specchannel' 'empty_71' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c26, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 71 [1/1] (0.00ns)   --->   "%empty_72 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c25_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c25, i32 %ctrl2_reg_c25"   --->   Operation 71 'specchannel' 'empty_72' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c25, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 73 [1/1] (0.00ns)   --->   "%empty_73 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c24_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c24, i32 %ctrl2_reg_c24"   --->   Operation 73 'specchannel' 'empty_73' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c24, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 75 [1/1] (0.00ns)   --->   "%empty_74 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c23_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c23, i32 %ctrl2_reg_c23"   --->   Operation 75 'specchannel' 'empty_74' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c23, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 77 [1/1] (0.00ns)   --->   "%empty_75 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c22_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c22, i32 %ctrl2_reg_c22"   --->   Operation 77 'specchannel' 'empty_75' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c22, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 79 [1/1] (0.00ns)   --->   "%empty_76 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl2_reg_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl2_reg_c, i32 %ctrl2_reg_c"   --->   Operation 79 'specchannel' 'empty_76' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 81 [1/1] (0.00ns)   --->   "%empty_77 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c21_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c21, i32 %ctrl1_reg_c21"   --->   Operation 81 'specchannel' 'empty_77' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c21, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 83 [1/1] (0.00ns)   --->   "%empty_78 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c20_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c20, i32 %ctrl1_reg_c20"   --->   Operation 83 'specchannel' 'empty_78' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c20, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 85 [1/1] (0.00ns)   --->   "%empty_79 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c19_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c19, i32 %ctrl1_reg_c19"   --->   Operation 85 'specchannel' 'empty_79' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c19, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 87 [1/1] (0.00ns)   --->   "%empty_80 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c18_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c18, i32 %ctrl1_reg_c18"   --->   Operation 87 'specchannel' 'empty_80' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c18, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 88 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 89 [1/1] (0.00ns)   --->   "%empty_81 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c17_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c17, i32 %ctrl1_reg_c17"   --->   Operation 89 'specchannel' 'empty_81' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c17, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 91 [1/1] (0.00ns)   --->   "%empty_82 = specchannel i32 @_ssdm_op_SpecChannel, void @ctrl1_reg_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %ctrl1_reg_c, i32 %ctrl1_reg_c"   --->   Operation 91 'specchannel' 'empty_82' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 93 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_27"   --->   Operation 93 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 94 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_40"   --->   Operation 94 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_29, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_30, i32 0, i32 0, void @empty_27, i32 0, i32 1024, void @empty_36, void @empty_26, void @empty_27, i32 16, i32 16, i32 16, i32 16, void @empty_27, void @empty_27"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 97 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %gmem"   --->   Operation 97 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_24, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 99 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_22, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 99 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in2, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_21, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 101 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in2, void @empty_22, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 101 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 102 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_9, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 102 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 103 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_22, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_23"   --->   Operation 103 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 104 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ctrl1_reg"   --->   Operation 104 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 105 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl1_reg, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_28, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 105 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 106 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ctrl2_reg"   --->   Operation 106 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ctrl2_reg, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_34, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 107 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 108 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %layer1_reg"   --->   Operation 108 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer1_reg, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_32, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 109 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 110 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %layer2_reg"   --->   Operation 110 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 111 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer2_reg, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_42, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 111 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 112 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_37, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_39, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 112 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 113 [1/1] (0.00ns)   --->   "%empty_83 = specchannel i32 @_ssdm_op_SpecChannel, void @c_ifmap_patch_st_str, i32 1, void @p_str, void @p_str, i32 1001, i32 1001, i32 %c_ifmap_patch_st, i32 %c_ifmap_patch_st"   --->   Operation 113 'specchannel' 'empty_83' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 114 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_ifmap_patch_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 114 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 115 [1/1] (0.00ns)   --->   "%empty_84 = specchannel i32 @_ssdm_op_SpecChannel, void @c_ifmap_col_op_st_str, i32 1, void @p_str, void @p_str, i32 1001, i32 1001, i32 %c_ifmap_col_op_st, i32 %c_ifmap_col_op_st"   --->   Operation 115 'specchannel' 'empty_84' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 116 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_ifmap_col_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 116 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 117 [1/1] (0.00ns)   --->   "%empty_85 = specchannel i32 @_ssdm_op_SpecChannel, void @c_fft_row_op_st_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %c_fft_row_op_st, i32 %c_fft_row_op_st"   --->   Operation 117 'specchannel' 'empty_85' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 118 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_fft_row_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 118 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 119 [1/1] (0.00ns)   --->   "%empty_86 = specchannel i32 @_ssdm_op_SpecChannel, void @c_fft_col_op_st_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %c_fft_col_op_st, i32 %c_fft_col_op_st"   --->   Operation 119 'specchannel' 'empty_86' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 120 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_fft_col_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 120 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 121 [1/1] (0.00ns)   --->   "%empty_87 = specchannel i32 @_ssdm_op_SpecChannel, void @c_row_op_st_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %c_row_op_st, i32 %c_row_op_st"   --->   Operation 121 'specchannel' 'empty_87' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 122 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 122 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 123 [1/1] (0.00ns)   --->   "%empty_88 = specchannel i32 @_ssdm_op_SpecChannel, void @c_row_op_trans_st_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %c_row_op_trans_st, i32 %c_row_op_trans_st"   --->   Operation 123 'specchannel' 'empty_88' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 124 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_trans_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 124 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 125 [1/2] (0.00ns)   --->   "%call_ln524 = call void @Mem_patch_Wr, i32 %c_fft_col_op_st, i128 %gmem, i64 %out_c_channel, i32 %ctrl1_reg_c, i32 %ctrl2_reg_c, i32 %layer1_reg_c, i32 %wr_ptr" [src/main.cpp:524]   --->   Operation 125 'call' 'call_ln524' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 126 [1/1] (0.00ns)   --->   "%ret_ln525 = ret" [src/main.cpp:525]   --->   Operation 126 'ret' 'ret_ln525' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read operation ('out_read') on port 'out_r' [34]  (1 ns)
+
+ <State 2>: 2.87ns
+The critical path consists of the following:
+	'call' operation ('call_ln518', src/main.cpp:518) to 'Mem_Patch_Gen' [130]  (2.87 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627572751">
+  <ports id="1" name="c_fft_col_op_st" type="PortType" coreName="FIFO_SRL" coreId="1330010203" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="gmem" type="PortType" coreId="622105232" bitwidth="128" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="p_read" type="PortType" coreId="625119488" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="ctrl1_reg" type="PortType" coreName="FIFO_SRL" coreId="624202416" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="ctrl2_reg" type="PortType" coreName="FIFO_SRL" coreId="630783264" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="layer1_reg" type="PortType" coreName="FIFO_SRL" coreId="630136416" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="25" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="28" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="30" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="32" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="33" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="34" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="38" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="39" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="40" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="41" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.1"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="44" sink_obj="//@blocks.0/@node_objs.7"/>
+  <blocks id="22" name="Mem_patch_Wr" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="p_read_29" coreId="859060791" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="layer1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>layer1_reg</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="ctrl2_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl2_reg</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="ctrl1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl1_reg</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="empty" rtlName="empty_fu_85_p1" coreId="1952805734" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="empty_175" rtlName="empty_175_fu_90_p1" coreId="621538400" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="empty_176" rtlName="empty_176_fu_95_p1" coreId="621538400" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln0" rtlName="grp_dataflow_parent_loop_proc16_fu_70" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>c_fft_col_op_st</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
+      <constName>dataflow_parent_loop_proc16</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln480" lineNumber="480" fileName="src/main.cpp" fileDirectory=".." coreId="629738864" contextFuncName="Mem_patch_Wr" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="480" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Mem_patch_Wr"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/main.cpp">
+      <validLinenumbers>480</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="empty_reg_105">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_175_reg_110">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_29_reg_100">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_176_reg_115">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <expressionNodes realName="empty_fu_85">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_175_fu_90">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_176_fu_95">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_dataflow_parent_loop_proc16_fu_70">
+    <nodeIds>20</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="p_read_29_read_fu_46">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer1_reg_read_read_fu_52">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ctrl2_reg_read_read_fu_58">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ctrl1_reg_read_read_fu_64">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioPorts name="c_fft_col_op_st">
+    <contents name="call">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_reg">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="call">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Mem_patch_Wr" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2" mMaxLatency="236840">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627575651">
+  <ports id="1" name="gmem" type="PortType" coreId="137" bitwidth="128" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in1" type="PortType" coreId="1796260256" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="in2" type="PortType" coreId="622120240" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="out_r" type="PortType" coreId="631284960" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="ctrl1_reg" type="PortType" originalName="ctrl1_reg" coreId="1869833586" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="ctrl2_reg" type="PortType" originalName="ctrl2_reg" coreId="622446000" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="layer1_reg" type="PortType" originalName="layer1_reg" coreId="1667589180" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="layer2_reg" type="PortType" originalName="layer2_reg" coreId="0" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <edges id="141" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="143" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="145" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="176" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="180" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="181" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="182" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="183" source_obj="//@ports.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="193" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="211" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="215" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="221" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="231" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="232" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="235" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="239" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="240" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="242" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="245" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="246" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="247" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="248" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="249" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="250" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="251" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="252" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="253" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="254" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="255" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="256" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="257" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="258" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="259" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="260" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="261" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="262" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="263" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="264" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="265" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="266" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="267" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="268" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="269" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="1187" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="1188" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="1189" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="1190" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="1191" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="1192" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="-176" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@ports.0"/>
+  <edges id="-240" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@ports.0"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="490" RegionName="fwd_fft">
+    <basic_blocks id="138" name="fwd_fft" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="out_read" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>out_r</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="in2_read" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataInputObjs>in2</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="in1_read" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <dataInputObjs>in1</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="layer1_reg_c31" rtlName="layer1_reg_c31_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="layer1_reg_c30" rtlName="layer1_reg_c30_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="layer1_reg_c29" rtlName="layer1_reg_c29_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="layer1_reg_c28" rtlName="layer1_reg_c28_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="layer1_reg_c27" rtlName="layer1_reg_c27_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="layer1_reg_c" rtlName="layer1_reg_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="ctrl2_reg_c26" rtlName="ctrl2_reg_c26_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="ctrl2_reg_c25" rtlName="ctrl2_reg_c25_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="ctrl2_reg_c24" rtlName="ctrl2_reg_c24_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="ctrl2_reg_c23" rtlName="ctrl2_reg_c23_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="ctrl2_reg_c22" rtlName="ctrl2_reg_c22_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="ctrl2_reg_c" rtlName="ctrl2_reg_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="ctrl1_reg_c21" rtlName="ctrl1_reg_c21_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="ctrl1_reg_c20" rtlName="ctrl1_reg_c20_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="ctrl1_reg_c19" rtlName="ctrl1_reg_c19_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="ctrl1_reg_c18" rtlName="ctrl1_reg_c18_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="ctrl1_reg_c17" rtlName="ctrl1_reg_c17_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="ctrl1_reg_c" rtlName="ctrl1_reg_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="c_ifmap_patch_st" lineNumber="509" originalName="c_ifmap_patch_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_ifmap_patch_st_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="509" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="c_ifmap_col_op_st" lineNumber="510" originalName="c_ifmap_col_op_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_ifmap_col_op_st_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="510" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="c_fft_row_op_st" lineNumber="511" originalName="c_fft_row_op_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_fft_row_op_st_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="511" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="c_fft_col_op_st" lineNumber="512" originalName="c_fft_col_op_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_fft_col_op_st_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="512" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="c_row_op_st" lineNumber="513" originalName="c_row_op_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_row_op_st_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="513" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="c_row_op_trans_st" lineNumber="514" originalName="c_row_op_trans_st" fileName="src/main.cpp" fileDirectory=".." rtlName="c_row_op_trans_st_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="fwd_fft" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="514" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="out_c_channel" rtlName="out_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="64" opcode="call" nodeLabel="13.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>entry_proc47</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="_ln518" lineNumber="518" fileName="src/main.cpp" fileDirectory=".." rtlName="Mem_Patch_Gen_U0" coreId="631953952" contextFuncName="fwd_fft" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.86" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="518" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>gmem</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>ctrl1_reg</dataInputObjs>
+        <dataInputObjs>ctrl2_reg</dataInputObjs>
+        <dataInputObjs>layer1_reg</dataInputObjs>
+        <dataInputObjs>layer2_reg</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>gmem</dataOutputObjs>
+        <constName>Mem_Patch_Gen</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="_ln519" lineNumber="519" fileName="src/main.cpp" fileDirectory=".." rtlName="Col_Wise_Overlap_Gen_U0" coreId="631954984" contextFuncName="fwd_fft" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="519" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Col_Wise_Overlap_Gen</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="_ln520" lineNumber="520" fileName="src/main.cpp" fileDirectory=".." rtlName="FFT_R_U0" coreId="631955136" contextFuncName="fwd_fft" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="520" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>FFT_R</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="_ln521" lineNumber="521" fileName="src/main.cpp" fileDirectory=".." rtlName="Row_Wise_Synch_U0" coreId="631955416" contextFuncName="fwd_fft" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="521" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Row_Wise_Synch</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="_ln522" lineNumber="522" fileName="src/main.cpp" fileDirectory=".." rtlName="Transpose_U0" coreId="0" contextFuncName="fwd_fft" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="522" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Transpose</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="_ln523" lineNumber="523" fileName="src/main.cpp" fileDirectory=".." rtlName="FFT_C_U0" coreId="10" contextFuncName="fwd_fft" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="523" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>FFT_C</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="_ln524" lineNumber="524" fileName="src/main.cpp" fileDirectory=".." rtlName="Mem_patch_Wr_U0" coreId="4" contextFuncName="fwd_fft" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="524" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>gmem</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>gmem</dataOutputObjs>
+        <constName>Mem_patch_Wr</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="_ln525" lineNumber="525" fileName="src/main.cpp" fileDirectory=".." coreId="3" contextFuncName="fwd_fft" opcode="ret" nodeLabel="14.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/main.cpp" linenumber="525" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="fwd_fft"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="src/main.cpp">
+        <validLinenumbers>509</validLinenumbers>
+        <validLinenumbers>510</validLinenumbers>
+        <validLinenumbers>511</validLinenumbers>
+        <validLinenumbers>512</validLinenumbers>
+        <validLinenumbers>513</validLinenumbers>
+        <validLinenumbers>514</validLinenumbers>
+        <validLinenumbers>518</validLinenumbers>
+        <validLinenumbers>519</validLinenumbers>
+        <validLinenumbers>520</validLinenumbers>
+        <validLinenumbers>521</validLinenumbers>
+        <validLinenumbers>522</validLinenumbers>
+        <validLinenumbers>523</validLinenumbers>
+        <validLinenumbers>524</validLinenumbers>
+        <validLinenumbers>525</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <regnodes realName="layer1_reg_c31_reg_474">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c26_reg_510">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="out_read_reg_459">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="in2_read_reg_464">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c17_reg_570">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="layer1_reg_c_reg_504">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="in1_read_reg_469">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c20_reg_552">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="layer1_reg_c29_reg_486">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c25_reg_516">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c19_reg_558">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c_reg_540">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c_reg_576">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="layer1_reg_c30_reg_480">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c21_reg_546">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="c_fft_row_op_st_reg_594">
+    <nodeIds>117</nodeIds>
+  </regnodes>
+  <regnodes realName="c_ifmap_patch_st_reg_582">
+    <nodeIds>111</nodeIds>
+  </regnodes>
+  <regnodes realName="c_fft_col_op_st_reg_600">
+    <nodeIds>120</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_c18_reg_564">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c24_reg_522">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="out_c_channel_reg_618">
+    <nodeIds>129</nodeIds>
+  </regnodes>
+  <regnodes realName="c_ifmap_col_op_st_reg_588">
+    <nodeIds>114</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c22_reg_534">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="c_row_op_trans_st_reg_612">
+    <nodeIds>126</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl2_reg_c23_reg_528">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="c_row_op_st_reg_606">
+    <nodeIds>123</nodeIds>
+  </regnodes>
+  <regnodes realName="layer1_reg_c28_reg_492">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="layer1_reg_c27_reg_498">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <expressionNodes realName="ctrl2_reg_c24_fu_230">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_ifmap_patch_st_fu_270">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_fft_row_op_st_fu_278">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_fft_col_op_st_fu_282">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c21_fu_246">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_ifmap_col_op_st_fu_274">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_c_fu_242">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_row_op_trans_st_fu_290">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c_fu_266">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c18_fu_258">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c_fu_218">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c17_fu_262">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c19_fu_254">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl1_reg_c20_fu_250">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c28_fu_210">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_row_op_st_fu_286">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c29_fu_206">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c30_fu_202">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c27_fu_214">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_c22_fu_238">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_c23_fu_234">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_c25_fu_226">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_c26_fu_222">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer1_reg_c31_fu_198">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Mem_Patch_Gen_fu_312">
+    <nodeIds>130</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Row_Wise_Synch_fu_380">
+    <nodeIds>133</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_FFT_R_fu_344">
+    <nodeIds>132</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Col_Wise_Overlap_Gen_fu_332">
+    <nodeIds>131</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_FFT_C_fu_404">
+    <nodeIds>135</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Transpose_fu_392">
+    <nodeIds>134</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Mem_patch_Wr_fu_445">
+    <nodeIds>136</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="out_c_channel_entry_proc47_fu_440">
+    <nodeIds>129</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="out_read_read_fu_294">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in1_read_read_fu_306">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in2_read_read_fu_300">
+    <nodeIds>35</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="w_M_imag" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag25" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag26" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag27" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag28" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag29" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag30" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag31" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag32" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag33" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag34" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag35" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real36" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real37" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real38" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real39" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real40" portID="100">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real41" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real42" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real43" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real44" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real45" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real46" portID="100">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <ioPorts name="ctrl1_reg">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+      <nodeIds>136</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in1">
+    <contents name="read">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in2">
+    <contents name="read">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer2_reg">
+    <contents name="call">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_r">
+    <contents name="read">
+      <nodeIds>34</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="130" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="130" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="131" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="131" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="132" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="132" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="133" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="133" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="134" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="134" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="135" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="135" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="136" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="2"/>
+      <operations id="137" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="fwd_fft" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="64" mMaxLatency="301271" mIsDfPipe="true">
+      <basicBlocks>138</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.7/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.5/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.9/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.13/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.17/@sink/@inst">
+        <processe_list name="entry_proc47_U0" ssdmobj_id="129">
+          <pins>
+            <port name="out" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_184" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc47_U0" ssdmobj_id="129" object_id="_192"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Mem_Patch_Gen_U0" ssdmobj_id="130">
+          <pins>
+            <port name="gmem" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_181" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="in1" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_182" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="in2" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_183" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="ctrl1_reg" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_185" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="ctrl2_reg" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_186" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="layer1_reg" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_187" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+          <pins>
+            <port name="layer2_reg" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_188" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131"/>
+        <processe_list name="FFT_R_U0" ssdmobj_id="132"/>
+        <processe_list name="Row_Wise_Synch_U0" ssdmobj_id="133"/>
+        <processe_list name="Transpose_U0" ssdmobj_id="134"/>
+        <processe_list name="FFT_C_U0" ssdmobj_id="135"/>
+        <processe_list name="Mem_patch_Wr_U0" ssdmobj_id="136">
+          <pins>
+            <port name="gmem" dir="DirOut" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_181" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="7" bitwidth="64" suggested_type="1" suggested_depth="7" name="out_c_channel" ssdmobj_id="129">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc47_U0" ssdmobj_id="129" object_id="_192"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1001" bitwidth="32" suggested_type="0" suggested_depth="1001" name="c_ifmap_patch_st" ssdmobj_id="111">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c21" ssdmobj_id="73">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c26" ssdmobj_id="55">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c31" ssdmobj_id="37">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_Patch_Gen_U0" ssdmobj_id="130" object_id="_196"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1001" bitwidth="32" suggested_type="0" suggested_depth="1001" name="c_ifmap_col_op_st" ssdmobj_id="114">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c20" ssdmobj_id="76">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c25" ssdmobj_id="58">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c30" ssdmobj_id="40">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Col_Wise_Overlap_Gen_U0" ssdmobj_id="131" object_id="_228"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="0" suggested_depth="2" name="c_fft_row_op_st" ssdmobj_id="117">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c19" ssdmobj_id="79">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c24" ssdmobj_id="61">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c29" ssdmobj_id="43">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_R_U0" ssdmobj_id="132" object_id="_249"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="0" suggested_depth="2" name="c_row_op_st" ssdmobj_id="123">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c18" ssdmobj_id="82">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c23" ssdmobj_id="64">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c28" ssdmobj_id="46">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Row_Wise_Synch_U0" ssdmobj_id="133" object_id="_270"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="0" suggested_depth="2" name="c_row_op_trans_st" ssdmobj_id="126">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c17" ssdmobj_id="85">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c22" ssdmobj_id="67">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c27" ssdmobj_id="49">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Transpose_U0" ssdmobj_id="134" object_id="_291"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="0" suggested_depth="2" name="c_fft_col_op_st" ssdmobj_id="120">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl1_reg_c" ssdmobj_id="88">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="ctrl2_reg_c" ssdmobj_id="70">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="layer1_reg_c" ssdmobj_id="52">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="FFT_C_U0" ssdmobj_id="135" object_id="_312"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Mem_patch_Wr_U0" ssdmobj_id="136" object_id="_217"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

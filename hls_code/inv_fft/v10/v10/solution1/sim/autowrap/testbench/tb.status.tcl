@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/./sim/autowrap/testbench/fft.cpp_pre.cpp.tb.cpp

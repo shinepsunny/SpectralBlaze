@@ -1,0 +1,63 @@
+<stg><name>entry_proc47</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:0 %out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %out_r
+
+]]></Node>
+<StgValue><ssdm name="out_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="64">
+<![CDATA[
+entry:1 %ret_ln0 = ret i64 %out_read
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="4" name="out_r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="out_r"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="6" from="_ssdm_op_Read.ap_auto.i64" to="out_read" fromId="5" toId="2">
+</dataflow>
+<dataflow id="7" from="out_r" to="out_read" fromId="4" toId="2">
+</dataflow>
+<dataflow id="8" from="out_read" to="ret_ln0" fromId="2" toId="3">
+</dataflow>
+</dataflows>
+
+
+</stg>

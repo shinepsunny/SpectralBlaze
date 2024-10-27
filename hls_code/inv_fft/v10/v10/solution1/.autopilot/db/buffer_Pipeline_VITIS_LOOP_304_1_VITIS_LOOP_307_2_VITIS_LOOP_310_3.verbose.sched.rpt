@@ -1,0 +1,243 @@
+
+
+================================================================
+== Vitis HLS Report for 'buffer_Pipeline_VITIS_LOOP_304_1_VITIS_LOOP_307_2_VITIS_LOOP_310_3'
+================================================================
+* Date:           Fri Dec  9 11:05:02 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        v10
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.953 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max |   Type  |
+    +---------+---------+-----------+----------+-----+------+---------+
+    |        4|     1572|  20.000 ns|  7.860 us|    4|  1572|       no|
+    +---------+---------+-----------+----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                                                      |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |                       Loop Name                      |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_304_1_VITIS_LOOP_307_2_VITIS_LOOP_310_3  |        2|     1570|         4|          1|          1|  0 ~ 1568|       yes|
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%rhs_V = alloca i32 1"   --->   Operation 7 'alloca' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%y = alloca i32 1"   --->   Operation 8 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 9 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%pn_x = alloca i32 1"   --->   Operation 10 'alloca' 'pn_x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten13 = alloca i32 1"   --->   Operation 11 'alloca' 'indvar_flatten13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%icmp_ln1027_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %icmp_ln1027"   --->   Operation 12 'read' 'icmp_ln1027_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%conv_i_i72_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %conv_i_i72"   --->   Operation 13 'read' 'conv_i_i72_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%div_cast_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %div_cast"   --->   Operation 14 'read' 'div_cast_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%bound_read = read i39 @_ssdm_op_Read.ap_auto.i39, i39 %bound"   --->   Operation 15 'read' 'bound_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bound4_read = read i47 @_ssdm_op_Read.ap_auto.i47, i47 %bound4"   --->   Operation 16 'read' 'bound4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv_i_i72_cast = zext i8 %conv_i_i72_read"   --->   Operation 17 'zext' 'conv_i_i72_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%div_cast_cast = zext i8 %div_cast_read"   --->   Operation 18 'zext' 'div_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bound_cast = zext i39 %bound_read"   --->   Operation 19 'zext' 'bound_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_st, void @empty_8, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.48ns)   --->   "%store_ln0 = store i47 0, i47 %indvar_flatten13"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 22 [1/1] (0.48ns)   --->   "%store_ln0 = store i8 0, i8 %pn_x"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 23 [1/1] (0.48ns)   --->   "%store_ln0 = store i40 0, i40 %indvar_flatten"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 24 [1/1] (0.48ns)   --->   "%store_ln0 = store i8 0, i8 %y"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 25 [1/1] (0.48ns)   --->   "%store_ln0 = store i32 0, i32 %rhs_V"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 26 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.21>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i40 %indvar_flatten" [src/fft.cpp:307]   --->   Operation 27 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%indvar_flatten13_load = load i47 %indvar_flatten13"   --->   Operation 28 'load' 'indvar_flatten13_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (1.30ns)   --->   "%icmp_ln1027_11 = icmp_eq  i47 %indvar_flatten13_load, i47 %bound4_read"   --->   Operation 29 'icmp' 'icmp_ln1027_11' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (1.26ns)   --->   "%add_ln1027 = add i47 %indvar_flatten13_load, i47 1"   --->   Operation 30 'add' 'add_ln1027' <Predicate = true> <Delay = 1.26> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln1027 = br i1 %icmp_ln1027_11, void %for.inc56.loopexit, void %for.end58.loopexit.exitStub"   --->   Operation 31 'br' 'br_ln1027' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%pn_x_load = load i8 %pn_x" [src/fft.cpp:304]   --->   Operation 32 'load' 'pn_x_load' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.90ns)   --->   "%pn_x_2 = add i8 %pn_x_load, i8 1" [src/fft.cpp:304]   --->   Operation 33 'add' 'pn_x_2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (1.28ns)   --->   "%icmp_ln307 = icmp_eq  i40 %indvar_flatten_load, i40 %bound_cast" [src/fft.cpp:307]   --->   Operation 34 'icmp' 'icmp_ln307' <Predicate = (!icmp_ln1027_11)> <Delay = 1.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.44ns)   --->   "%select_ln302_2 = select i1 %icmp_ln307, i8 %pn_x_2, i8 %pn_x_load" [src/fft.cpp:302]   --->   Operation 35 'select' 'select_ln302_2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (1.23ns)   --->   "%add_ln307_1 = add i40 %indvar_flatten_load, i40 1" [src/fft.cpp:307]   --->   Operation 36 'add' 'add_ln307_1' <Predicate = (!icmp_ln1027_11)> <Delay = 1.23> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.36ns)   --->   "%select_ln307_2 = select i1 %icmp_ln307, i40 1, i40 %add_ln307_1" [src/fft.cpp:307]   --->   Operation 37 'select' 'select_ln307_2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.48ns)   --->   "%store_ln310 = store i47 %add_ln1027, i47 %indvar_flatten13" [src/fft.cpp:310]   --->   Operation 38 'store' 'store_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.48>
+ST_2 : Operation 39 [1/1] (0.48ns)   --->   "%store_ln310 = store i8 %select_ln302_2, i8 %pn_x" [src/fft.cpp:310]   --->   Operation 39 'store' 'store_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.48>
+ST_2 : Operation 40 [1/1] (0.48ns)   --->   "%store_ln310 = store i40 %select_ln307_2, i40 %indvar_flatten" [src/fft.cpp:310]   --->   Operation 40 'store' 'store_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.48>
+
+State 3 <SV = 2> <Delay = 2.17>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%rhs_V_load = load i32 %rhs_V"   --->   Operation 41 'load' 'rhs_V_load' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node select_ln307)   --->   "%select_ln302_1 = select i1 %icmp_ln307, i32 0, i32 %rhs_V_load" [src/fft.cpp:302]   --->   Operation 42 'select' 'select_ln302_1' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln302 = zext i8 %select_ln302_2" [src/fft.cpp:302]   --->   Operation 43 'zext' 'zext_ln302' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (2.17ns)   --->   "%mul_ln302 = mul i16 %zext_ln302, i16 %div_cast_cast" [src/fft.cpp:302]   --->   Operation 44 'mul' 'mul_ln302' <Predicate = (!icmp_ln1027_11)> <Delay = 2.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln302_1 = trunc i16 %mul_ln302" [src/fft.cpp:302]   --->   Operation 45 'trunc' 'trunc_ln302_1' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln302_2 = trunc i16 %mul_ln302" [src/fft.cpp:302]   --->   Operation 46 'trunc' 'trunc_ln302_2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (1.11ns)   --->   "%icmp_ln1027_12 = icmp_ult  i32 %rhs_V_load, i32 %conv_i_i72_cast"   --->   Operation 47 'icmp' 'icmp_ln1027_12' <Predicate = (!icmp_ln1027_11 & !icmp_ln307)> <Delay = 1.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.26ns)   --->   "%select_ln302_3 = select i1 %icmp_ln307, i1 %icmp_ln1027_read, i1 %icmp_ln1027_12" [src/fft.cpp:302]   --->   Operation 48 'select' 'select_ln302_3' <Predicate = (!icmp_ln1027_11)> <Delay = 0.26> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.52ns) (out node of the LUT)   --->   "%select_ln307 = select i1 %select_ln302_3, i32 %select_ln302_1, i32 0" [src/fft.cpp:307]   --->   Operation 49 'select' 'select_ln307' <Predicate = (!icmp_ln1027_11)> <Delay = 0.52> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln1495 = trunc i32 %select_ln307"   --->   Operation 50 'trunc' 'trunc_ln1495' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln314 = br i1 %trunc_ln302_2, void %arrayidx2922.case.0, void %arrayidx2922.case.1" [src/fft.cpp:314]   --->   Operation 51 'br' 'br_ln314' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln316 = br i1 %trunc_ln302_2, void %arrayidx5344.case.1, void %arrayidx5344.case.0" [src/fft.cpp:316]   --->   Operation 52 'br' 'br_ln316' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.95>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%y_5 = load i8 %y" [src/fft.cpp:302]   --->   Operation 53 'load' 'y_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln302 = trunc i8 %y_5" [src/fft.cpp:302]   --->   Operation 54 'trunc' 'trunc_ln302' <Predicate = (!icmp_ln307 & select_ln302_3)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 55 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.44ns)   --->   "%select_ln302 = select i1 %icmp_ln307, i8 0, i8 %y_5" [src/fft.cpp:302]   --->   Operation 56 'select' 'select_ln302' <Predicate = (!icmp_ln1027_11)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.90ns)   --->   "%add_ln307 = add i8 %select_ln302, i8 1" [src/fft.cpp:307]   --->   Operation 57 'add' 'add_ln307' <Predicate = (!icmp_ln1027_11)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node select_ln314)   --->   "%empty = trunc i8 %add_ln307" [src/fft.cpp:307]   --->   Operation 58 'trunc' 'empty' <Predicate = (!icmp_ln1027_11 & !select_ln302_3)> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node select_ln314)   --->   "%select_ln302_4 = select i1 %icmp_ln307, i6 0, i6 %trunc_ln302" [src/fft.cpp:302]   --->   Operation 59 'select' 'select_ln302_4' <Predicate = (!icmp_ln1027_11 & select_ln302_3)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (0.44ns) (out node of the LUT)   --->   "%select_ln314 = select i1 %select_ln302_3, i6 %select_ln302_4, i6 %empty" [src/fft.cpp:314]   --->   Operation 60 'select' 'select_ln314' <Predicate = (!icmp_ln1027_11)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i6.i7, i6 %select_ln314, i7 0" [src/fft.cpp:314]   --->   Operation 61 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.44ns)   --->   "%select_ln307_1 = select i1 %select_ln302_3, i8 %select_ln302, i8 %add_ln307" [src/fft.cpp:307]   --->   Operation 62 'select' 'select_ln307_1' <Predicate = (!icmp_ln1027_11)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (1.50ns)   --->   "%out_st_read = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %out_st" [src/fft.cpp:313]   --->   Operation 63 'read' 'out_st_read' <Predicate = (!icmp_ln1027_11)> <Delay = 1.50> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln313 = trunc i64 %out_st_read" [src/fft.cpp:313]   --->   Operation 64 'trunc' 'trunc_ln313' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%trunc_ln313_2 = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %out_st_read, i32 32, i32 47" [src/fft.cpp:313]   --->   Operation 65 'partselect' 'trunc_ln313_2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.98ns)   --->   "%ret_V_4 = add i14 %trunc_ln1495, i14 %trunc_ln302_1"   --->   Operation 66 'add' 'ret_V_4' <Predicate = (!icmp_ln1027_11)> <Delay = 0.98> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i13 @_ssdm_op_PartSelect.i13.i14.i32.i32, i14 %ret_V_4, i32 1, i32 13" [src/fft.cpp:314]   --->   Operation 67 'partselect' 'lshr_ln' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.97ns)   --->   "%add_ln314 = add i13 %tmp_s, i13 %lshr_ln" [src/fft.cpp:314]   --->   Operation 68 'add' 'add_ln314' <Predicate = (!icmp_ln1027_11)> <Delay = 0.97> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 69 [1/1] (0.98ns)   --->   "%ret_V = add i14 %ret_V_4, i14 1"   --->   Operation 69 'add' 'ret_V' <Predicate = (!icmp_ln1027_11)> <Delay = 0.98> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%lshr_ln2 = partselect i13 @_ssdm_op_PartSelect.i13.i14.i32.i32, i14 %ret_V, i32 1, i32 13" [src/fft.cpp:316]   --->   Operation 70 'partselect' 'lshr_ln2' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.97ns)   --->   "%add_ln316 = add i13 %tmp_s, i13 %lshr_ln2" [src/fft.cpp:316]   --->   Operation 71 'add' 'add_ln316' <Predicate = (!icmp_ln1027_11)> <Delay = 0.97> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (1.20ns)   --->   "%x = add i32 %select_ln307, i32 2" [src/fft.cpp:310]   --->   Operation 72 'add' 'x' <Predicate = (!icmp_ln1027_11)> <Delay = 1.20> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 73 [1/1] (0.48ns)   --->   "%store_ln310 = store i8 %select_ln307_1, i8 %y" [src/fft.cpp:310]   --->   Operation 73 'store' 'store_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.48>
+ST_4 : Operation 74 [1/1] (0.48ns)   --->   "%store_ln310 = store i32 %x, i32 %rhs_V" [src/fft.cpp:310]   --->   Operation 74 'store' 'store_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.48>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln310 = br void %for.inc" [src/fft.cpp:310]   --->   Operation 75 'br' 'br_ln310' <Predicate = (!icmp_ln1027_11)> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 98 'ret' 'ret_ln0' <Predicate = (icmp_ln1027_11)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.35>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_304_1_VITIS_LOOP_307_2_VITIS_LOOP_310_3_str"   --->   Operation 76 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 1568, i64 168"   --->   Operation 77 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 78 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_307_2_VITIS_LOOP_310_3_str"   --->   Operation 79 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 80 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%specloopname_ln302 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [src/fft.cpp:302]   --->   Operation 81 'specloopname' 'specloopname_ln302' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln313 = bitcast i16 %trunc_ln313" [src/fft.cpp:313]   --->   Operation 82 'bitcast' 'bitcast_ln313' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%bitcast_ln313_1 = bitcast i16 %trunc_ln313_2" [src/fft.cpp:313]   --->   Operation 83 'bitcast' 'bitcast_ln313_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln314 = zext i13 %add_ln314" [src/fft.cpp:314]   --->   Operation 84 'zext' 'zext_ln314' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%buffer1_0_addr = getelementptr i16 %buffer1_0, i64 0, i64 %zext_ln314" [src/fft.cpp:314]   --->   Operation 85 'getelementptr' 'buffer1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%buffer1_1_addr = getelementptr i16 %buffer1_1, i64 0, i64 %zext_ln314" [src/fft.cpp:314]   --->   Operation 86 'getelementptr' 'buffer1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (1.35ns)   --->   "%store_ln314 = store i16 %bitcast_ln313, i13 %buffer1_0_addr" [src/fft.cpp:314]   --->   Operation 87 'store' 'store_ln314' <Predicate = (!trunc_ln302_2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8192> <RAM>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln315 = br void %arrayidx2922.exit" [src/fft.cpp:315]   --->   Operation 88 'br' 'br_ln315' <Predicate = (!trunc_ln302_2)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (1.35ns)   --->   "%store_ln314 = store i16 %bitcast_ln313, i13 %buffer1_1_addr" [src/fft.cpp:314]   --->   Operation 89 'store' 'store_ln314' <Predicate = (trunc_ln302_2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8192> <RAM>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln315 = br void %arrayidx2922.exit" [src/fft.cpp:315]   --->   Operation 90 'br' 'br_ln315' <Predicate = (trunc_ln302_2)> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%zext_ln316 = zext i13 %add_ln316" [src/fft.cpp:316]   --->   Operation 91 'zext' 'zext_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%buffer1_0_addr_2 = getelementptr i16 %buffer1_0, i64 0, i64 %zext_ln316" [src/fft.cpp:316]   --->   Operation 92 'getelementptr' 'buffer1_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%buffer1_1_addr_2 = getelementptr i16 %buffer1_1, i64 0, i64 %zext_ln316" [src/fft.cpp:316]   --->   Operation 93 'getelementptr' 'buffer1_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (1.35ns)   --->   "%store_ln316 = store i16 %bitcast_ln313_1, i13 %buffer1_1_addr_2" [src/fft.cpp:316]   --->   Operation 94 'store' 'store_ln316' <Predicate = (!trunc_ln302_2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8192> <RAM>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln317 = br void %arrayidx5344.exit" [src/fft.cpp:317]   --->   Operation 95 'br' 'br_ln317' <Predicate = (!trunc_ln302_2)> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (1.35ns)   --->   "%store_ln316 = store i16 %bitcast_ln313_1, i13 %buffer1_0_addr_2" [src/fft.cpp:316]   --->   Operation 96 'store' 'store_ln316' <Predicate = (trunc_ln302_2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8192> <RAM>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln317 = br void %arrayidx5344.exit" [src/fft.cpp:317]   --->   Operation 97 'br' 'br_ln317' <Predicate = (trunc_ln302_2)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 0.489ns
+The critical path consists of the following:
+	'alloca' operation ('indvar_flatten13') [13]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'indvar_flatten13' [23]  (0.489 ns)
+
+ <State 2>: 2.22ns
+The critical path consists of the following:
+	'load' operation ('indvar_flatten_load', src/fft.cpp:307) on local variable 'indvar_flatten' [31]  (0 ns)
+	'icmp' operation ('icmp_ln307', src/fft.cpp:307) [44]  (1.28 ns)
+	'select' operation ('select_ln302_2', src/fft.cpp:302) [47]  (0.445 ns)
+	'store' operation ('store_ln310', src/fft.cpp:310) of variable 'select_ln302_2', src/fft.cpp:302 on local variable 'pn_x' [103]  (0.489 ns)
+
+ <State 3>: 2.17ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln302', src/fft.cpp:302) [49]  (2.17 ns)
+
+ <State 4>: 2.95ns
+The critical path consists of the following:
+	'add' operation ('ret.V') [71]  (0.989 ns)
+	'add' operation ('ret.V') [85]  (0.989 ns)
+	'add' operation ('add_ln316', src/fft.cpp:316) [87]  (0.975 ns)
+
+ <State 5>: 1.35ns
+The critical path consists of the following:
+	'store' operation ('store_ln314', src/fft.cpp:314) of variable 'bitcast_ln313', src/fft.cpp:313 on array 'buffer1_1' [82]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_139_1'
+================================================================
+* Date:           Thu Oct 13 07:49:28 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.708 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       30|      204|  0.150 us|  1.020 us|    5|   28|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                  |               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |     Instance     |     Module    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |stream_2_buf_U0   |stream_2_buf   |        2|       18|  10.000 ns|  90.000 ns|    2|   18|       no|
+        |fft_stage_0_0_U0  |fft_stage_0_0  |        4|       27|  20.000 ns|   0.135 us|    4|   27|       no|
+        |fft_stage_1_0_U0  |fft_stage_1_0  |        3|       27|  15.000 ns|   0.135 us|    3|   27|       no|
+        |fft_stage_2_0_U0  |fft_stage_2_0  |        3|       27|  15.000 ns|   0.135 us|    3|   27|       no|
+        |fft_stage_3_0_U0  |fft_stage_3_0  |        3|       27|  15.000 ns|   0.135 us|    3|   27|       no|
+        |fft_stage_4_0_U0  |fft_stage_4_0  |        3|       27|  15.000 ns|   0.135 us|    3|   27|       no|
+        |fft_stage_5_0_U0  |fft_stage_5_0  |        3|       26|  15.000 ns|   0.130 us|    3|   26|       no|
+        |buf_2_stream_U0   |buf_2_stream   |        2|       18|  10.000 ns|  90.000 ns|    2|   18|       no|
+        +------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      86|    -|
+|FIFO             |        -|     -|     693|     469|    -|
+|Instance         |        -|   120|   10172|    9828|    -|
+|Memory           |       28|     -|       0|       0|    -|
+|Multiplexer      |        -|     -|       -|     126|    -|
+|Register         |        -|     -|      14|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       28|   120|   10879|   10509|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        4|     6|       2|       4|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------+---------------+---------+----+------+------+-----+
+    |     Instance     |     Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +------------------+---------------+---------+----+------+------+-----+
+    |buf_2_stream_U0   |buf_2_stream   |        0|   0|    11|    77|    0|
+    |fft_stage_0_0_U0  |fft_stage_0_0  |        0|  20|  1640|  1407|    0|
+    |fft_stage_1_0_U0  |fft_stage_1_0  |        0|  20|  1706|  1591|    0|
+    |fft_stage_2_0_U0  |fft_stage_2_0  |        0|  20|  1690|  1652|    0|
+    |fft_stage_3_0_U0  |fft_stage_3_0  |        0|  20|  1690|  1660|    0|
+    |fft_stage_4_0_U0  |fft_stage_4_0  |        0|  20|  1690|  1655|    0|
+    |fft_stage_5_0_U0  |fft_stage_5_0  |        0|  20|  1664|  1646|    0|
+    |stream_2_buf_U0   |stream_2_buf   |        0|   0|    81|   140|    0|
+    +------------------+---------------+---------+----+------+------+-----+
+    |Total             |               |        0| 120| 10172|  9828|    0|
+    +------------------+---------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------+----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory    |                    Module                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |input_data1_U  |dataflow_in_loop_VITIS_LOOP_91_1_input_data1  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_12_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_12  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_23_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_12  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_34_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_12  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_45_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_12  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_56_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_12  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    |out_data_67_U  |dataflow_in_loop_VITIS_LOOP_91_1_out_data_67  |        4|  0|   0|    0|    64|   32|     1|         2048|
+    +---------------+----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total          |                                              |       28|  0|   0|    0|   448|  224|     7|        14336|
+    +---------------+----------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +------------------------+---------+----+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+----+----+-----+------+-----+---------+
+    |ctrl1_reg_c1_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |ctrl1_reg_c2_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |ctrl1_reg_c3_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |ctrl1_reg_c4_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |ctrl1_reg_c5_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |ctrl1_reg_c6_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |ctrl1_reg_c_channel_U   |        0|  99|   0|    -|     2|    8|       16|
+    +------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                   |        0| 693|   0|    0|    14|  152|      304|
+    +------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_ctrl1_reg_c1_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c2_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c3_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c4_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c5_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c6_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_ctrl1_reg_c_channel         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_input_data1                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_12                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_23                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_34                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_45                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_56                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_data_67                 |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                     |       and|   0|  0|   2|           1|           1|
+    |buf_2_stream_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
+    |fft_stage_0_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_0_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |fft_stage_1_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_1_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |fft_stage_2_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_2_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |fft_stage_3_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_3_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |fft_stage_4_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_4_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |fft_stage_5_0_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |fft_stage_5_0_U0_ap_start                   |       and|   0|  0|   2|           1|           1|
+    |stream_2_buf_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c1_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c2_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c3_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c4_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c5_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c6_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ctrl1_reg_c_channel   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_input_data1           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_12           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_23           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_34           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_45           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_56           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_data_67           |        or|   0|  0|   2|           1|           1|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                       |          |   0|  0|  86|          43|          43|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_ctrl1_reg_c1_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c2_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c3_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c4_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c5_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c6_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_ctrl1_reg_c_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_input_data1           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_12           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_23           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_34           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_45           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_56           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_data_67           |   9|          2|    1|          2|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           | 126|         28|   14|         28|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_ctrl1_reg_c1_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c2_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c3_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c4_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c5_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c6_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_ctrl1_reg_c_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_input_data1           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_12           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_23           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_34           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_45           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_56           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_data_67           |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           | 14|   0|   14|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_139_1|  return value|
+|c_row_op_trans_st_dout     |   in|   32|     ap_fifo|                  c_row_op_trans_st|       pointer|
+|c_row_op_trans_st_empty_n  |   in|    1|     ap_fifo|                  c_row_op_trans_st|       pointer|
+|c_row_op_trans_st_read     |  out|    1|     ap_fifo|                  c_row_op_trans_st|       pointer|
+|p_read                     |   in|   32|     ap_none|                             p_read|        scalar|
+|p_read_ap_vld              |   in|    1|     ap_none|                             p_read|        scalar|
+|c_fft_col_op_st_din        |  out|   32|     ap_fifo|                    c_fft_col_op_st|       pointer|
+|c_fft_col_op_st_full_n     |   in|    1|     ap_fifo|                    c_fft_col_op_st|       pointer|
+|c_fft_col_op_st_write      |  out|    1|     ap_fifo|                    c_fft_col_op_st|       pointer|
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+

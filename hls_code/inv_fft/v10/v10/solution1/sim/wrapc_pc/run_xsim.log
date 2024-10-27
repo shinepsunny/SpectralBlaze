@@ -1,0 +1,941 @@
+
+ The current i is 0 and j is 0 and t is 0
+ FFT output is (1.38672,1.38672)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 0 and j is 4 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 0 and j is 8 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 0 and j is 12 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 1 and j is 0 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 1 and j is 4 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 1 and j is 8 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 1 and j is 12 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 2 and j is 0 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 2 and j is 4 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 2 and j is 8 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 2 and j is 12 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 3 and j is 0 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 3 and j is 4 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 3 and j is 8 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 3 and j is 12 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 4 and j is 0 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 4 and j is 4 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 4 and j is 8 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 4 and j is 12 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 5 and j is 0 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 5 and j is 4 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 5 and j is 8 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 5 and j is 12 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 6 and j is 0 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 6 and j is 4 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 6 and j is 8 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 6 and j is 12 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 7 and j is 0 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 7 and j is 4 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 7 and j is 8 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 7 and j is 12 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 8 and j is 0 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 8 and j is 4 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 8 and j is 8 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 8 and j is 12 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 9 and j is 0 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 9 and j is 4 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 9 and j is 8 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 9 and j is 12 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 10 and j is 0 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 10 and j is 4 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 10 and j is 8 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 10 and j is 12 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 11 and j is 0 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 11 and j is 4 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 11 and j is 8 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 11 and j is 12 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 12 and j is 0 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 12 and j is 4 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 12 and j is 8 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 12 and j is 12 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 13 and j is 0 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 13 and j is 4 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 13 and j is 8 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 13 and j is 12 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 14 and j is 0 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 14 and j is 4 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 14 and j is 8 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 14 and j is 12 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 15 and j is 0 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 15 and j is 4 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 15 and j is 8 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 15 and j is 12 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+*** Test passes ***
+
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_vr_ifft_top glbl -Oenable_linking_all_libraries -prj vr_ifft.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s vr_ifft -debug wave 
+Multi-threading is on. Using 6 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_hmul_16ns_16ns_16_4_max_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hmul_16ns_16ns_16_4_max_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_hadd_16ns_16ns_16_5_full_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hadd_16ns_16ns_16_5_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_hsub_16ns_16ns_16_5_full_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hsub_16ns_16ns_16_5_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_uitofp_32ns_32_7_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_uitofp_32ns_32_7_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_hdiv_16ns_16ns_16_7_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hdiv_16ns_16ns_16_7_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/ip/xil_defaultlib/vr_ifft_sptohp_32ns_16_2_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_sptohp_32ns_16_2_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_hsub_16ns_16ns_16_5_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hsub_16ns_16ns_16_5_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y_w_M_imag_430.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y_w_M_imag_430
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_vr_ifft_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_start_for_collect_input_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_start_for_collect_input_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_start_for_collect_input_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_8ns_7ns_70_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_8ns_7ns_70_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_push_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_push_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_hadd_16ns_16ns_16_5_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hadd_16ns_16ns_16_5_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1_input_data2_memcore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1_input_data2_memcore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_gmem_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_read
+INFO: [VRFC 10-311] analyzing module vr_ifft_gmem_m_axi_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_sptohp_32ns_16_2_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_sptohp_32ns_16_2_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage7_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage7_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w32_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_dataflow_parent_loop_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_dataflow_parent_loop_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_entry_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y_w_M_real_460.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y_w_M_real_460
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y_w_M_imag_539.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y_w_M_imag_539
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_mul_16ns_16ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_mul_16ns_16ns_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_mul_16ns_16ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage9
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_collect_input_Pipeline_VITIS_LOOP_92_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_collect_input_Pipeline_VITIS_LOOP_92_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_ctrl_bus_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_ctrl_bus_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_push_out_Pipeline_VITIS_LOOP_121_1_VITIS_LOOP_124_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_push_out_Pipeline_VITIS_LOOP_121_1_VITIS_LOOP_124_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/AESL_axi_slave_ctrl_bus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_ctrl_bus
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_hdiv_16ns_16ns_16_7_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hdiv_16ns_16ns_16_7_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y_w_M_real_357.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y_w_M_real_357
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y_w_M_imag_222.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y_w_M_imag_222
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage8_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage8_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage9_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage9_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage5_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage5_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_31ns_9s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_31ns_9s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_7ns_7ns_14_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_7ns_7ns_14_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fifo_w8_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w8_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w8_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_collect_input.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_collect_input
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y_w_M_imag_115.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y_w_M_imag_115
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage8_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y_w_M_imag_327.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage7_Pipeline_SKIP_X_SKIP_Y_w_M_imag_327
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_hmul_16ns_16ns_16_4_max_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_hmul_16ns_16ns_16_4_max_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y_w_M_real_569.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage9_Pipeline_SKIP_X_SKIP_Y_w_M_real_569
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fifo_w64_d10_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w64_d10_S_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w64_d10_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y_w_M_real_145.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage5_Pipeline_SKIP_X_SKIP_Y_w_M_real_145
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_rd_data_Pipeline_VITIS_LOOP_151_1_VITIS_LOOP_154_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_rd_data_Pipeline_VITIS_LOOP_151_1_VITIS_LOOP_154_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/AESL_axi_master_gmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_wr_data_Pipeline_VITIS_LOOP_170_1_VITIS_LOOP_173_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_wr_data_Pipeline_VITIS_LOOP_170_1_VITIS_LOOP_173_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_uitofp_32ns_32_7_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_uitofp_32ns_32_7_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y_w_M_real_252.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y_w_M_real_252
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage4_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage4_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fifo_w128_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w128_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w128_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_8ns_8ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_8ns_8ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fifo_w16_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w16_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module vr_ifft_fifo_w16_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1_input_data2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_dataflow_in_loop_VITIS_LOOP_195_1_input_data2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_31ns_8ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_31ns_8ns_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage4_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage4_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage6_Pipeline_SKIP_X_SKIP_Y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_rd_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_rd_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_fft_stage6_Pipeline_VITIS_LOOP_66_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_fft_stage6_Pipeline_VITIS_LOOP_66_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_mul_8ns_31ns_38_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_mul_8ns_31ns_38_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/vr_ifft_wr_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vr_ifft_wr_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package floating_point_v7_1_12.floating_point_v7_1_12_viv_comp
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_12.floating_point_v7_1_12_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_12.floating_point_v7_1_12_exp_table...
+Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_12.floating_point_v7_1_12_pkg
+Compiling package floating_point_v7_1_12.flt_utils
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package mult_gen_v12_0_17.dsp_pkg
+Compiling package floating_point_v7_1_12.vt2mutils
+Compiling package floating_point_v7_1_12.vt2mcomps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.vr_ifft_dataflow_in_loop_VITIS_L...
+Compiling module xil_defaultlib.vr_ifft_dataflow_in_loop_VITIS_L...
+Compiling module xil_defaultlib.vr_ifft_entry_proc
+Compiling module xil_defaultlib.vr_ifft_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.vr_ifft_rd_data_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.vr_ifft_mul_31ns_8ns_32_2_1(NUM_...
+Compiling module xil_defaultlib.vr_ifft_mul_8ns_31ns_38_2_1(NUM_...
+Compiling module xil_defaultlib.vr_ifft_mul_31ns_9s_32_2_1(NUM_S...
+Compiling module xil_defaultlib.vr_ifft_rd_data
+Compiling module xil_defaultlib.vr_ifft_collect_input_Pipeline_V...
+Compiling module xil_defaultlib.vr_ifft_collect_input
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=11,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=16,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=7,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=48,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=11,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xczu7cg...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=14,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_12.align_add_dsp48e1_hp [\align_add_dsp48e1_hp(c_xdevicef...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.lead_zero_encode_shift_hp [\lead_zero_encode_shift_hp(regis...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=25,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=13,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_12.norm_and_round_dsp48e1_hp [\norm_and_round_dsp48e1_hp(c_xde...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=6,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000011111111000011...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111010111011111010...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111111111111000000...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.three_input_adder [\three_input_adder(c_a_width=7,c...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_12.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=8,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_12.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_12.compare [\compare(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=5)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=6)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2,length=2,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=12,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_add_exp_hp [\flt_add_exp_hp(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=10)\]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_hadd_16ns_16ns_16_5_full...
+Compiling module xil_defaultlib.vr_ifft_hadd_16ns_16ns_16_5_full...
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_hsub_16ns_16ns_16_5_full...
+Compiling module xil_defaultlib.vr_ifft_hsub_16ns_16ns_16_5_full...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=13,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(acascreg=0,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.op_resize [\op_resize(ai_width=11,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.dsp [\dsp(c_xdevicefamily="zynquplus"...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17_viv [\mult_gen_v12_0_17_viv(c_verbosi...]
+Compiling architecture rtl of entity floating_point_v7_1_12.fix_mult_xx [\fix_mult_xx(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.fix_mult [\fix_mult(c_xdevicefamily="zynqu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=5,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_12.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_12.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=18,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.dsp48e1_wrapper [\dsp48e1_wrapper(b_width=18,c_wi...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=3,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_12.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_mult [\flt_mult(c_xdevicefamily="zynqu...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_hmul_16ns_16ns_16_4_max_...
+Compiling module xil_defaultlib.vr_ifft_hmul_16ns_16ns_16_4_max_...
+Compiling module xil_defaultlib.vr_ifft_fft_stage4_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage4_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_mul_7ns_7ns_14_1_1(NUM_S...
+Compiling module xil_defaultlib.vr_ifft_fft_stage4
+Compiling module xil_defaultlib.vr_ifft_fft_stage5_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage5_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage5_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage5_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_fft_stage5
+Compiling module xil_defaultlib.vr_ifft_fft_stage6_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage6_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage6_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage6_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_fft_stage6
+Compiling module xil_defaultlib.vr_ifft_fft_stage7_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage7_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage7_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage7_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_fft_stage7
+Compiling module xil_defaultlib.vr_ifft_fft_stage8_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage8_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage8_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage8_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_fft_stage8
+Compiling module xil_defaultlib.vr_ifft_fft_stage9_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage9_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage9_Pipeline_SKIP...
+Compiling module xil_defaultlib.vr_ifft_fft_stage9_Pipeline_VITI...
+Compiling module xil_defaultlib.vr_ifft_fft_stage9
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=10,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=12,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=13)\]
+Compiling architecture virtex of entity floating_point_v7_1_12.flt_div_mant [\flt_div_mant(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=7,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_12.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=4,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=5,length=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=3,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=3,length=3,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=4,length=3,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_12.flt_div [\flt_div(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_hdiv_16ns_16ns_16_7_no_d...
+Compiling module xil_defaultlib.vr_ifft_hdiv_16ns_16ns_16_7_no_d...
+Compiling module xil_defaultlib.vr_ifft_push_out_Pipeline_VITIS_...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.norm_zero_det [\norm_zero_det(data_width=7,norm...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=32)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2,length=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_12.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_12.shift_msb_first [\shift_msb_first(a_width=32,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=12)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=11)\]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_12.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(length=2)\]
+Compiling architecture synth of entity floating_point_v7_1_12.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_12.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_12.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_uitofp_32ns_32_7_no_dsp_...
+Compiling module xil_defaultlib.vr_ifft_uitofp_32ns_32_7_no_dsp_...
+Compiling architecture synth of entity floating_point_v7_1_12.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_12.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture struct of entity floating_point_v7_1_12.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_12.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_12.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=16,r_ew...]
+Compiling architecture synth of entity floating_point_v7_1_12.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_12.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12_viv [\floating_point_v7_1_12_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_12.floating_point_v7_1_12 [\floating_point_v7_1_12(c_xdevic...]
+Compiling module xil_defaultlib.vr_ifft_sptohp_32ns_16_2_no_dsp_...
+Compiling module xil_defaultlib.vr_ifft_sptohp_32ns_16_2_no_dsp_...
+Compiling module xil_defaultlib.vr_ifft_mul_8ns_7ns_70_1_1(NUM_S...
+Compiling module xil_defaultlib.vr_ifft_push_out
+Compiling module xil_defaultlib.vr_ifft_wr_data_Pipeline_VITIS_L...
+Compiling module xil_defaultlib.vr_ifft_wr_data
+Compiling module xil_defaultlib.vr_ifft_fifo_w64_d10_S_shiftReg
+Compiling module xil_defaultlib.vr_ifft_fifo_w64_d10_S
+Compiling module xil_defaultlib.vr_ifft_fifo_w128_d2_S_shiftReg
+Compiling module xil_defaultlib.vr_ifft_fifo_w128_d2_S
+Compiling module xil_defaultlib.vr_ifft_fifo_w32_d2_S_shiftReg
+Compiling module xil_defaultlib.vr_ifft_fifo_w32_d2_S
+Compiling module xil_defaultlib.vr_ifft_fifo_w16_d2_S_shiftReg
+Compiling module xil_defaultlib.vr_ifft_fifo_w16_d2_S
+Compiling module xil_defaultlib.vr_ifft_fifo_w8_d2_S_shiftReg
+Compiling module xil_defaultlib.vr_ifft_fifo_w8_d2_S
+Compiling module xil_defaultlib.vr_ifft_start_for_collect_input_...
+Compiling module xil_defaultlib.vr_ifft_start_for_collect_input_...
+Compiling module xil_defaultlib.vr_ifft_dataflow_in_loop_VITIS_L...
+Compiling module xil_defaultlib.vr_ifft_dataflow_parent_loop_pro...
+Compiling module xil_defaultlib.vr_ifft_ctrl_bus_s_axi
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_reg_slice(N=9...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_fifo(DATA_BIT...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_buffer(DATA_W...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_fifo(DEPTH=5,...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_fifo(DATA_BIT...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_fifo(DATA_BIT...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_write(NUM_WRI...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_buffer(DATA_W...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_reg_slice(N=1...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_read(NUM_READ...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi_throttle(ADDR...
+Compiling module xil_defaultlib.vr_ifft_gmem_m_axi(NUM_READ_OUTS...
+Compiling module xil_defaultlib.vr_ifft_mul_8ns_8ns_16_1_1(NUM_S...
+Compiling module xil_defaultlib.vr_ifft_mul_mul_16ns_16ns_32_4_1...
+Compiling module xil_defaultlib.vr_ifft_mul_mul_16ns_16ns_32_4_1...
+Compiling module xil_defaultlib.vr_ifft
+Compiling module xil_defaultlib.AESL_axi_master_gmem
+Compiling module xil_defaultlib.AESL_axi_slave_ctrl_bus
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.df_fifo_intf
+Compiling module xil_defaultlib.df_process_intf
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.df_loop_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=6)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=4)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_vr_ifft_top
+Compiling module work.glbl
+Built simulation snapshot vr_ifft
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/shine/Desktop/fft_story/hls/inv_fft/vr_fft/v8/v8/solution1/sim/verilog/xsim.dir/vr_ifft/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct  4 04:57:49 2022...
+
+****** xsim v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Tue Oct  4 04:58:30 2022...
+
+ The current i is 0 and j is 0 and t is 0
+ FFT output is (1.38672,1.38672)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 0 and j is 4 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 0 and j is 8 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 0 and j is 12 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 1 and j is 0 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 1 and j is 4 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 1 and j is 8 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 1 and j is 12 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 2 and j is 0 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 2 and j is 4 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 2 and j is 8 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 2 and j is 12 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 3 and j is 0 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 3 and j is 4 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 3 and j is 8 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 3 and j is 12 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 4 and j is 0 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 4 and j is 4 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 4 and j is 8 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 4 and j is 12 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 5 and j is 0 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 5 and j is 4 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 5 and j is 8 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 5 and j is 12 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 6 and j is 0 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 6 and j is 4 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 6 and j is 8 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 6 and j is 12 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 7 and j is 0 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 7 and j is 4 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 7 and j is 8 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 7 and j is 12 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 8 and j is 0 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 8 and j is 4 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 8 and j is 8 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 8 and j is 12 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 9 and j is 0 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 9 and j is 4 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 9 and j is 8 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 9 and j is 12 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 10 and j is 0 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 10 and j is 4 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 10 and j is 8 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 10 and j is 12 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 11 and j is 0 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 11 and j is 4 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 11 and j is 8 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+
+ The current i is 11 and j is 12 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 12 and j is 0 and t is 0
+ FFT output is (-0.386719,0.386719)(-0.209229,0.505371)(0,0.546875)(0.209229,0.505371)
+
+ The current i is 12 and j is 4 and t is 0
+ FFT output is (-0.386719,-0.386719)(-0.505371,-0.209229)(-0.546875,0)(-0.505371,0.209229)
+
+ The current i is 12 and j is 8 and t is 0
+ FFT output is (0.386719,-0.386719)(0.209229,-0.505371)(0,-0.546875)(-0.209229,-0.505371)
+
+ The current i is 12 and j is 12 and t is 0
+ FFT output is (0.386719,0.386719)(0.505371,0.209229)(0.546875,0)(0.505371,-0.209229)
+
+ The current i is 13 and j is 0 and t is 0
+ FFT output is (-0.209229,0.505371)(0,-0.546875)(0.209229,0.505371)(-0.386719,-0.386719)
+
+ The current i is 13 and j is 4 and t is 0
+ FFT output is (-0.505371,-0.209229)(0.546875,0)(-0.505371,0.209229)(-0.386719,0.386719)
+
+ The current i is 13 and j is 8 and t is 0
+ FFT output is (0.209229,-0.505371)(0,0.546875)(-0.209229,-0.505371)(0.386719,0.386719)
+
+ The current i is 13 and j is 12 and t is 0
+ FFT output is (0.505371,0.209229)(-0.546875,0)(0.505371,-0.209229)(0.386719,-0.386719)
+
+ The current i is 14 and j is 0 and t is 0
+ FFT output is (0,0.546875)(0.209229,0.505371)(0.386719,0.386719)(0.505371,0.209229)
+
+ The current i is 14 and j is 4 and t is 0
+ FFT output is (-0.546875,0)(-0.505371,0.209229)(0.386719,-0.386719)(0.209229,-0.505371)
+
+ The current i is 14 and j is 8 and t is 0
+ FFT output is (0,-0.546875)(-0.209229,-0.505371)(-0.386719,-0.386719)(-0.505371,-0.209229)
+
+ The current i is 14 and j is 12 and t is 0
+ FFT output is (0.546875,0)(0.505371,-0.209229)(-0.386719,0.386719)(-0.209229,0.505371)
+
+ The current i is 15 and j is 0 and t is 0
+ FFT output is (0.209229,0.505371)(-0.386719,-0.386719)(0.505371,0.209229)(-0.546875,0)
+
+ The current i is 15 and j is 4 and t is 0
+ FFT output is (-0.505371,0.209229)(-0.386719,0.386719)(0.209229,-0.505371)(0,0.546875)
+
+ The current i is 15 and j is 8 and t is 0
+ FFT output is (-0.209229,-0.505371)(0.386719,0.386719)(-0.505371,-0.209229)(0.546875,0)
+
+ The current i is 15 and j is 12 and t is 0
+ FFT output is (0.505371,-0.209229)(0.386719,-0.386719)(-0.209229,0.505371)(0,-0.546875)
+*** Test passes ***
+

@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_471_3'
+================================================================
+* Date:           Thu Oct 13 07:49:13 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.536 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max   | min | max |   Type   |
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |        4|      550|  20.000 ns|  2.750 us|    3|  292|  dataflow|
+    +---------+---------+-----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_24 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read"   --->   Operation 5 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ifmap_CF_M_real = alloca i64 1" [src/main.cpp:462]   --->   Operation 6 'alloca' 'ifmap_CF_M_real' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ifmap_CF_M_imag = alloca i64 1" [src/main.cpp:462]   --->   Operation 7 'alloca' 'ifmap_CF_M_imag' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (3.00ns)   --->   "%ctrl1_reg_c_channel1 = call i8 @ifmap_gen_y, i32 %c_fft_col_op_st, i32 %ifmap_CF_M_real, i32 %ifmap_CF_M_imag, i8 %p_read_24"   --->   Operation 8 'call' 'ctrl1_reg_c_channel1' <Predicate = true> <Delay = 3.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%ctrl1_reg_c_channel1 = call i8 @ifmap_gen_y, i32 %c_fft_col_op_st, i32 %ifmap_CF_M_real, i32 %ifmap_CF_M_imag, i8 %p_read_24"   --->   Operation 9 'call' 'ctrl1_reg_c_channel1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 2.34>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%fft_out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %fft_out"   --->   Operation 10 'read' 'fft_out_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%fft_out_c_channel = call i64 @entry_proc, i64 %fft_out_read"   --->   Operation 11 'call' 'fft_out_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_3 : Operation 12 [2/2] (2.34ns)   --->   "%call_ln0 = call void @ifmap_vec_write, i32 %ifmap_CF_M_real, i32 %ifmap_CF_M_imag, i128 %gmem, i64 %fft_out_c_channel, i8 %ctrl1_reg_c_channel1, i32 %wr_ptr"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 2.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_fft_col_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_30, i32 0, i32 0, void @empty_27, i32 0, i32 1024, void @empty_36, void @empty_26, void @empty_27, i32 16, i32 16, i32 16, i32 16, void @empty_27, void @empty_27"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln475 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_27" [src/main.cpp:475]   --->   Operation 15 'specdataflowpipeline' 'specdataflowpipeline_ln475' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %ifmap_CF_M_real"   --->   Operation 16 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %ifmap_CF_M_imag"   --->   Operation 17 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ifmap_vec_write, i32 %ifmap_CF_M_real, i32 %ifmap_CF_M_imag, i128 %gmem, i64 %fft_out_c_channel, i8 %ctrl1_reg_c_channel1, i32 %wr_ptr"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 19 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 3ns
+The critical path consists of the following:
+	wire read operation ('p_read_24') on port 'p_read' [10]  (0 ns)
+	'call' operation ('ctrl1_reg_c_channel1') to 'ifmap_gen_y' [16]  (3 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.35ns
+The critical path consists of the following:
+	wire read operation ('fft_out_read') on port 'fft_out' [9]  (0 ns)
+	'call' operation ('fft_out_c_channel') to 'entry_proc' [15]  (0 ns)
+	'call' operation ('call_ln0') to 'ifmap_vec_write' [17]  (2.35 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

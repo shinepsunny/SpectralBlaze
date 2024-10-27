@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'ifmap_gen_x'
+================================================================
+* Date:           Thu Oct 13 07:49:23 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.536 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|      258|  10.000 ns|  1.290 us|    2|  258|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_370_1_VITIS_LOOP_373_2  |        0|      256|         2|          1|          1|  0 ~ 256|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     120|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     0|       0|      40|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      90|    -|
+|Register         |        -|     -|      87|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      87|     250|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------------------+---------+----+---+----+-----+
+    |         Instance        |       Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------------+--------------------+---------+----+---+----+-----+
+    |mul_8ns_8ns_16_1_1_U257  |mul_8ns_8ns_16_1_1  |        0|   0|  0|  40|    0|
+    +-------------------------+--------------------+---------+----+---+----+-----+
+    |Total                    |                    |        0|   0|  0|  40|    0|
+    +-------------------------+--------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1057_fu_144_p2              |         +|   0|  0|  23|          16|           1|
+    |add_ln370_fu_156_p2               |         +|   0|  0|  15|           8|           1|
+    |add_ln373_fu_220_p2               |         +|   0|  0|  15|           8|           1|
+    |add_ln376_fu_200_p2               |         +|   0|  0|  19|          12|          12|
+    |ap_condition_108                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1057_3_fu_162_p2           |      icmp|   0|  0|  11|           8|           8|
+    |icmp_ln1057_fu_138_p2             |      icmp|   0|  0|  13|          16|          16|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |select_ln1057_1_fu_176_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln1057_fu_168_p3           |    select|   0|  0|   8|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 120|          74|          53|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
+    |ap_return                             |   9|          2|    8|         16|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_x_load               |   9|          2|    8|         16|
+    |ap_sig_allocacmp_y_load               |   9|          2|    8|         16|
+    |c_row_op_st_blk_n                     |   9|          2|    1|          2|
+    |indvar_flatten_fu_68                  |   9|          2|   16|         32|
+    |x_fu_60                               |   9|          2|    8|         16|
+    |y_fu_64                               |   9|          2|    8|         16|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  90|         20|   75|        150|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |add_ln376_reg_278        |  12|   0|   12|          0|
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_return_preg           |   8|   0|    8|          0|
+    |indvar_flatten_fu_68     |  16|   0|   16|          0|
+    |trunc_ln145_3_reg_288    |  16|   0|   16|          0|
+    |trunc_ln145_reg_283      |  16|   0|   16|          0|
+    |x_fu_60                  |   8|   0|    8|          0|
+    |y_fu_64                  |   8|   0|    8|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  87|   0|   87|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|ap_return                 |  out|    8|  ap_ctrl_hs|      ifmap_gen_x|  return value|
+|c_row_op_st_dout          |   in|   32|     ap_fifo|      c_row_op_st|       pointer|
+|c_row_op_st_empty_n       |   in|    1|     ap_fifo|      c_row_op_st|       pointer|
+|c_row_op_st_read          |  out|    1|     ap_fifo|      c_row_op_st|       pointer|
+|ifmap_CF_M_real_address0  |  out|   12|   ap_memory|  ifmap_CF_M_real|         array|
+|ifmap_CF_M_real_ce0       |  out|    1|   ap_memory|  ifmap_CF_M_real|         array|
+|ifmap_CF_M_real_we0       |  out|    1|   ap_memory|  ifmap_CF_M_real|         array|
+|ifmap_CF_M_real_d0        |  out|   16|   ap_memory|  ifmap_CF_M_real|         array|
+|ifmap_CF_M_imag_address0  |  out|   12|   ap_memory|  ifmap_CF_M_imag|         array|
+|ifmap_CF_M_imag_ce0       |  out|    1|   ap_memory|  ifmap_CF_M_imag|         array|
+|ifmap_CF_M_imag_we0       |  out|    1|   ap_memory|  ifmap_CF_M_imag|         array|
+|ifmap_CF_M_imag_d0        |  out|   16|   ap_memory|  ifmap_CF_M_imag|         array|
+|p_read                    |   in|    8|     ap_none|           p_read|        scalar|
++--------------------------+-----+-----+------------+-----------------+--------------+
+

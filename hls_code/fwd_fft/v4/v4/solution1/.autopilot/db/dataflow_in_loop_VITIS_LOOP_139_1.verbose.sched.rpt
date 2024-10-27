@@ -1,0 +1,253 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_139_1'
+================================================================
+* Date:           Thu Oct 13 07:49:11 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.953 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       30|      204|  0.150 us|  1.020 us|    5|   28|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.35>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_read_26 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read"   --->   Operation 17 'read' 'p_read_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%input_data1 = alloca i64 1"   --->   Operation 18 'alloca' 'input_data1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%out_data_12 = alloca i64 1"   --->   Operation 19 'alloca' 'out_data_12' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%out_data_23 = alloca i64 1"   --->   Operation 20 'alloca' 'out_data_23' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%out_data_34 = alloca i64 1"   --->   Operation 21 'alloca' 'out_data_34' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%out_data_45 = alloca i64 1"   --->   Operation 22 'alloca' 'out_data_45' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%out_data_56 = alloca i64 1"   --->   Operation 23 'alloca' 'out_data_56' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%out_data_67 = alloca i64 1"   --->   Operation 24 'alloca' 'out_data_67' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 25 [2/2] (2.35ns)   --->   "%ctrl1_reg_c6_channel = call i32 @stream_2_buf, i32 %c_row_op_trans_st, i32 %input_data1, i32 %p_read_26" [src/main.cpp:169]   --->   Operation 25 'call' 'ctrl1_reg_c6_channel' <Predicate = true> <Delay = 2.35> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%ctrl1_reg_c6_channel = call i32 @stream_2_buf, i32 %c_row_op_trans_st, i32 %input_data1, i32 %p_read_26" [src/main.cpp:169]   --->   Operation 26 'call' 'ctrl1_reg_c6_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 2.20>
+ST_3 : Operation 27 [2/2] (2.20ns)   --->   "%ctrl1_reg_c5_channel = call i32 @fft_stage.0.0, i32 %input_data1, i32 %out_data_12, i32 %ctrl1_reg_c6_channel, i16 %w_M_real41, i16 %w_M_imag30" [src/main.cpp:171]   --->   Operation 27 'call' 'ctrl1_reg_c5_channel' <Predicate = true> <Delay = 2.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 28 [1/2] (0.00ns)   --->   "%ctrl1_reg_c5_channel = call i32 @fft_stage.0.0, i32 %input_data1, i32 %out_data_12, i32 %ctrl1_reg_c6_channel, i16 %w_M_real41, i16 %w_M_imag30" [src/main.cpp:171]   --->   Operation 28 'call' 'ctrl1_reg_c5_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 5 <SV = 4> <Delay = 2.20>
+ST_5 : Operation 29 [2/2] (2.20ns)   --->   "%ctrl1_reg_c4_channel = call i32 @fft_stage.1.0, i32 %out_data_12, i32 %out_data_23, i32 %ctrl1_reg_c5_channel, i16 %w_M_real42, i16 %w_M_imag31" [src/main.cpp:172]   --->   Operation 29 'call' 'ctrl1_reg_c4_channel' <Predicate = true> <Delay = 2.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 30 [1/2] (0.00ns)   --->   "%ctrl1_reg_c4_channel = call i32 @fft_stage.1.0, i32 %out_data_12, i32 %out_data_23, i32 %ctrl1_reg_c5_channel, i16 %w_M_real42, i16 %w_M_imag31" [src/main.cpp:172]   --->   Operation 30 'call' 'ctrl1_reg_c4_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 7 <SV = 6> <Delay = 2.20>
+ST_7 : Operation 31 [2/2] (2.20ns)   --->   "%ctrl1_reg_c3_channel = call i16 @fft_stage.2.0, i32 %out_data_23, i32 %out_data_34, i32 %ctrl1_reg_c4_channel, i16 %w_M_real43, i16 %w_M_imag32" [src/main.cpp:173]   --->   Operation 31 'call' 'ctrl1_reg_c3_channel' <Predicate = true> <Delay = 2.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 32 [1/2] (0.00ns)   --->   "%ctrl1_reg_c3_channel = call i16 @fft_stage.2.0, i32 %out_data_23, i32 %out_data_34, i32 %ctrl1_reg_c4_channel, i16 %w_M_real43, i16 %w_M_imag32" [src/main.cpp:173]   --->   Operation 32 'call' 'ctrl1_reg_c3_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 9 <SV = 8> <Delay = 2.21>
+ST_9 : Operation 33 [2/2] (2.21ns)   --->   "%ctrl1_reg_c2_channel = call i16 @fft_stage.3.0, i32 %out_data_34, i32 %out_data_45, i16 %ctrl1_reg_c3_channel, i16 %w_M_real44, i16 %w_M_imag33" [src/main.cpp:174]   --->   Operation 33 'call' 'ctrl1_reg_c2_channel' <Predicate = true> <Delay = 2.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 34 [1/2] (0.00ns)   --->   "%ctrl1_reg_c2_channel = call i16 @fft_stage.3.0, i32 %out_data_34, i32 %out_data_45, i16 %ctrl1_reg_c3_channel, i16 %w_M_real44, i16 %w_M_imag33" [src/main.cpp:174]   --->   Operation 34 'call' 'ctrl1_reg_c2_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 11 <SV = 10> <Delay = 2.20>
+ST_11 : Operation 35 [2/2] (2.20ns)   --->   "%ctrl1_reg_c1_channel = call i16 @fft_stage.4.0, i32 %out_data_45, i32 %out_data_56, i16 %ctrl1_reg_c2_channel, i16 %w_M_real45, i16 %w_M_imag34" [src/main.cpp:175]   --->   Operation 35 'call' 'ctrl1_reg_c1_channel' <Predicate = true> <Delay = 2.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 36 [1/2] (0.00ns)   --->   "%ctrl1_reg_c1_channel = call i16 @fft_stage.4.0, i32 %out_data_45, i32 %out_data_56, i16 %ctrl1_reg_c2_channel, i16 %w_M_real45, i16 %w_M_imag34" [src/main.cpp:175]   --->   Operation 36 'call' 'ctrl1_reg_c1_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 13 <SV = 12> <Delay = 2.20>
+ST_13 : Operation 37 [2/2] (2.20ns)   --->   "%ctrl1_reg_c_channel = call i8 @fft_stage.5.0, i32 %out_data_56, i32 %out_data_67, i16 %ctrl1_reg_c1_channel, i16 %w_M_real46, i16 %w_M_imag35" [src/main.cpp:176]   --->   Operation 37 'call' 'ctrl1_reg_c_channel' <Predicate = true> <Delay = 2.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 38 [1/2] (0.00ns)   --->   "%ctrl1_reg_c_channel = call i8 @fft_stage.5.0, i32 %out_data_56, i32 %out_data_67, i16 %ctrl1_reg_c1_channel, i16 %w_M_real46, i16 %w_M_imag35" [src/main.cpp:176]   --->   Operation 38 'call' 'ctrl1_reg_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 15 <SV = 14> <Delay = 1.34>
+ST_15 : Operation 39 [2/2] (1.34ns)   --->   "%call_ln177 = call void @buf_2_stream, i32 %out_data_67, i32 %c_fft_col_op_st, i8 %ctrl1_reg_c_channel" [src/main.cpp:177]   --->   Operation 39 'call' 'call_ln177' <Predicate = true> <Delay = 1.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_trans_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_fft_col_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 42 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln150 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_27" [src/main.cpp:150]   --->   Operation 42 'specdataflowpipeline' 'specdataflowpipeline_ln150' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln150 = specmemcore void @_ssdm_op_SpecMemCore, i32 %input_data1, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:150]   --->   Operation 43 'specmemcore' 'specmemcore_ln150' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln153 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_12, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:153]   --->   Operation 44 'specmemcore' 'specmemcore_ln153' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln154 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_23, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:154]   --->   Operation 45 'specmemcore' 'specmemcore_ln154' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 46 [1/1] (0.00ns)   --->   "%specmemcore_ln155 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_34, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:155]   --->   Operation 46 'specmemcore' 'specmemcore_ln155' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln156 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_45, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:156]   --->   Operation 47 'specmemcore' 'specmemcore_ln156' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 48 [1/1] (0.00ns)   --->   "%specmemcore_ln157 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_56, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:157]   --->   Operation 48 'specmemcore' 'specmemcore_ln157' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 49 [1/1] (0.00ns)   --->   "%specmemcore_ln158 = specmemcore void @_ssdm_op_SpecMemCore, i32 %out_data_67, i64 666, i64 30, i64 18446744073709551615" [src/main.cpp:158]   --->   Operation 49 'specmemcore' 'specmemcore_ln158' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln177 = call void @buf_2_stream, i32 %out_data_67, i32 %c_fft_col_op_st, i8 %ctrl1_reg_c_channel" [src/main.cpp:177]   --->   Operation 50 'call' 'call_ln177' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 51 [1/1] (0.00ns)   --->   "%ret_ln177 = ret" [src/main.cpp:177]   --->   Operation 51 'ret' 'ret_ln177' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 2.36ns
+The critical path consists of the following:
+	wire read operation ('p_read_26') on port 'p_read' [19]  (0 ns)
+	'call' operation ('ctrl1_reg_c6_channel', src/main.cpp:169) to 'stream_2_buf' [34]  (2.36 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.2ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c5_channel', src/main.cpp:171) to 'fft_stage.0.0' [35]  (2.2 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 2.21ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c4_channel', src/main.cpp:172) to 'fft_stage.1.0' [36]  (2.21 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 2.2ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c3_channel', src/main.cpp:173) to 'fft_stage.2.0' [37]  (2.2 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 2.21ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c2_channel', src/main.cpp:174) to 'fft_stage.3.0' [38]  (2.21 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 2.2ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c1_channel', src/main.cpp:175) to 'fft_stage.4.0' [39]  (2.2 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 2.2ns
+The critical path consists of the following:
+	'call' operation ('ctrl1_reg_c_channel', src/main.cpp:176) to 'fft_stage.5.0' [40]  (2.2 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 1.34ns
+The critical path consists of the following:
+	'call' operation ('call_ln177', src/main.cpp:177) to 'buf_2_stream' [41]  (1.34 ns)
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,150 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_parent_loop_proc'
+================================================================
+* Date:           Thu Oct 13 07:49:06 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.536 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max |   Type  |
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |        5|     4421|  25.000 ns|  22.105 us|    5|  4421|       no|
+    +---------+---------+-----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_442_3  |        4|     4420|   8 ~ 521|          -|          -|  0 ~ 16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_trans_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_22 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read"   --->   Operation 7 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ctrl2_reg_load_cast_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %ctrl2_reg_load_cast"   --->   Operation 8 'read' 'ctrl2_reg_load_cast_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.48ns)   --->   "%br_ln0 = br void"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 0.90>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%pnx_2 = phi i8 0, void %newFuncRoot, i8 %pnx, void %.split"   --->   Operation 10 'phi' 'pnx_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.85ns)   --->   "%icmp_ln1057 = icmp_eq  i8 %pnx_2, i8 %ctrl2_reg_load_cast_read"   --->   Operation 11 'icmp' 'icmp_ln1057' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln442 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @dataflow_parent_loop_str, i8 %pnx_2, i8 %ctrl2_reg_load_cast" [src/main.cpp:442]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln442' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.90ns)   --->   "%pnx = add i8 %pnx_2, i8 1" [src/main.cpp:442]   --->   Operation 13 'add' 'pnx' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln442 = br i1 %icmp_ln1057, void %.split, void %.exitStub" [src/main.cpp:442]   --->   Operation 14 'br' 'br_ln442' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 15 'ret' 'ret_ln0' <Predicate = (icmp_ln1057)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.00>
+ST_3 : Operation 16 [2/2] (3.00ns)   --->   "%call_ln448 = call void @dataflow_in_loop_VITIS_LOOP_442_3, i32 %c_row_op_st, i8 %p_read_22, i32 %c_row_op_trans_st" [src/main.cpp:448]   --->   Operation 16 'call' 'call_ln448' <Predicate = (!icmp_ln1057)> <Delay = 3.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%speclooptripcount_ln446 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 16, i64 8" [src/main.cpp:446]   --->   Operation 17 'speclooptripcount' 'speclooptripcount_ln446' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln446 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [src/main.cpp:446]   --->   Operation 18 'specloopname' 'specloopname_ln446' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+ST_4 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln448 = call void @dataflow_in_loop_VITIS_LOOP_442_3, i32 %c_row_op_st, i8 %p_read_22, i32 %c_row_op_trans_st" [src/main.cpp:448]   --->   Operation 19 'call' 'call_ln448' <Predicate = (!icmp_ln1057)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln442 = br void" [src/main.cpp:442]   --->   Operation 20 'br' 'br_ln442' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 2ns.
+
+ <State 1>: 0.489ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('pnx') with incoming values : ('pnx', src/main.cpp:442) [11]  (0.489 ns)
+
+ <State 2>: 0.907ns
+The critical path consists of the following:
+	'phi' operation ('pnx') with incoming values : ('pnx', src/main.cpp:442) [11]  (0 ns)
+	'add' operation ('pnx', src/main.cpp:442) [14]  (0.907 ns)
+
+ <State 3>: 3ns
+The critical path consists of the following:
+	'call' operation ('call_ln448', src/main.cpp:448) to 'dataflow_in_loop_VITIS_LOOP_442_3' [19]  (3 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

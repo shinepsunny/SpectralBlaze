@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627570239">
+  <ports id="1" name="c_row_op_trans_st" type="PortType" coreName="FIFO_SRL" coreId="626639584" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="c_fft_col_op_st" type="PortType" coreName="FIFO_SRL" coreId="1397508187" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="ctrl1_reg" type="PortType" coreName="FIFO_SRL" coreId="627204000" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="ctrl2_reg" type="PortType" coreName="FIFO_SRL" coreId="623353232" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="layer1_reg" type="PortType" coreName="FIFO_SRL" coreId="619829936" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="ctrl1_reg_c" type="PortType" coreName="FIFO_SRL" coreId="624146880" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="ctrl2_reg_c" type="PortType" coreName="FIFO_SRL" coreId="619830080" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="layer1_reg_c" type="PortType" coreName="FIFO_SRL" coreId="625951840" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="52" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="55" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.7"/>
+  <edges id="56" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="58" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="60" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.6"/>
+  <edges id="61" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="63" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.5"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="67" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="70" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="71" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="74" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="85" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@ports.1"/>
+  <edges id="88" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="89" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="90" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="91" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="92" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="93" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="94" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="95" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="96" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="97" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="98" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="99" sink_obj="//@blocks.0/@node_objs.18"/>
+  <blocks id="49" name="FFT_C" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="layer1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>layer1_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="layer1_reg_c_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>layer1_reg_c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="ctrl2_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl2_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="ctrl2_reg_c_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ctrl2_reg_c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="ctrl1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl1_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="ctrl1_reg_c_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ctrl1_reg_c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="lhs" lineNumber="225" originalName="lhs" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="lhs_fu_140_p1" coreId="627549440" contextFuncName="ap_int_base_8_false_s" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="zext_ln225" lineNumber="225" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="ret_2_fu_161_p10" coreId="627549440" contextFuncName="ap_int_base_8_false_s" bitwidth="16" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="rhs" lineNumber="225" originalName="rhs" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="rhs_fu_144_p1" coreId="627549440" contextFuncName="ap_int_base_8_false_s" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="zext_ln225_4" lineNumber="225" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="grp_fu_177_p10" coreId="627549440" contextFuncName="ap_int_base_8_false_s" bitwidth="24" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="zext_ln225_5" lineNumber="225" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="ret_2_fu_161_p00" coreId="627549440" contextFuncName="ap_int_base_8_false_s" bitwidth="16" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="ret_2" lineNumber="1524" originalName="ret" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="mul_8ns_8ns_16_1_1_U429" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_8_false_8_false" bitwidth="16" opcode="mul" nodeLabel="1.0" m_display="0" m_delay="2.17" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1524" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator*&amp;lt;8, false, 8, false&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln225_6" lineNumber="225" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="grp_fu_177_p00" coreId="627549440" contextFuncName="ap_int_base_16_false_s" bitwidth="24" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;16, false&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="ret" lineNumber="1524" originalName="ret" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="mul_mul_16ns_8ns_24_4_1_U430" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="127" contextFuncName="operator_mul_16_false_8_false" bitwidth="24" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="0.69" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1524" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator*&amp;lt;16, false, 8, false&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln138" lineNumber="138" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_fu_184_p00" coreId="627549440" contextFuncName="FFT_C" bitwidth="32" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="138" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="FFT_C"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="trunc_ln225" lineNumber="225" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln225_fu_148_p1" coreId="627549440" contextFuncName="ap_int_base_16_false_s" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="225" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="ap_int_base&amp;lt;16, false&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="zext_ln138_1" lineNumber="138" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_fu_184_p10" coreId="627549440" contextFuncName="FFT_C" bitwidth="32" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="138" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="FFT_C"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="n" lineNumber="138" originalName="n" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_mul_24ns_16ns_32_4_1_U431" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="127" contextFuncName="FFT_C" bitwidth="32" opcode="mul" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="0.69" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="138" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="FFT_C"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln138" lineNumber="138" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_dataflow_parent_loop_proc12_fu_106" coreId="627549440" contextFuncName="FFT_C" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="138" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="FFT_C"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>c_row_op_trans_st</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>c_fft_col_op_st</dataOutputObjs>
+      <constName>dataflow_parent_loop_proc12</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln179" lineNumber="179" fileName="src/main.cpp" fileDirectory=".." coreId="627549440" contextFuncName="FFT_C" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="179" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="FFT_C"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/main.cpp">
+      <validLinenumbers>138</validLinenumbers>
+      <validLinenumbers>179</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>225</validLinenumbers>
+      <validLinenumbers>1524</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <regnodes realName="zext_ln138_reg_222">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="rhs_reg_201">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="ctrl1_reg_read_reg_191">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln138_1_reg_227">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln225_4_reg_212">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="n_reg_232">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln225_6_reg_217">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln225_reg_207">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="lhs_reg_196">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <expressionNodes realName="rhs_fu_144">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln138_1_fu_174">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln225_5_fu_158">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln225_4_fu_155">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln138_fu_171">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln225_6_fu_167">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln225_fu_152">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lhs_fu_140">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_2_fu_161">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln225_fu_148">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_184">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_dataflow_parent_loop_proc12_fu_106">
+    <nodeIds>47</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_177">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="ctrl1_reg_read_read_fu_92">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_98">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ctrl2_reg_read_read_fu_78">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_70">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_84">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer1_reg_read_read_fu_64">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="w_M_imag30" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag31" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag32" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag33" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag34" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_imag35" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real41" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real42" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real43" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real44" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real45" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w_M_real46" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <ioPorts name="c_fft_col_op_st">
+    <contents name="call">
+      <nodeIds>47</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_row_op_trans_st">
+    <contents name="call">
+      <nodeIds>47</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_reg">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_reg_c">
+    <contents name="write">
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg">
+    <contents name="read">
+      <nodeIds>26</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg_c">
+    <contents name="write">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg_c">
+    <contents name="write">
+      <nodeIds>24</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="4" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="42" stage="3" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="42" stage="2" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="42" stage="1" latency="4"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="4" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="46" stage="3" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="46" stage="2" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="46" stage="1" latency="4"/>
+      <operations id="47" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="48" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="FFT_C" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="36" mMaxLatency="301243">
+      <basicBlocks>49</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

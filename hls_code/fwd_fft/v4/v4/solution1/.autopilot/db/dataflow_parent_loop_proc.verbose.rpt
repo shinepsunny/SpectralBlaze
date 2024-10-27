@@ -1,0 +1,694 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_parent_loop_proc'
+================================================================
+* Date:           Thu Oct 13 07:49:24 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.536 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max |   Type  |
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |        5|     4421|  25.000 ns|  22.105 us|    5|  4421|       no|
+    +---------+---------+-----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+----------+
+        |                                      |                                   |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline |
+        |               Instance               |               Module              |   min   |   max   |    min    |    max   | min | max |   Type   |
+        +--------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+----------+
+        |dataflow_in_loop_VITIS_LOOP_442_3_U0  |dataflow_in_loop_VITIS_LOOP_442_3  |        5|      518|  25.000 ns|  2.590 us|    3|  260|  dataflow|
+        +--------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_442_3  |        4|     4420|   8 ~ 521|          -|          -|  0 ~ 16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|     120|      30|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       16|     0|     238|     601|    0|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      18|    -|
+|Register         |        -|     -|      16|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       16|     0|     374|     649|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        2|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |               Instance               |               Module              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |dataflow_in_loop_VITIS_LOOP_442_3_U0  |dataflow_in_loop_VITIS_LOOP_442_3  |       16|   0|  238|  601|    0|
+    +--------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |Total                                 |                                   |       16|   0|  238|  601|    0|
+    +--------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+----+----+----+------------+------------+
+    |        Variable Name       | Operation| DSP| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+----+----+----+------------+------------+
+    |loop_dataflow_input_count   |         +|   0|  40|  10|           8|           1|
+    |loop_dataflow_output_count  |         +|   0|  40|  10|           8|           1|
+    |bound_minus_1               |         -|   0|  40|  10|           8|           1|
+    +----------------------------+----------+----+----+----+------------+------------+
+    |Total                       |          |   0| 120|  30|          24|           3|
+    +----------------------------+----------+----+----+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |loop_dataflow_input_count   |   9|          2|    8|         16|
+    |loop_dataflow_output_count  |   9|          2|    8|         16|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  18|          4|   16|         32|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+---+----+-----+-----------+
+    |            Name            | FF| LUT| Bits| Const Bits|
+    +----------------------------+---+----+-----+-----------+
+    |loop_dataflow_input_count   |  8|   0|    8|          0|
+    |loop_dataflow_output_count  |  8|   0|    8|          0|
+    +----------------------------+---+----+-----+-----------+
+    |Total                       | 16|   0|   16|          0|
+    +----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+---------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++--------------------------+-----+-----+------------+---------------------------+--------------+
+|ctrl2_reg_load_cast       |   in|    8|     ap_none|        ctrl2_reg_load_cast|        scalar|
+|c_row_op_st_dout          |   in|   32|     ap_fifo|                c_row_op_st|       pointer|
+|c_row_op_st_empty_n       |   in|    1|     ap_fifo|                c_row_op_st|       pointer|
+|c_row_op_st_read          |  out|    1|     ap_fifo|                c_row_op_st|       pointer|
+|p_read                    |   in|    8|     ap_none|                     p_read|        scalar|
+|p_read_ap_vld             |   in|    1|     ap_none|                     p_read|        scalar|
+|c_row_op_trans_st_din     |  out|   32|     ap_fifo|          c_row_op_trans_st|       pointer|
+|c_row_op_trans_st_full_n  |   in|    1|     ap_fifo|          c_row_op_trans_st|       pointer|
+|c_row_op_trans_st_write   |  out|    1|     ap_fifo|          c_row_op_trans_st|       pointer|
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
++--------------------------+-----+-----+------------+---------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %c_row_op_trans_st, void @empty_17, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_22 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read"   --->   Operation 7 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ctrl2_reg_load_cast_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %ctrl2_reg_load_cast"   --->   Operation 8 'read' 'ctrl2_reg_load_cast_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.48ns)   --->   "%br_ln0 = br void"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 0.90>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%pnx_2 = phi i8 0, void %newFuncRoot, i8 %pnx, void %.split"   --->   Operation 10 'phi' 'pnx_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.85ns)   --->   "%icmp_ln1057 = icmp_eq  i8 %pnx_2, i8 %ctrl2_reg_load_cast_read"   --->   Operation 11 'icmp' 'icmp_ln1057' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln442 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @dataflow_parent_loop_str, i8 %pnx_2, i8 %ctrl2_reg_load_cast" [src/main.cpp:442]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln442' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.90ns)   --->   "%pnx = add i8 %pnx_2, i8 1" [src/main.cpp:442]   --->   Operation 13 'add' 'pnx' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln442 = br i1 %icmp_ln1057, void %.split, void %.exitStub" [src/main.cpp:442]   --->   Operation 14 'br' 'br_ln442' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 15 'ret' 'ret_ln0' <Predicate = (icmp_ln1057)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.00>
+ST_3 : Operation 16 [2/2] (3.00ns)   --->   "%call_ln448 = call void @dataflow_in_loop_VITIS_LOOP_442_3, i32 %c_row_op_st, i8 %p_read_22, i32 %c_row_op_trans_st" [src/main.cpp:448]   --->   Operation 16 'call' 'call_ln448' <Predicate = (!icmp_ln1057)> <Delay = 3.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%speclooptripcount_ln446 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 16, i64 8" [src/main.cpp:446]   --->   Operation 17 'speclooptripcount' 'speclooptripcount_ln446' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln446 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [src/main.cpp:446]   --->   Operation 18 'specloopname' 'specloopname_ln446' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+ST_4 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln448 = call void @dataflow_in_loop_VITIS_LOOP_442_3, i32 %c_row_op_st, i8 %p_read_22, i32 %c_row_op_trans_st" [src/main.cpp:448]   --->   Operation 19 'call' 'call_ln448' <Predicate = (!icmp_ln1057)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln442 = br void" [src/main.cpp:442]   --->   Operation 20 'br' 'br_ln442' <Predicate = (!icmp_ln1057)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ ctrl2_reg_load_cast]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ c_row_op_st]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ c_row_op_trans_st]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0          (specinterface       ) [ 00000]
+specinterface_ln0          (specinterface       ) [ 00000]
+p_read_22                  (read                ) [ 00111]
+ctrl2_reg_load_cast_read   (read                ) [ 00111]
+br_ln0                     (br                  ) [ 01111]
+pnx_2                      (phi                 ) [ 00100]
+icmp_ln1057                (icmp                ) [ 00111]
+specdataflowpipeline_ln442 (specdataflowpipeline) [ 00000]
+pnx                        (add                 ) [ 01111]
+br_ln442                   (br                  ) [ 00000]
+ret_ln0                    (ret                 ) [ 00000]
+speclooptripcount_ln446    (speclooptripcount   ) [ 00000]
+specloopname_ln446         (specloopname        ) [ 00000]
+call_ln448                 (call                ) [ 00000]
+br_ln442                   (br                  ) [ 01111]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="ctrl2_reg_load_cast">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ctrl2_reg_load_cast"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="c_row_op_st">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="c_row_op_st"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="p_read">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="c_row_op_trans_st">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="c_row_op_trans_st"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_27"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dataflow_parent_loop_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dataflow_in_loop_VITIS_LOOP_442_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_19"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="p_read_22_read_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="8" slack="0"/>
+<pin id="44" dir="0" index="1" bw="8" slack="0"/>
+<pin id="45" dir="1" index="2" bw="8" slack="2"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_22/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="ctrl2_reg_load_cast_read_read_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="8" slack="0"/>
+<pin id="50" dir="0" index="1" bw="8" slack="0"/>
+<pin id="51" dir="1" index="2" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="ctrl2_reg_load_cast_read/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1005" name="pnx_2_reg_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="8" slack="1"/>
+<pin id="56" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="pnx_2 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="pnx_2_phi_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="1" slack="1"/>
+<pin id="60" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="61" dir="0" index="2" bw="8" slack="0"/>
+<pin id="62" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="63" dir="1" index="4" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="pnx_2/2 "/>
+</bind>
+</comp>
+
+<comp id="65" class="1004" name="grp_dataflow_in_loop_VITIS_LOOP_442_3_fu_65">
+<pin_list>
+<pin id="66" dir="0" index="0" bw="0" slack="0"/>
+<pin id="67" dir="0" index="1" bw="32" slack="0"/>
+<pin id="68" dir="0" index="2" bw="8" slack="2"/>
+<pin id="69" dir="0" index="3" bw="32" slack="0"/>
+<pin id="70" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln448/3 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="icmp_ln1057_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="8" slack="0"/>
+<pin id="76" dir="0" index="1" bw="8" slack="1"/>
+<pin id="77" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln1057/2 "/>
+</bind>
+</comp>
+
+<comp id="79" class="1004" name="pnx_fu_79">
+<pin_list>
+<pin id="80" dir="0" index="0" bw="8" slack="0"/>
+<pin id="81" dir="0" index="1" bw="1" slack="0"/>
+<pin id="82" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="pnx/2 "/>
+</bind>
+</comp>
+
+<comp id="85" class="1005" name="p_read_22_reg_85">
+<pin_list>
+<pin id="86" dir="0" index="0" bw="8" slack="2"/>
+<pin id="87" dir="1" index="1" bw="8" slack="2"/>
+</pin_list>
+<bind>
+<opset="p_read_22 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1005" name="ctrl2_reg_load_cast_read_reg_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="8" slack="1"/>
+<pin id="92" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="ctrl2_reg_load_cast_read "/>
+</bind>
+</comp>
+
+<comp id="95" class="1005" name="icmp_ln1057_reg_95">
+<pin_list>
+<pin id="96" dir="0" index="0" bw="1" slack="1"/>
+<pin id="97" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln1057 "/>
+</bind>
+</comp>
+
+<comp id="99" class="1005" name="pnx_reg_99">
+<pin_list>
+<pin id="100" dir="0" index="0" bw="8" slack="0"/>
+<pin id="101" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opset="pnx "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="46"><net_src comp="16" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="47"><net_src comp="4" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="52"><net_src comp="16" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="0" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="57"><net_src comp="18" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="64"><net_src comp="54" pin="1"/><net_sink comp="58" pin=0"/></net>
+
+<net id="71"><net_src comp="28" pin="0"/><net_sink comp="65" pin=0"/></net>
+
+<net id="72"><net_src comp="2" pin="0"/><net_sink comp="65" pin=1"/></net>
+
+<net id="73"><net_src comp="6" pin="0"/><net_sink comp="65" pin=3"/></net>
+
+<net id="78"><net_src comp="58" pin="4"/><net_sink comp="74" pin=0"/></net>
+
+<net id="83"><net_src comp="58" pin="4"/><net_sink comp="79" pin=0"/></net>
+
+<net id="84"><net_src comp="26" pin="0"/><net_sink comp="79" pin=1"/></net>
+
+<net id="88"><net_src comp="42" pin="2"/><net_sink comp="85" pin=0"/></net>
+
+<net id="89"><net_src comp="85" pin="1"/><net_sink comp="65" pin=2"/></net>
+
+<net id="93"><net_src comp="48" pin="2"/><net_sink comp="90" pin=0"/></net>
+
+<net id="94"><net_src comp="90" pin="1"/><net_sink comp="74" pin=1"/></net>
+
+<net id="98"><net_src comp="74" pin="2"/><net_sink comp="95" pin=0"/></net>
+
+<net id="102"><net_src comp="79" pin="2"/><net_sink comp="99" pin=0"/></net>
+
+<net id="103"><net_src comp="99" pin="1"/><net_sink comp="58" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: c_row_op_st | {}
+	Port: c_row_op_trans_st | {3 4 }
+ - Input state : 
+	Port: dataflow_parent_loop_proc : ctrl2_reg_load_cast | {1 }
+	Port: dataflow_parent_loop_proc : c_row_op_st | {3 4 }
+	Port: dataflow_parent_loop_proc : p_read | {1 }
+	Port: dataflow_parent_loop_proc : c_row_op_trans_st | {}
+  - Chain level:
+	State 1
+	State 2
+		icmp_ln1057 : 1
+		specdataflowpipeline_ln442 : 1
+		pnx : 1
+		br_ln442 : 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|               Functional Unit               |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   call   | grp_dataflow_in_loop_VITIS_LOOP_442_3_fu_65 |    16   |    0    |  1.467  |   161   |   331   |    0    |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+|    add   |                  pnx_fu_79                  |    0    |    0    |    0    |    0    |    15   |    0    |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   icmp   |              icmp_ln1057_fu_74              |    0    |    0    |    0    |    0    |    11   |    0    |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   read   |             p_read_22_read_fu_42            |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |     ctrl2_reg_load_cast_read_read_fu_48     |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                                             |    16   |    0    |  1.467  |   161   |   357   |    0    |
+|----------|---------------------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------------+--------+
+|                               |   FF   |
++-------------------------------+--------+
+|ctrl2_reg_load_cast_read_reg_90|    8   |
+|       icmp_ln1057_reg_95      |    1   |
+|        p_read_22_reg_85       |    8   |
+|          pnx_2_reg_54         |    8   |
+|           pnx_reg_99          |    8   |
++-------------------------------+--------+
+|             Total             |   33   |
++-------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |   16   |    0   |    1   |   161  |   357  |    0   |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |   33   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   16   |    0   |    1   |   194  |   357  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

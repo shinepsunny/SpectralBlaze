@@ -1,0 +1,50 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'shine' on host 'shine-VivoBook-ASUSLaptop-K3502ZA-S3502ZA' (Linux_x86_64 version 5.19.5) on Fri Dec 09 12:13:28 IST 2022
+INFO: [HLS 200-10] On os Ubuntu 22.04 LTS
+INFO: [HLS 200-10] In directory '/home/shine/Documents/research/fft_story/hls/fwd_fft/v4'
+Sourcing Tcl script '/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source /home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4/solution1/cosim.tcl
+INFO: [HLS 200-1510] Running: open_project v4 
+INFO: [HLS 200-10] Opening project '/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4'.
+INFO: [HLS 200-1510] Running: set_top fwd_fft 
+INFO: [HLS 200-1510] Running: add_files src/globals.hpp 
+INFO: [HLS 200-10] Adding design file 'src/globals.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/main.cpp 
+INFO: [HLS 200-10] Adding design file 'src/main.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/types.hpp 
+INFO: [HLS 200-10] Adding design file 'src/types.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/main_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/main_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_data -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test_data' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7cg-fbvb900-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7cg-fbvb900-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2 
+INFO: [HLS 200-1510] Running: source ./v4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fwd_fft fwd_fft 
+INFO: [HLS 200-1510] Running: cosim_design -wave_debug -enable_dataflow_profiling -trace_level all 
+Running Dispatch Server on port: 42911
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 6.55 seconds. CPU system time: 0.34 seconds. Elapsed time: 6.95 seconds; current allocated memory: 4.410 MB.
+command 'ap_source' returned error code
+    while executing
+"source /home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4/solution1/cosim.tcl"
+    invoked from within
+"hls::main /home/shine/Documents/research/fft_story/hls/fwd_fft/v4/v4/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 8.03 seconds. Total CPU system time: 0.52 seconds. Total elapsed time: 18.4 seconds; peak allocated memory: 210.676 MB.

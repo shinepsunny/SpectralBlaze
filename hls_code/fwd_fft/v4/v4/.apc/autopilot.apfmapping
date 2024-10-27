@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="globals.hpp" path="/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/src/globals.hpp"/>
+    <originFiles name="main.cpp" path="/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/src/main.cpp"/>
+    <originFiles name="types.hpp" path="/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/src/types.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main_test.cpp" path="/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/tb/main_test.cpp"/>
+    <originFiles name="test_data" path="/home/shine/Documents/research/fft_story/hls/fwd_fft/v4/test_data"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

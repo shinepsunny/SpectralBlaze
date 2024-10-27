@@ -1,0 +1,137 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_442_3'" level="0">
+<item name = "Date">Thu Oct 13 07:49:24 2022
+</item>
+<item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)</item>
+<item name = "Project">v4</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7cg-fbvb900-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.536 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5, 518, 25.000 ns, 2.590 us, 3, 260, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="ifmap_gen_x_U0">ifmap_gen_x, 2, 258, 10.000 ns, 1.290 us, 2, 258, no</column>
+<column name="ifmap_cons_y_U0">ifmap_cons_y, 2, 259, 10.000 ns, 1.295 us, 2, 259, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 18, -</column>
+<column name="FIFO">-, -, 99, 67, -</column>
+<column name="Instance">-, 0, 136, 489, -</column>
+<column name="Memory">16, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, 27, -</column>
+<column name="Register">-, -, 3, -, -</column>
+<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="ifmap_cons_y_U0">ifmap_cons_y, 0, 0, 49, 239, 0</column>
+<column name="ifmap_gen_x_U0">ifmap_gen_x, 0, 0, 87, 250, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="ifmap_RF_M_real_U">dataflow_in_loop_VITIS_LOOP_442_3_ifmap_RF_M_real, 8, 0, 0, 0, 4096, 16, 1, 65536</column>
+<column name="ifmap_RF_M_imag_U">dataflow_in_loop_VITIS_LOOP_442_3_ifmap_RF_M_real, 8, 0, 0, 0, 4096, 16, 1, 65536</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="ctrl1_reg_c_channel1_U">0, 99, 0, -, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_channel_done_ctrl1_reg_c_channel1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_ifmap_RF_M_imag">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_ifmap_RF_M_real">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ifmap_cons_y_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ifmap_gen_x_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_ctrl1_reg_c_channel1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_ifmap_RF_M_imag">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_ifmap_RF_M_real">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_ctrl1_reg_c_channel1">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_ifmap_RF_M_imag">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_ifmap_RF_M_real">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_ctrl1_reg_c_channel1">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_ifmap_RF_M_imag">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_ifmap_RF_M_real">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_442_3, return value</column>
+<column name="c_row_op_st_dout">in, 32, ap_fifo, c_row_op_st, pointer</column>
+<column name="c_row_op_st_empty_n">in, 1, ap_fifo, c_row_op_st, pointer</column>
+<column name="c_row_op_st_read">out, 1, ap_fifo, c_row_op_st, pointer</column>
+<column name="p_read">in, 8, ap_none, p_read, scalar</column>
+<column name="p_read_ap_vld">in, 1, ap_none, p_read, scalar</column>
+<column name="c_row_op_trans_st_din">out, 32, ap_fifo, c_row_op_trans_st, pointer</column>
+<column name="c_row_op_trans_st_full_n">in, 1, ap_fifo, c_row_op_trans_st, pointer</column>
+<column name="c_row_op_trans_st_write">out, 1, ap_fifo, c_row_op_trans_st, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,7 @@
+As the loop bound is not a constant or function argument, the compiler may not successfully process the dataflow loop
+Since the loop counter is not declared in loop header and/or initialized to '0', the compiler may not successfully process the dataflow loop
+Either use an argument of the function or declare the variable inside the dataflow loop body
+Either use an argument of the function or declare the variable inside the dataflow loop body
+Either use an argument of the function or declare the variable inside the dataflow loop body
+Either use an argument of the function or declare the variable inside the dataflow loop body
+6 warnings generated.

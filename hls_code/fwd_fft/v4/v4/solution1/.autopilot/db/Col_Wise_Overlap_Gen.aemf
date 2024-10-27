@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665627558091">
+  <ports id="1" name="c_ifmap_patch_st" type="PortType" coreName="FIFO" coreId="107" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="c_ifmap_col_op_st" type="PortType" coreName="FIFO" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="ctrl1_reg" type="PortType" coreName="FIFO_SRL" coreId="136" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="ctrl2_reg" type="PortType" coreName="FIFO_SRL" coreId="3621216858" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="layer1_reg" type="PortType" coreName="FIFO_SRL" coreId="1001210768" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="ctrl1_reg_c20" type="PortType" coreName="FIFO_SRL" coreId="1004226192" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="ctrl2_reg_c25" type="PortType" coreName="FIFO_SRL" coreId="1003317104" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="layer1_reg_c30" type="PortType" coreName="FIFO_SRL" coreId="1003696000" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="55" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.7"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="61" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="63" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.6"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="66" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.5"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="74" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="92" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="111" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="114" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@ports.1"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="128" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="130" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="135" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="136" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="137" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="313" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="314" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="315" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="316" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="317" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="318" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="319" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <blocks id="52" name="Col_Wise_Overlap_Gen" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="layer1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>layer1_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="layer1_reg_c30_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>layer1_reg_c30</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="ctrl2_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl2_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ctrl2_reg_c25_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ctrl2_reg_c25</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ctrl1_reg_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.5" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>ctrl1_reg</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="ctrl1_reg_c20_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.5" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ctrl1_reg_c20</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="Col_Buffer" lineNumber="260" originalName="Col_Buffer" fileName="src/main.cpp" fileDirectory=".." rtlName="Col_Buffer_fifo_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="260" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="empty_181" rtlName="empty_181_fu_137_p1" coreId="1004258048" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty_182" rtlName="empty_182_fu_141_p1" coreId="1004203952" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="ctrl2_reg_load_cast_cast" rtlName="ctrl2_reg_load_cast_cast_fu_207_p1" coreId="1004498000" bitwidth="9" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sub_i_i" rtlName="sub_i_i_fu_210_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="9" opcode="add" nodeLabel="9.0" m_display="0" m_delay="0.9" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="p_cast1" rtlName="p_cast1_reg_272" coreId="1004287952" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln266" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="trunc_ln266_fu_155_p1" coreId="1003814064" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="trunc_ln" lineNumber="263" fileName="src/main.cpp" fileDirectory=".." rtlName="trunc_ln_reg_285" coreId="1003586016" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="263" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="cast" rtlName="bound_fu_175_p00" coreId="1003301408" bitwidth="16" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="cast1" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="bound_fu_175_p10" coreId="1611014112" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="16" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bound" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_8ns_8ns_16_1_1_U59" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="16" opcode="mul" nodeLabel="1.0" m_display="0" m_delay="2.17" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="cast2" rtlName="grp_fu_242_p00" coreId="1002951296" bitwidth="24" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="cast3" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_fu_242_p10" coreId="1003696896" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="24" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="bound4" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_mul_8ns_16ns_24_4_1_U61" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="127" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="24" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="0.69" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="cast14" rtlName="grp_fu_249_p00" coreId="1003674528" bitwidth="32" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="cast15" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_fu_249_p10" coreId="1003696896" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="32" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="bound16" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_mul_8ns_24ns_32_4_1_U62" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="127" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="32" opcode="mul" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="0.69" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="cast40" rtlName="grp_fu_200_p00" coreId="1003228288" bitwidth="48" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="cast41" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_fu_200_p10" coreId="1002463712" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="48" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="bound42" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="mul_16ns_32ns_48_2_1_U60" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="Col_Wise_Overlap_Gen" bitwidth="48" opcode="mul" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="2.96" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="cmp_i_i_mid157" rtlName="cmp_i_i_mid157_fu_217_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.85" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln1057" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1057_fu_224_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_8_false" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.85" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="icmp_ln1057_21" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1057_21_fu_230_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_8_false" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.86" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln1057_22" lineNumber="1057" fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1057_22_fu_236_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_8_false" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.98" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h" linenumber="1057" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="operator&amp;lt;&amp;lt;8, false&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="empty_183" coreId="999610768" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln266" lineNumber="266" fileName="src/main.cpp" fileDirectory=".." rtlName="grp_Col_Wise_Overlap_Gen_Pipeline_VITIS_LOOP_263_1_VITIS_LOOP_269_3_VITIS_LOOP_272_4_VITIS_LOOP_275_5_fu_116" coreId="0" contextFuncName="Col_Wise_Overlap_Gen" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="266" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>c_ifmap_patch_st</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>c_ifmap_col_op_st</dataOutputObjs>
+      <constName>Col_Wise_Overlap_Gen_Pipeline_VITIS_LOOP_263_1_VITIS_LOOP_269_3_VITIS_LOOP_272_4_VITIS_LOOP_275_5</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln305" lineNumber="305" fileName="src/main.cpp" fileDirectory=".." coreId="1005048512" contextFuncName="Col_Wise_Overlap_Gen" opcode="ret" nodeLabel="10.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/main.cpp" linenumber="305" fileDirectory="/home/shine/Desktop/fft_story/hls/fwd_fft/v4" functionName="Col_Wise_Overlap_Gen"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/main.cpp">
+      <validLinenumbers>260</validLinenumbers>
+      <validLinenumbers>266</validLinenumbers>
+      <validLinenumbers>263</validLinenumbers>
+      <validLinenumbers>305</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>1057</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <regnodes realName="icmp_ln1057_reg_353">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="bound42_reg_343">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1057_21_reg_358">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="cast41_reg_333">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1057_22_reg_363">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln_reg_285">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="cast15_reg_317">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_i_i_reg_338">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="p_cast1_reg_272">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="bound4_reg_306">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_182_reg_265">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="cast40_reg_328">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_181_reg_260">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="bound16_reg_322">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="bound_reg_290">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="cast14_reg_312">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="cmp_i_i_mid157_reg_348">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="cast3_reg_301">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="Col_Buffer_reg_255">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="cast2_reg_296">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln266_reg_278">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <expressionNodes realName="cast_fu_169">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctrl2_reg_load_cast_cast_fu_207">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1057_fu_224">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast15_fu_191">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1057_22_fu_236">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast1_fu_172">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1057_21_fu_230">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_cast1_fu_145">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln266_fu_155">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Col_Buffer_fu_70">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast14_fu_188">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_i_i_fu_210">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bound_fu_175">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast2_fu_181">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_182_fu_141">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast40_fu_194">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast3_fu_184">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cast41_fu_197">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_159">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_181_fu_137">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp_i_i_mid157_fu_217">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_249">
+    <nodeIds>41</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Col_Wise_Overlap_Gen_Pipeline_VITIS_LOOP_263_1_VITIS_LOOP_269_3_VITIS_LOOP_272_4_VITIS_LOOP_275_5_fu_116">
+    <nodeIds>50</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_200">
+    <nodeIds>44</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_242">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="ctrl1_reg_read_read_fu_102">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ctrl2_reg_read_read_fu_88">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_108">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_94">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer1_reg_read_read_fu_74">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_80">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioPorts name="c_ifmap_col_op_st">
+    <contents name="call">
+      <nodeIds>50</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_ifmap_patch_st">
+    <contents name="call">
+      <nodeIds>50</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_reg">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl1_reg_c20">
+    <contents name="write">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ctrl2_reg_c25">
+    <contents name="write">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer1_reg_c30">
+    <contents name="write">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="4" latency="4"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="38" stage="3" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="38" stage="2" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="38" stage="1" latency="4"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="4" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="41" stage="3" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="41" stage="2" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="41" stage="1" latency="4"/>
+    </states>
+    <states id="9">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="2"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="2"/>
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Col_Wise_Overlap_Gen" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="13" mMaxLatency="172045">
+      <basicBlocks>52</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

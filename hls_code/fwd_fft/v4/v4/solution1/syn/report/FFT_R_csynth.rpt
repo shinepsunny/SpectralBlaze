@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_R'
+================================================================
+* Date:           Thu Oct 13 07:49:22 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        v4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7cg-fbvb900-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.708 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+    +---------+---------+----------+----------+-----+--------+---------+
+    |       36|   301243|  0.180 us|  1.506 ms|   36|  301243|       no|
+    +---------+---------+----------+----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+--------+---------+
+        |                                        |                             |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+        |                Instance                |            Module           |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+--------+---------+
+        |grp_dataflow_parent_loop_proc11_fu_112  |dataflow_parent_loop_proc11  |       28|   301235|  0.140 us|  1.506 ms|   28|  301235|       no|
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     2|       -|       -|    -|
+|Expression       |        -|     -|       0|       6|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       28|   120|   11387|   10669|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     144|    -|
+|Register         |        -|     -|     110|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       28|   122|   11497|   10819|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        4|     7|       2|       4|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+-----------------------------+---------+-----+-------+-------+-----+
+    |                Instance                |            Module           | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +----------------------------------------+-----------------------------+---------+-----+-------+-------+-----+
+    |grp_dataflow_parent_loop_proc11_fu_112  |dataflow_parent_loop_proc11  |       28|  120|  11387|  10629|    0|
+    |mul_8ns_8ns_16_1_1_U218                 |mul_8ns_8ns_16_1_1           |        0|    0|      0|     40|    0|
+    +----------------------------------------+-----------------------------+---------+-----+-------+-------+-----+
+    |Total                                   |                             |       28|  120|  11387|  10669|    0|
+    +----------------------------------------+-----------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    +-------------------------------+--------------------------+-----------+
+    |            Instance           |          Module          | Expression|
+    +-------------------------------+--------------------------+-----------+
+    |mul_mul_16ns_8ns_24_4_1_U219   |mul_mul_16ns_8ns_24_4_1   |    i0 * i1|
+    |mul_mul_24ns_16ns_32_4_1_U220  |mul_mul_24ns_16ns_32_4_1  |    i0 * i1|
+    +-------------------------------+--------------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                      Variable Name                      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1                                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc11_fu_112_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc11_fu_112_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                    |          |   0|  0|   6|           3|           3|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  54|         10|    1|         10|
+    |ap_done                 |   9|          2|    1|          2|
+    |c_fft_row_op_st_write   |   9|          2|    1|          2|
+    |c_ifmap_col_op_st_read  |   9|          2|    1|          2|
+    |ctrl1_reg_blk_n         |   9|          2|    1|          2|
+    |ctrl1_reg_c19_blk_n     |   9|          2|    1|          2|
+    |ctrl2_reg_blk_n         |   9|          2|    1|          2|
+    |ctrl2_reg_c24_blk_n     |   9|          2|    1|          2|
+    |layer1_reg_blk_n        |   9|          2|    1|          2|
+    |layer1_reg_c29_blk_n    |   9|          2|    1|          2|
+    |real_start              |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 144|         30|   11|         30|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                            | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                    |   9|   0|    9|          0|
+    |ap_done_reg                                                  |   1|   0|    1|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc11_fu_112_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc11_fu_112_ap_ready  |   1|   0|    1|          0|
+    |ctrl1_reg_read_reg_203                                       |  32|   0|   32|          0|
+    |grp_dataflow_parent_loop_proc11_fu_112_ap_start_reg          |   1|   0|    1|          0|
+    |n_reg_244                                                    |  32|   0|   32|          0|
+    |rhs_reg_213                                                  |   8|   0|    8|          0|
+    |start_once_reg                                               |   1|   0|    1|          0|
+    |trunc_ln225_reg_219                                          |  16|   0|   16|          0|
+    |trunc_ln_reg_208                                             |   8|   0|    8|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                        | 110|   0|  110|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++---------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|start_full_n               |   in|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|start_out                  |  out|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|start_write                |  out|    1|  ap_ctrl_hs|              FFT_R|  return value|
+|c_ifmap_col_op_st_dout     |   in|   32|     ap_fifo|  c_ifmap_col_op_st|       pointer|
+|c_ifmap_col_op_st_empty_n  |   in|    1|     ap_fifo|  c_ifmap_col_op_st|       pointer|
+|c_ifmap_col_op_st_read     |  out|    1|     ap_fifo|  c_ifmap_col_op_st|       pointer|
+|c_fft_row_op_st_din        |  out|   32|     ap_fifo|    c_fft_row_op_st|       pointer|
+|c_fft_row_op_st_full_n     |   in|    1|     ap_fifo|    c_fft_row_op_st|       pointer|
+|c_fft_row_op_st_write      |  out|    1|     ap_fifo|    c_fft_row_op_st|       pointer|
+|ctrl1_reg_dout             |   in|   32|     ap_fifo|          ctrl1_reg|       pointer|
+|ctrl1_reg_empty_n          |   in|    1|     ap_fifo|          ctrl1_reg|       pointer|
+|ctrl1_reg_read             |  out|    1|     ap_fifo|          ctrl1_reg|       pointer|
+|ctrl2_reg_dout             |   in|   32|     ap_fifo|          ctrl2_reg|       pointer|
+|ctrl2_reg_empty_n          |   in|    1|     ap_fifo|          ctrl2_reg|       pointer|
+|ctrl2_reg_read             |  out|    1|     ap_fifo|          ctrl2_reg|       pointer|
+|layer1_reg_dout            |   in|   32|     ap_fifo|         layer1_reg|       pointer|
+|layer1_reg_empty_n         |   in|    1|     ap_fifo|         layer1_reg|       pointer|
+|layer1_reg_read            |  out|    1|     ap_fifo|         layer1_reg|       pointer|
+|ctrl1_reg_c19_din          |  out|   32|     ap_fifo|      ctrl1_reg_c19|       pointer|
+|ctrl1_reg_c19_full_n       |   in|    1|     ap_fifo|      ctrl1_reg_c19|       pointer|
+|ctrl1_reg_c19_write        |  out|    1|     ap_fifo|      ctrl1_reg_c19|       pointer|
+|ctrl2_reg_c24_din          |  out|   32|     ap_fifo|      ctrl2_reg_c24|       pointer|
+|ctrl2_reg_c24_full_n       |   in|    1|     ap_fifo|      ctrl2_reg_c24|       pointer|
+|ctrl2_reg_c24_write        |  out|    1|     ap_fifo|      ctrl2_reg_c24|       pointer|
+|layer1_reg_c29_din         |  out|   32|     ap_fifo|     layer1_reg_c29|       pointer|
+|layer1_reg_c29_full_n      |   in|    1|     ap_fifo|     layer1_reg_c29|       pointer|
+|layer1_reg_c29_write       |  out|    1|     ap_fifo|     layer1_reg_c29|       pointer|
++---------------------------+-----+-----+------------+-------------------+--------------+
+
